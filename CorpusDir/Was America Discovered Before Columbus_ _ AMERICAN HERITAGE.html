@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"137fa3d47f",applicationID:"60282449"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-18446029-6", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="robots" content="index, follow" />
+<meta http-equiv="content-language" content="en" />
+<meta name="abstract" content="American History Lives Here! American Heritage, the definitive magazine of American History since 1954, now offers its entire archive online free." />
+<meta name="keywords" content="american history, u.s. history, united states, political history, military history, cultural history, american heritage, american heritage magazine" />
+<meta name="referrer" content="no-referrer" />
+<meta name="rights" content="© 1949-2019 American Heritage. All Rights Reserved." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>
+       window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/americanheritage-network/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}</script>
+<script type="text/javascript">
+// Initialize the google variables.
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+// Add a place to store the slot name variable.
+googletag.slots = googletag.slots || {};
+(function() {
+  var useSSL = "https:" == document.location.protocol;
+  var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+  document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["openads_zone_block_zone_8_300x250"] = googletag.defineSlot("/21706820001/", [300, 250], "js-dfp-tag-openads_zone_block_zone_8_300x250")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["openads_zone_block_zone_7_300x250"] = googletag.defineSlot("/21706820001/", [300, 250], "js-dfp-tag-openads_zone_block_zone_7_300x250")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["openads_zone_block_zone_6_300x250"] = googletag.defineSlot("/21706820001/", [300, 250], "js-dfp-tag-openads_zone_block_zone_6_300x250")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["openads_zone_block_zone_5_300x250"] = googletag.defineSlot("/21706820001/", [300, 250], "js-dfp-tag-openads_zone_block_zone_5_300x250")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["openads_zone_block_zone_1_300x250"] = googletag.defineSlot("/21706820001/", [300, 250], "js-dfp-tag-openads_zone_block_zone_1_300x250")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["openads_zone_lock_leaderboard_728x90"] = googletag.defineSlot("/21706820001/", [728, 90], "js-dfp-tag-openads_zone_lock_leaderboard_728x90")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+googletag.cmd.push(function() {
+      googletag.pubads().enableAsyncRendering();
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+      });
+googletag.enableServices();
+</script>
+<link rel="shortcut icon" href="/themes/journaleight/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://www.americanheritage.com/was-america-discovered-columbus" />
+<link rel="shortlink" href="https://www.americanheritage.com/node/62006" />
+<link rel="revision" href="https://www.americanheritage.com/was-america-discovered-columbus" />
+
+    <title>Was America Discovered Before Columbus? | AMERICAN HERITAGE</title>
+    <link rel="stylesheet" media="all" href="/core/assets/vendor/normalize-css/normalize.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/misc/normalize-fixes.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/libraries/superfish/css/superfish.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/ajax-progress.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/align.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/autocomplete-loading.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/fieldgroup.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/container-inline.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/clearfix.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/details.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/hidden.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/item-list.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/js.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/nowrap.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/position-container.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/progress.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/reset-appearance.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/resize.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/sticky-header.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-counter.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-counters.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-general-info.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tabledrag.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tablesort.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tree-child.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/views/views.module.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/modules/popup_dialog/css/popup_dialog.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/bootstrap/css/bootstrap.min.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/base/elements.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/base/layout.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/base/typography.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/base/local-base.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/progress.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/action-links.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/breadcrumb.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/button.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/collapse-processed.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/container-inline.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/details.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/exposed-filters.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/field.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/form.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/icons.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/inline-form.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/item-list.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/link.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/links.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/menu.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/more-link.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/pager.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/tabledrag.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/tableselect.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/tablesort.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/tabs.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/textarea.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/ui-dialog.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/messages.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/node.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/js/flexslider/flexslider.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/site-branding.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/breadcrumb.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/tabs.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/accordion.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/progress-bars.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/drupal-tabs.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/block.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/node.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/field.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/comments.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/menu.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/primary-menu.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/teaser-listing.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/pager.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/image-overlay.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/admin.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/search.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/forms.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/buttons.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/node-images.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/node-links.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/tables.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/to-top.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/quickedit.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/icons-list.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/more-links.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/views.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/view-hot-posts.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/view-latest.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/view-archive-summary.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/view-news-in-images.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/view-tags-cloud.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/messages.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/fixed-header.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/flexslider-main.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/components/local-components.css?q67aq5" />
+<link rel="stylesheet" media="all" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/theme/hover-effects.css?q67aq5" />
+<link rel="stylesheet" media="print" href="/themes/journaleight/css/theme/print.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/theme/patterns.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/custom/custom.css?q67aq5" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&amp;subset=latin-ext,latin,greek" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Oswald:400,300,700&amp;subset=latin,latin-ext" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/theme/color-light-indigo.css?q67aq5" />
+<link rel="stylesheet" media="all" href="/themes/journaleight/css/theme/local-theme.css?q67aq5" />
+
+    
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+  		(adsbygoogle = window.adsbygoogle || []).push({
+  			google_ad_client: "ca-pub-8234620345074416",
+  			enable_page_level_ads: true
+  		});
+  	</script>
+  </head>
+  <body class="layout-one-sidebar layout-sidebar-second hff-10 navff-17 pff-10 sff-10 slff-10 wide grad3 fixed-header-enabled">
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-container">
+
+  <header class="headers-wrapper">
+                <div id="pre-header" class="clearfix colored-area colored-area__light-indigo">
+        <div class="container">
+                    <div id="pre-header-inside" class="clearfix">
+            <div class="row">
+                              <div class="col-md-12">
+                                    <div id="pre-header-first" class="clearfix">
+                    <div class="pre-header-area">
+                            <div class="region region-pre-header-first">
+      <div id="block-dfptagopenads-zone-lock-leaderboard-728x90" class="block block-dfp block-dfp-ad05778992-6b12-43f0-ba22-fc9dbb8e241f">
+  
+    
+      <div class="content">
+      <div id="js-dfp-tag-openads_zone_lock_leaderboard_728x90">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-openads_zone_lock_leaderboard_728x90');
+        });
+    </script>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+  
+                    </div>
+                  </div>
+                                  </div>
+                                        </div>
+          </div>
+                  </div>
+      </div>
+                        <div id="header" role="banner" class="clearfix">
+        <div class="container">
+                    <div id="header-inside" class="clearfix">
+            <div class="row">
+                              <div class="col-md-6">
+                                    <div id="header-fisrt" class="clearfix">
+                    <div class="header-area">
+                              <div class="clearfix region region-header">
+      <div id="block-sitebranding" class="clearfix site-branding block block-system block-system-branding-block">
+  
+    
+    <div class="logo-and-site-name-wrapper clearfix">
+          <div class="logo">
+        <a href="/" title="Home" rel="home" class="site-branding__logo">
+          <img src="/sites/default/files/AH_LOGO_2_line_transparentx767.jpg" alt="Home" />
+        </a>
+      </div>
+                  <div class="site-slogan site-branding__slogan">Trusted Writing on History, Travel, Food and Culture Since 1949</div>
+      </div>
+</div>
+
+    </div>
+  
+                    </div>
+                  </div>
+                                  </div>
+                                            <div class="col-md-4">
+                                    <div id="header-second" class="clearfix">
+                    <div class="header-area">
+                              <div class="region region-header-second">
+      <div class="search-block-form block block-search container-inline" data-drupal-selector="search-block-form" id="block-searchform" role="search">
+  
+    
+  <div class="content container-inline">
+    <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-form search-block-form">
+  <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." placeholder="Enter keywords to search..." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" />
+</div>
+
+    <span class="search-form-under-text"><a href="/search/node?advanced-form-open=1">Advanced Search</a></span>
+</form>
+
+  </div>
+</div>
+
+    </div>
+  
+                    </div>
+                  </div>
+                                  </div>
+                                            <div class="col-md-2">
+                                    <div id="header-third" class="clearfix">
+                    <div class="header-area">
+                            <div class="region region-header-third">
+      <div id="block-ahsocialicons" class="block block-block-content block-block-contentbe2fcc9c-de75-4ca2-9fcf-aaf9d86f0f75">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><ul class="icons-list"><li>
+<a class="hover-effect-1" href="https://www.facebook.com/ameriheritage/"><i class="fa fa-facebook"></i><span class="sr-only">Facebook</span></a>
+</li>
+<li>
+<a class="hover-effect-1" href="https://twitter.com/AmeriHeritage"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span></a>
+</li>
+</ul></div>
+      
+    </div>
+  </div>
+
+    </div>
+  
+                    </div>
+                  </div>
+                                  </div>
+                          </div>
+          </div>
+                  </div>
+      </div>
+        
+              <div id="navigation">
+                  <div class="site-name site-name__header">
+            <a href="/" title="Home" rel="home">AMERICAN HERITAGE</a>
+          </div>
+                <div class="container">
+                    <div id="navigation-inside" class="clearfix">
+            <div class="row">
+                                            <div class="col-md-12">
+                                    <div id="main-navigation" class="clearfix">
+                    <div class="navigation-area">
+                      <nav>
+                              <div class="region region-navigation">
+      <div id="block-mainnavigation" class="block block-superfish block-superfishmain">
+  
+    
+      <div class="content">
+      
+<ul id="superfish-main" class="menu sf-menu sf-main sf-navbar sf-style-none">
+  
+<li id="main-menu-link-content14138a1b-98b7-4ba3-b2fc-bec1af436f73" class="sf-depth-1 menuparent"><a href="/" class="sf-depth-1 menuparent">Home</a><ul><li id="main-menu-link-contente455a8af-760b-4c6e-966b-83335d309d75" class="sf-depth-2 sf-no-children"><a href="/topics/antebellum-period" class="sf-depth-2">Antebellum</a></li><li id="main-menu-link-content935d90c6-0f3d-4842-8d68-22eba607afde" class="sf-depth-2 sf-no-children"><a href="/topics/civil-war" class="sf-depth-2">Civil War</a></li><li id="main-menu-link-content0a213b68-5735-4083-9403-30fa2f9faaa8" class="sf-depth-2 sf-no-children"><a href="/topics/colonial-north-america" class="sf-depth-2">Colonial</a></li><li id="main-menu-link-contenta1155838-289c-4147-b4a8-7cf8ffff7527" class="sf-depth-2 sf-no-children"><a href="/topics/great-depression" class="sf-depth-2">Depression &amp; FDR</a></li><li id="main-menu-link-contentd4ce289c-1904-4c64-a206-888ec47fbed1" class="sf-depth-2 sf-no-children"><a href="/topics/early-republic" class="sf-depth-2">Early Republic &amp; 1812</a></li><li id="main-menu-link-contente786c4b6-308d-480a-9196-ea3f66c95927" class="sf-depth-2 sf-no-children"><a href="/topics/gilded-age" class="sf-depth-2">Gilded Age &amp; Industry</a></li><li id="main-menu-link-contentc029e2b1-bc80-4a48-878a-ab888c1fceed" class="sf-depth-2 sf-no-children"><a href="/topics/reconstruction" class="sf-depth-2">Reconstruction</a></li><li id="main-menu-link-content3f8a7b6f-ae8b-43d6-b553-650ca85ef85c" class="sf-depth-2 sf-no-children"><a href="/topics/american-revolution" class="sf-depth-2">Revolution</a></li><li id="main-menu-link-content0f90d5bf-df95-4652-9e91-ed9065c7e372" class="sf-depth-2 sf-no-children"><a href="/topics/world-war-i" class="sf-depth-2">WWI</a></li><li id="main-menu-link-content7b949e08-6f6b-4049-b786-24795c6a613e" class="sf-depth-2 sf-no-children"><a href="/topics/world-war-ii" class="sf-depth-2">WWII</a></li><li id="main-menu-link-content3493b3b7-026e-4027-a7f0-3d88a6b86bd7" class="sf-depth-2 sf-no-children"><a href="/topics/cold-war" class="sf-depth-2">Cold War</a></li></ul></li><li id="main-menu-link-content8bf4578a-c4af-4b64-abd7-a48fbe31c53c" class="sf-depth-1 menuparent"><a href="http://www.americanheritage.com/content/winter-2019" class="sf-depth-1 sf-external menuparent">Magazine</a><ul><li id="main-menu-link-contenta08b21f7-0e6a-44bd-adea-7e2b8467a4fb" class="sf-depth-2 sf-no-children"><a href="https://www.americanheritage.com/content/winter-2020-0" class="sf-depth-2 sf-external">Current Issue</a></li><li id="main-menu-link-contentfcb411a4-5d91-4207-8481-b4ff87a434c7" class="sf-depth-2 sf-no-children"><a href="/magazine/archive" class="sf-depth-2">Archive (1949-2019)</a></li><li id="main-menu-link-content98c88856-a4ee-4f40-9375-e0e22ec12cf8" class="sf-depth-2 sf-no-children"><a href="/content/featured-stories" class="sf-depth-2">Featured</a></li><li id="main-menu-link-contentf8ee9e64-5754-47f8-8c17-bf2b1c176bf9" class="sf-depth-2 sf-no-children"><a href="https://www.americanheritage.com/volume/2020/year" class="sf-depth-2 sf-external">2020</a></li><li id="main-menu-link-contentbe5a26f3-7625-4b7c-be25-77a4919c5a5d" class="sf-depth-2 sf-no-children"><a href="https://www.americanheritage.com/volume/2019/year" class="sf-depth-2 sf-external">2019</a></li><li id="main-menu-link-content04afa812-ecf2-4f66-8d54-801db817cb37" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/volume/2018/year" title="Issues in 2018" class="sf-depth-2 sf-external">2018</a></li><li id="main-menu-link-contentb4f7e66b-95e8-42ca-b18b-18380189c121" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/volume/2017/year" title="2017 Issues" class="sf-depth-2 sf-external">2017</a></li><li id="main-menu-link-content45bd4c3c-8e66-48cb-a4d3-90cfd34ee29c" class="sf-depth-2 sf-no-children"><a href="/content/winter-2010" class="sf-depth-2">60th Anniv Issue</a></li><li id="main-menu-link-content4c64b1c1-f6fb-4fbe-ab08-512a5b21bfa9" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/category/article-keywords/my-brush-history" title="My Brush with History essays are among the most popular writing in the magazine" class="sf-depth-2 sf-external">My Brush With History</a></li><li id="main-menu-link-content284d460f-1906-47cc-9e73-323e345aac3c" class="sf-depth-2 sf-no-children"><a href="/about/magazine/permissions-and-rights" class="sf-depth-2">Permissions</a></li><li id="main-menu-link-content2005b741-a2cc-40d8-87b7-a7029f0b91f5" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/about/magazine" title="About American Heritage Magazine" class="sf-depth-2 sf-external">About the Magazine</a></li></ul></li><li id="main-menu-link-contenta5dd51d0-436e-4009-bc22-c5f9f198064b" class="sf-depth-1 menuparent"><a href="/about/press-releases" class="sf-depth-1 menuparent">Blogs</a><ul><li id="main-views-viewviewsstories-without-issuespage-2" class="sf-depth-2 sf-no-children"><a href="/posts" class="sf-depth-2">Blogs/Posts</a></li><li id="main-views-viewviewshistory-around-the-webpage-1" class="sf-depth-2 sf-no-children"><a href="/history-around-the-web" class="sf-depth-2">Around the Web</a></li><li id="main-menu-link-content2495d8bb-5506-4553-b9ef-a2e997a7c1ab" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/node/132714" title="Blog by Smithsonian curator Jon Grinspan" class="sf-depth-2 sf-external">Jon Grinspan</a></li><li id="main-menu-link-contenta3a475be-a540-4ec0-b919-50654a399d67" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/content/wild-west-germany" class="sf-depth-2 sf-external">Edward Lengel</a></li><li id="main-menu-link-content28420efe-fdf1-466c-a873-cb32e1e5a92c" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/content/no-to-war" title="Blog by historian Bruce Watson" class="sf-depth-2 sf-external">Bruce Watson</a></li></ul></li><li id="main-menu-link-content2441ef5a-44b6-4f8a-85d1-d0bf6c18a87b" class="sf-depth-1 menuparent"><a href="/books-from-american-heritage" class="sf-depth-1 menuparent">Books</a><ul><li id="main-menu-link-contentb81a3308-2558-49a7-bc40-e07f0bb04583" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/books-from-american-heritage?field_format_value=All&amp;field_subject_area_target_id=36279&amp;sort_by=title&amp;sort_order=ASC" class="sf-depth-2 sf-external">American History</a></li><li id="main-menu-link-content8106c8ea-0682-4b56-b16a-ab0b18a51460" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/books-from-american-heritage?field_format_value=All&amp;field_subject_area_target_id=36289&amp;sort_by=title&amp;sort_order=ASC" class="sf-depth-2 sf-external">Civil War</a></li><li id="main-menu-link-contentdf6cc52a-b97b-40bc-80e9-212f88f25ec0" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/books-from-american-heritage?field_format_value=All&amp;field_subject_area_target_id=36287&amp;sort_by=title&amp;sort_order=ASC" class="sf-depth-2 sf-external">Culture</a></li><li id="main-menu-link-contentfb1fb646-7c24-4fb4-9506-011ffd5c6bae" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/books-from-american-heritage?field_format_value=All&amp;field_subject_area_target_id=36283&amp;sort_by=title&amp;sort_order=ASC" class="sf-depth-2 sf-external">European History</a></li><li id="main-menu-link-content34b3d3c2-f18b-472c-ad51-93a2143f987b" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/books-from-american-heritage?field_format_value=All&amp;field_subject_area_target_id=36288&amp;sort_by=title&amp;sort_order=ASC" class="sf-depth-2 sf-external">Exploration</a></li><li id="main-menu-link-contentef9dea45-c9e5-4dad-a3af-c7b03d50b1f4" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/books-from-american-heritage?field_format_value=All&amp;field_subject_area_target_id=36330&amp;sort_by=title&amp;sort_order=ASC" class="sf-depth-2 sf-external">Maritime</a></li><li id="main-menu-link-content1887d9d3-89b5-4878-8a79-72605057ccee" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/books-from-american-heritage?field_format_value=All&amp;field_subject_area_target_id=36328&amp;sort_by=title&amp;sort_order=ASC" class="sf-depth-2 sf-external">Old West</a></li><li id="main-menu-link-content3d7db4ee-09e6-475a-a366-27e06ac67c1c" class="sf-depth-2 sf-no-children"><a href="http://www.americanheritage.com/books-from-american-heritage?field_format_value=All&amp;field_subject_area_target_id=36285&amp;sort_by=title&amp;sort_order=ASC" class="sf-depth-2 sf-external">World War II</a></li></ul></li><li id="main-menu-link-content9a4146c4-15a6-4681-ba0e-7f58a9661219" class="sf-depth-1 menuparent"><a href="/contributors-user-list?name=A" class="sf-depth-1 menuparent">AUTHORS</a><ul><li id="main-menu-link-content9b228c81-910d-437e-8160-79c957326458" class="sf-depth-2 sf-no-children"><a href="/contributors-user-list" class="sf-depth-2">All Contributors</a></li><li id="main-menu-link-content4112f505-0333-4346-b6e7-4a6365d71131" class="sf-depth-2 sf-no-children"><a href="/users/wallace-stegner" class="sf-depth-2">Stegner</a></li><li id="main-menu-link-contentd61328b0-a792-4cf9-afa3-0fa7484bf118" class="sf-depth-2 sf-no-children"><a href="/users/stephen-e-ambrose" class="sf-depth-2">Ambrose</a></li><li id="main-menu-link-content71f8ccaf-4bcb-48b6-8fe2-baf125a94ed3" class="sf-depth-2 sf-no-children"><a href="/users/bruce-catton" class="sf-depth-2">Catton</a></li><li id="main-menu-link-contenta6a8cab2-b3b0-405c-9eda-0aac04d7f28a" class="sf-depth-2 sf-no-children"><a href="/users/henry-steele-commager" class="sf-depth-2">Commager</a></li><li id="main-menu-link-content944c0ec4-453b-48bb-aba7-bfc73af63266" class="sf-depth-2 sf-no-children"><a href="/users/joseph-j-ellis" class="sf-depth-2">Ellis</a></li><li id="main-menu-link-content8ef45b6e-55b6-4419-95de-fd5961e1bc98" class="sf-depth-2 sf-no-children"><a href="/users/james-thomas-flexner" class="sf-depth-2">Flexner</a></li><li id="main-menu-link-contente3e62b24-4d7a-4ba4-a042-34d852b300ae" class="sf-depth-2 sf-no-children"><a href="/users/john-lukacs" class="sf-depth-2">Lukacs</a></li><li id="main-menu-link-content446291f0-6bc8-4777-b3db-b34d796c59a8" class="sf-depth-2 sf-no-children"><a href="/users/david-mccullough" class="sf-depth-2">McCullough</a></li><li id="main-menu-link-contentda32d3ab-e7ac-44fe-9a06-cc6154e14a3e" class="sf-depth-2 sf-no-children"><a href="/users/james-m-mcpherson" class="sf-depth-2">McPherson</a></li><li id="main-menu-link-contentebe98fed-99b3-4bc8-bd41-20c1350e848e" class="sf-depth-2 sf-no-children"><a href="/users/arthur-schlesinger-jr" class="sf-depth-2">Schlesinger</a></li><li id="main-menu-link-contentc332000d-0bde-4167-ac41-4f9685692c69" class="sf-depth-2 sf-no-children"><a href="/users/barbara-w-tuchman" class="sf-depth-2">Tuchman</a></li><li id="main-menu-link-content1277295d-a787-47b4-a337-3c5a341c83e4" class="sf-depth-2 sf-no-children"><a href="/users/geoffrey-c-ward" class="sf-depth-2">Ward</a></li></ul></li><li id="main-menu-link-content1c059df6-969d-49c0-990d-b8ffe4328cf1" class="sf-depth-1 menuparent"><a href="/historic-themes" class="sf-depth-1 menuparent">Historic Sites</a><ul><li id="main-menu-link-contentdad1da00-9f60-45ca-98f4-9de115c6625c" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=19147&amp;field_type_nid=&amp;field_state_nid=" class="sf-depth-2"> Battlefields</a></li><li id="main-menu-link-contentfe150eab-104b-4377-ae33-f77ef5ab8106" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=&amp;field_type_nid=19186&amp;field_state_nid=" class="sf-depth-2"> Forts &amp; Military</a></li><li id="main-menu-link-contente69c9586-2f4d-4259-a141-8fb44115f0f8" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=19196&amp;field_type_nid=&amp;field_state_nid=" class="sf-depth-2">Air And Space</a></li><li id="main-menu-link-content9feb3913-02d3-41f6-96eb-5f013d5a9293" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=&amp;field_type_nid=19184&amp;field_state_nid=" class="sf-depth-2">Churches</a></li><li id="main-menu-link-contentf38a8ae0-90be-4961-b6a5-c944f8860550" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=19214&amp;field_type_nid=&amp;field_state_nid=" class="sf-depth-2">Civil Rights</a></li><li id="main-menu-link-content059f19d5-8ea2-4c22-848d-ab82ad1a1419" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=19151&amp;field_type_nid=&amp;field_state_nid=" class="sf-depth-2">Confederacy</a></li><li id="main-menu-link-content7d185761-33f8-466b-abc6-a8b65023e7cf" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=19163&amp;field_type_nid=&amp;field_state_nid=" class="sf-depth-2">Native Americans</a></li><li id="main-menu-link-contentca17ed0d-22fc-44f3-9b7a-a6cfe9965016" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=&amp;field_type_nid=19202&amp;field_state_nid=" class="sf-depth-2">Navy Ships</a></li><li id="main-menu-link-contentc8c79d0c-23c7-492c-8e74-c998caf9f544" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=19165&amp;field_type_nid=&amp;field_state_nid=" class="sf-depth-2">Pioneer &amp; Rural Life</a></li><li id="main-menu-link-content5dfb10af-3c79-47f2-b218-76d875ed19c1" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=&amp;field_type_nid=19193&amp;field_state_nid=" class="sf-depth-2">Presidential</a></li><li id="main-menu-link-contenta35b3b19-43d2-472e-857f-b08d90edc919" class="sf-depth-2 sf-no-children"><a href="/historic-sites?keys=&amp;field_theme_nid=&amp;field_type_nid=19195&amp;field_state_nid=" class="sf-depth-2">Trails</a></li></ul></li><li id="main-menu-link-content731cdca1-3687-41bd-8aaa-c9111e0a1f36" class="sf-depth-1 menuparent"><a href="/content/american-heritage-traveler" class="sf-depth-1 menuparent">TRAVEL</a><ul><li id="main-menu-link-content22b848a4-96f7-4bd2-a095-07f9f61c7d5b" class="sf-depth-2 sf-no-children"><a href="/content/guide-historic-sites-florida" class="sf-depth-2">Florida</a></li><li id="main-menu-link-contenta60c1bc1-6b85-42be-96ae-8d676f6e98cf" class="sf-depth-2 sf-no-children"><a href="/content/colorado-americas-heart-gold" class="sf-depth-2">Colorado</a></li><li id="main-menu-link-content7383ee13-722d-4148-b7e3-a3cd7e698b68" class="sf-depth-2 sf-no-children"><a href="/content/kentucky" class="sf-depth-2">Kentucky</a></li><li id="main-menu-link-content1a4fd128-0a87-4855-80ca-57f9b9908bea" class="sf-depth-2 sf-no-children"><a href="/content/new-yorks-hudson-river-lake-champlain-region" class="sf-depth-2">New York</a></li><li id="main-menu-link-content052fe36b-932d-42fe-84a3-d95e31bd8292" class="sf-depth-2 sf-no-children"><a href="/content/guide-historic-sites-north-carolina" class="sf-depth-2">North Carolina</a></li><li id="main-menu-link-content1a0e351a-0d0e-430f-b51f-a28775192a6b" class="sf-depth-2 sf-no-children"><a href="/content/pony-express" class="sf-depth-2">Pony Express</a></li><li id="main-menu-link-content3b7ad8ac-d73f-4f5d-b2ae-ea2f054f9a59" class="sf-depth-2 sf-no-children"><a href="/content/guide-historic-sites-texas" class="sf-depth-2">Texas</a></li><li id="main-menu-link-content18c4e903-7e87-4e0f-8b67-1bd3c9446f4f" class="sf-depth-2 sf-no-children"><a href="/travel/virginia" class="sf-depth-2">Virginia</a></li><li id="main-menu-link-content2ae5c75c-ab27-4200-a4fe-2d2afc04dbd9" class="sf-depth-2 sf-no-children"><a href="/content/guide-historic-sites-west-virginia" class="sf-depth-2">West Virginia</a></li><li id="main-menu-link-contentd90995ab-2131-4e51-ac11-7700dadb0b83" class="sf-depth-2 sf-no-children"><a href="/sites/default/files/heritage-traveler/downloads/united-states-colored-troops-civil-war-guide.pdf" class="sf-depth-2">USCT Patriots </a></li><li id="main-menu-link-content20abeee2-76cb-432e-b0bd-df1e9e8479c1" class="sf-depth-2 sf-no-children"><a href="/sites/default/files/travel/MD/MD.pdf" class="sf-depth-2">Maryland</a></li><li id="main-menu-link-content994c9d32-43cf-4c94-9ee1-1f38d5ea9204" class="sf-depth-2 sf-no-children"><a href="/content/travel-jones-beach-and-how-they-dreamed-it" class="sf-depth-2">Travel Blogs</a></li></ul></li><li id="main-menu-link-content6b370809-354b-4e23-b03f-a4a2d3e37a3d" class="sf-depth-1 sf-no-children"><a href="/content/christmas-mount-vernon" class="sf-depth-1">FOOD</a></li><li id="main-menu-link-contentfc30c131-39b7-464d-ab99-16c374abbe1d" class="sf-depth-1 menuparent"><a href="/about/company" class="sf-depth-1 menuparent">ABOUT</a><ul><li id="main-menu-link-content495f0a03-a30d-4134-ab2f-22c3858c177e" class="sf-depth-2 sf-no-children"><a href="http://www.ahsociety.org" class="sf-depth-2 sf-external">About Society</a></li><li id="main-menu-link-content56580e75-0346-4949-a62a-93a1c9415ab9" class="sf-depth-2 sf-no-children"><a href="/about/company" class="sf-depth-2">Mission and History</a></li><li id="main-menu-link-contentc9d2159c-7130-44af-92d7-b93318dc0571" class="sf-depth-2 sf-no-children"><a href="/about/magazine/what-others-have-said" class="sf-depth-2">Comments about AH</a></li><li id="main-menu-link-content0fc56719-3142-4815-8ecc-a427537b973c" class="sf-depth-2 sf-no-children"><a href="/about/magazine" class="sf-depth-2">American Heritage Magazine</a></li><li id="main-menu-link-content0d89a9d5-5538-47c7-b68c-9338dad28c90" class="sf-depth-2 sf-no-children"><a href="/about/advertising/media-kit" class="sf-depth-2">Advertising</a></li><li id="main-menu-link-contente2934b0a-ba4f-48d7-9f90-8ed3f00e557a" class="sf-depth-2 sf-no-children"><a href="/about/company/management-team" class="sf-depth-2">Management</a></li><li id="main-menu-link-content6a417479-9077-451e-8c16-4e7b34a111f6" class="sf-depth-2 sf-no-children"><a href="/about/press-releases" class="sf-depth-2">Press Releases</a></li><li id="main-menu-link-content0ac3938d-f98c-4376-b75b-94f6400d26fb" class="sf-depth-2 sf-no-children"><a href="/jobs" class="sf-depth-2">Jobs</a></li><li id="main-menu-link-content56542141-9988-4ced-a76b-e5eae4fbd986" class="sf-depth-2 sf-no-children"><a href="https://www.americanheritage.com/american-heritage-back" class="sf-depth-2 sf-external">About Our Relaunch</a></li><li id="main-menu-link-content53383f2c-b607-4fcb-ae06-551f60b28fc7" class="sf-depth-2 sf-no-children"><a href="https://www.americanheritage.com/node/132706" class="sf-depth-2 sf-external">Privacy Policy</a></li></ul></li><li id="main-menu-link-content20110f9a-6801-4fed-a39d-c2c5ec6709be" class="sf-depth-1 sf-no-children"><a href="/node/132668" class="sf-depth-1">Contact</a></li><li id="main-menu-link-contentfccb2715-aaff-4425-9c87-d4c424ffde9d" class="sf-depth-1 sf-no-children"><a href="https://www.americanheritage.com/about/press-releases" title="News about American Heritage" class="sf-depth-1 sf-external">News</a></li>
+</ul>
+
+    </div>
+  </div>
+
+    </div>
+  
+                      </nav>
+                    </div>
+                  </div>
+                                  </div>
+                          </div>
+          </div>
+                  </div>
+      </div>
+          </header>
+
+  
+    <div id="page" class="page clearfix">
+    <div class="container">
+            <div id="page-inside">
+
+                            <div id="top-content">
+                        <div id="top-content-inside" class="clearfix "
+              >
+              <div class="row">
+                <div class="col-md-12">
+                        <div class="region region-top-content">
+      <div data-drupal-messages-fallback class="hidden"></div>
+
+    </div>
+  
+                </div>
+              </div>
+            </div>
+                      </div>
+                  
+                <div id="main-content">
+          <div class="row">
+
+            <section class="col-md-8">
+
+              
+              
+              
+                            <div id="main" class="clearfix "
+                >
+
+                                        <div class="region region-content">
+      <div id="block-journaleight-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+        <nav class="breadcrumb" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">Home</a>
+          <span class="breadcrumb-separator">/</span>
+              </li>
+          <li>
+                  <a href="/content/winter-2011">Magazine</a>
+          <span class="breadcrumb-separator">/</span>
+              </li>
+          <li>
+                  <a href="/volume/1955/year">1955</a>
+          <span class="breadcrumb-separator">/</span>
+              </li>
+          <li>
+                  <a href="/content/april-1955">Volume 6, Issue 3</a>
+          <span class="breadcrumb-separator">/</span>
+              </li>
+          <li>
+                  Was America Discovered Before Columbus?
+              </li>
+        </ol>
+  </nav>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockdepartment-slug-block-1" id="block-views-block-department-slug-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-department-slug view-id-department_slug view-display-id-block_1 js-view-dom-id-458956b48bfc079dcef4bf35e0150f0d64ed454f188e0ab4a3593141cde7892f">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><div class="views-field views-field-field-department-slug"><h4 class="field-content"></h4></div></div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+<div id="block-journaleight-page-title" class="block block-core block-page-title-block">
+  
+    
+      <div class="content">
+      
+  <h1 class="title page-title"><span property="schema:name" class="field field--name-title field--type-string field--label-hidden">Was America Discovered Before Columbus?</span>
+</h1>
+
+
+    </div>
+  </div>
+<div id="block-journaleight-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+<article about="/was-america-discovered-columbus" typeof="schema:Article" class="node node--type-article node--promoted node--view-mode-full clearfix">
+  
+  <div class="node-side">
+                                                                                                                        <div class="reading-time">
+                  8<div class="reading-time__text">min read</div>              </div>
+              <div id="affix">
+              <div class="share-links">
+        <ul>
+          <li class="facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.americanheritage.com/was-america-discovered-columbus&t=Was%20America%20Discovered%20Before%20Columbus%3F" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="share-links__text">Share</span>
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="http://twitter.com/share?text=Was%20America%20Discovered%20Before%20Columbus%3F&url=https://www.americanheritage.com/was-america-discovered-columbus" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="share-links__text">Tweet</span>
+            </a>
+          </li>
+          <li class="email">
+            <a href="mailto:?Subject=Was%20America%20Discovered%20Before%20Columbus%3F&amp;Body=https://www.americanheritage.com/was-america-discovered-columbus">
+                <i class="fa fa-envelope-o"></i>
+                <span class="share-links__text">Email</span>
+            </a>
+          </li>
+                      <li class="print">
+              <div class="print">
+                <a href="javascript:window.print()" class="print-button">
+                  <i class="fa fa-print"></i>
+                  <span class="share-links__text">Print</span>
+                </a>
+              </div>
+            </li>
+                  </ul>
+      </div>
+              <div class="content-font-settings">
+          <div class="font-resize">
+            <a href="#" id="decfont">A-</a>
+            <a href="#" id="incfont">A+</a>
+          </div>
+      </div>
+              <div class="post-progress">
+        <div class="post-progress__value"></div>
+        <div class="post-progress__text">Read</div>
+        <div class="post-progress__bar"></div>
+      </div>
+              </div>
+      </div>
+  <div class="node-content">
+            <header>
+        
+  <!--h1 class="node__title title">
+    <span property="schema:name" class="field field--name-title field--type-string field--label-hidden">Was America Discovered Before Columbus?</span>
+
+  </h1-->
+    <span property="schema:name" content="Was America Discovered Before Columbus?" class="rdf-meta hidden"></span>
+
+            <div class="node__meta">
+      <div class="node-info">
+                  <div class="node-info-item node-info-item-date"><i class="fa fa-calendar"></i> March 2020 </div>
+                              </div>
+    </div>
+      </header>
+    <div class="node__content clearfix">
+        
+            <div class="clearfix text-formatted field field--name-field-deck field--type-text-long field--label-hidden field__item"><p><span class="deck">This nautical chart, lost for five centuries, gives evidence that Portuguese captains had found the New World by 1424</span></p>
+</div>
+      
+  <div>
+              <div class="multiple field-art-contributor-stories-page">
+                        
+                                          <div><a href="/users/alvin-m-josephy-jr" hreflang="en">Alvin M. Josephy Jr.</a></div>
+                        
+
+          </div>
+      </div>
+<div class="field field--name-field-issue-nid field--type-entity-reference field--label-hidden field--entity-reference-target-type-node clearfix">
+    <ul class='links field__items'>
+          <li>
+<article about="/content/april-1955" class="node node--type-issue node--promoted node--view-mode-teaser clearfix">
+      <div class="node-content">
+            <header>
+              
+                  <h2 class="node__title title">
+            <a href="/content/april-1955" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">April 1955</span>
+</a>
+          </h2>
+                
+                              <div class="node__meta">
+            <div class="user-picture">
+                      
+<div class="user-data">
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <div class="field field--name-user-picture field--type-image field--label-hidden field__item">  <a href="/user/1" hreflang="en"><img src="/sites/default/files/styles/thumbnail/public/pictures/2017-03/flower.jpg?itok=o6tdUPe2" width="86" height="100" alt="Profile picture for user admin" typeof="foaf:Image" class="image-style-thumbnail" />
+
+</a>
+</div>
+      </div>
+        <div class="col-md-9"></div>
+    </div>
+</div>
+
+            </div>
+            <span class="post-info">
+              <span>9 years ago</span>
+              <span>By <span class="field field--name-uid field--type-entity-reference field--label-hidden">
+<a title="View user profile." href="/user/1" lang="" about="/user/1">admin</a></span>
+</span>
+                          </span>
+            
+          </div>
+                  </header>
+    <div class="node__content clearfix">
+              
+  <div class="field field--name-field-volume-number field--type-string field--label-inline">
+    <div class="field__label">Volume</div>
+              <div class="field__item">6</div>
+          </div>
+
+  <div class="field field--name-field-issue-number field--type-string field--label-inline">
+    <div class="field__label">Issue</div>
+              <div class="field__item">3</div>
+          </div>
+
+            
+    </div>
+  </div>
+</article>
+</li>
+      </ul>
+</div>
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><p>The last issue of <span class="typestyle"> AMERICAN HERITAGE</span> reported the publication in Europe of an ancient map giving evidence that the Western Hemisphere was discovered by Portuguese explorers before Columbus. This map, whose history and meaning are discussed in the following article, is here reproduced in color for the first time in the United States.</p>
+<p> </p>
+<p><span class="body">Every American schoolboy knows that Christopher Columbus discovered America in 1492. But did he? Save for the Norsemen who in 1,000 A.D. came and left, leaving neither imprint nor impress to alter world history, did anyone reach America before Columbus, and, if so, when, and what is the proof?</span></p>
+<p><span class="body">Almost twenty years ago, Professor Samuel Eliot Morison pointed out to his fellow North Americans that Portuguese and Brazilian historians had been asserting for half a century that what American schoolboys believe is not so. Leading schools and universities in those countries taught, and still teach, that Columbus was a come-lately who capitalized on the unpublicized achievement of an earlier discoverer, and educated Portuguese and Brazilians accept it as fact.</span></p>
+<div class="insertable">
+<div class="img-block"> </div>
+</div>
+<p><span class="body">Not without a little national pride, the pre-Columbians believe that the true discoverer of the New World was a Portuguese navigator. Who he was or when he made the first dramatic landfall they cannot say. From time to time, they thought they had their man (Pedro de Velasco in 1452, João Vaz Corte-Real in 1472), but each time they abandoned the claim under sharp questioning by Columbus’ defenders. Through the years, however, by persistent reasoning, deductions and diligent research, their basic theory has managed to make subtle progress toward acceptance—enough so that, today, most historians, including some of the stoutest champions of Columbus, have come to admit that Portuguese navigators before 1492 did suspect or even know of lands lying west of the Azores, and that Portuguese navigators were sailing out through the misty reaches of the great Ocean Sea looking for those lands, and might—just might—have found something. There agreement ends, and the burden has been left with the Portuguese to unfold more about their mysterious navigators and what they did.</span></p>
+<div class="insertable">
+<div class="img-block"> </div>
+</div>
+<p><span class="body">Recently, there came to light in England an aged nautical chart of 1424, showing what an outstanding Portuguese cartographical expert, Armando Cortesão, asserts is a representation of the New World made almost seventy years before Columbus’ first voyage, and possibly proving therefore that someone, perhaps unknown Portuguese navigators, had reached America by that time.</span></p>
+<p><span class="body">The history of this document is almost as intriguing as what appears on it. It came from the collection of Sir Thomas Phillipps who, during the first three-quarters of the Nineteenth Century, amassed the biggest library of old vellum manuscripts the world has ever known. When Sir Thomas died in 1872, his great, bulging collection of some 60,000 parchment manuscripts and maps, many of them still uncatalogued, represented a fabulous storehouse of unsuspected historical treasures. Odd lots were sold oil at different periods, and in 1946 the still-considerable remainder was bought by William H. Robinson, Ltd., a distinguished London firm dealing in rare books and manuscripts, in reputedly the largest single purchase ever made by a dealer.</span></p>
+<p class="text-align-center"><strong><span class="body">[<a href="https://www.americanheritage.com/category/article-keywords/christopher-columbus">See a list of other articles on Columbus in <em>American Heritage</em></a>.]</span></strong></p>
+<p><span class="body">It was impossible for the purchaser to know what was in the prize without dipping into it, piece by piece. Alter eight years, it is still not all unpacked, and it will be years more before it ceases to disclose valuable surprises. The well-preserved sea (hart of 1424 was one of the first items revealed. It was numbered 25,924 in the Phillipps Collection, but cataloguing of the library had stopped on Sir Thomas’ death with Number 23,-837, and there was no clue concerning the background of the map, where Sir Thomas found it or anything else about it.</span></p>
+<p><span class="body">The document was tested at once for authenticity and found to be entirely genuine; there was no doubt that the date and writing were of the early Fifteenth Century. Upon the recommendation of scholars at the British Museum, Professor Cortesão, a Portuguese representative at UNESCO and one of the world’s acknowledged authorities on Fifteenth and Sixteenth Century maps and charts, was then invited to make a study of it. He was delighted with the opportunity, especially after noting quickly no less than 23 Atlantic islands on the map, including a conspicuous red rectangle with the legend, “ista ixola dixeno antilia,” a combination of old Portuguese and Venetian, meaning “This island is called Antilia,” an isle or representation of mainland which has played a key role in the Portuguese theory of pre-Columbian discovery.</span></p>
+<p><span class="body">Professor Cortesão’s study took five years to complete, the results being recently published in English by the University of Coimbra in Portugal. A foreword, to the 123-page book by Professor Maximino Correia, Rector Magnificus of the University, refers to the work, not unexpectedly, as part of “this really national task” of securing proper recognition for the early Portuguese navigators.</span></p>
+<p><span class="body">Professor Cortesão’s theme is built slowly and carefully. He is unable definitely to identify the cartographer of the map. The original name was erased, another one written in, that one also erased, and a third one, “Zuane Pizzi,” finally inserted. By a series of tests, he concludes tentatively that the author was named Zuane Pizzigano, a previously unknown member of a family of Venetian cartographers who were well-known a century earlier.</span></p>
+<p><span class="body">He then turns to the island of Antilia, and with painful thoroughness proves conclusively that the 1424 chart is the first document known in which the name or representation of Antilia appears. In itself, this gives the map immense historical value.</span></p>
+<p><span class="body">Whether Antilia was a real or mythical island has been argued by historians for generations. There is a whole literature on the subject, for, if real, it could only be the New World. There is nothing else west of the A/ores. Professor Cortesão believes Antilia did represent a real island, and his study, in essence, is an attempt to prove that it got onto the 1424 chart, and all others following it, as a real island because it had been seen by some unknown Portuguese navigators.</span></p>
+<p><span class="body">In the first chapter of his famous <span class="typestyle"> Historia de lax Indias</span> , begun about 1527, Bartolomé de Las Casas, doughty “Apostle of the Indians,” wrote: “In the seacharts made in times gone by, were depicted several islands in those seas and parts, especially the island called Antillia, and they placed it a little over two hundred leagues west of the Canary Islands and the Azores.” Antilia, indeed, had been appearing on maps since the middle of the Fifteenth Century, usually as a large rectangle in a group of four islands far out in the western reaches of the Atlantic. The other three islands (Satanazes, Saya, Ymana) changed their names from map to map and are believed to be a representation of Greenland, or of mythical islands reported in the legends of the Irish and Norsemen. </span></p>
+<p><span class="body">Antilia provides the historian with more substance. Usually it was shown with the names of seven cities, and was considered either an island or large land mass to which seven Portuguese bishops and their flocks fled by boat in 734 <span class="typestyle"> A.D.</span> when the Moors overran the Iberian Peninsula. The legend of the bishops and the seven cities they founded gained strength during the late Middle Ages and persisted in the fancies of Spanish and Portuguese conquistadores long alter Columbus, finally dying hard in the modest Indian pueblos of New Mexico which Coronado had fervently expected would turn out to be the fabled cities of the bishops, now plated in gold and hung with jewels. </span></p>
+<p><span class="body">Many navigators of the Fifteenth Century knew about Antilia and, fanciful or real, attempted to find it. There is documentary evidence of a letter patent of Alfonso V of Portugal, dated November 10, 1475, granting to Fernão Teles “the Seven Cities or some other islands” that he might find in the western Atlantic. A similar grant was issued by João II in 1486 to Ferdnand van Olm, a Fleming who had settled in the Azores and was known as Fernão Dulmo. Columbus firmly believed that Antilia was a real island, with shores of gold-flecked sand, on the route to the Indies. He based much of his thinking on a letter said to have been written in 1474 by a Florentine physician, Paolo dal Pozzo Toscanelli, who wrote that a route to China passed by the island of Antilia “which is known to you.” And, among others, Martin Behaim who drew a famous globe in 1492 prior to the news of Columbus’ discovery noted that Antilia had been seen by mariners as early as 1414, information he supposedly acquired in the Azores where he lived during the 1480’s.</span></p>
+<p><span class="body">There still remains no documentary proof of a real landfall, and Professor Cortesão must build his case on circumstantial evidence. He commences with a detailed study of what knowledge we have of early Phoenician navigations as far back as 1500 <span class="typestyle"> B.C.</span> The ancients credited the Phoenicians with long open-sea voyages that took them certainly to the Canary Islands and possibly to lands beyond. Their discoveries, though carefully guarded for commercial reasons, crept into the historiccal works of the Greeks and Romans, and such writers as Plato, Strabo, Diodorus Siculus, Herodotus and Pliny willed to the Middle Ages a vast heritage of Atlantic islands and lands across the ocean that supposedly had been found by Phoenician sailors. </span></p>
+<p><span class="body">The art of navigation died during the Dark Ages. but the tradition of faraway isles, once known to the ancients, persisted. New ones, spun from the myths and fables of Irish seafarers, the Norsemen and Arab cosmographers, found their places on maps until the outer borders of medieval charts were as crowded with islands as the Florida Keys. Reality began to creep in again with the rise of the Italian, Majorcan and Portuguese navigators late in the Thirteenth Century. As the art of nautical science revived, and mariners with the encouragement of Prince Henry the Navigator and the Portuguese kings pushed out into the unknown, legendary islands began to disappear from the maps, and real ones appeared. At this juncture, in 1424, Antilia, as the newly discovered Phillips map reveals, suddenly showed up on a sea chart for the first time.</span></p>
+<p><span class="body">Was it the result of an actual landfall? Returning to the Phoenicians, Professor Cortesão believes that their vessels might easily have been carried—either deliberately or by accident—by the northeast trades and currents from the Canaries to the Caribbean area, and then back to the Azores by the strong westerly winds farther north. Although this theory is opposed by Professor Morison, among others, Professor Cortesão draws on seafaring literature for reported cases of ships being driven across the Atlantic, and concludes the same could have happened to Fourteenth and Fifteenth Century Portuguese vessels sailing between the Canaries and Madeira. Certainly, he observes, Portuguese mariners know of the Sargasso Sea far west of the Azores prior to Columbus’ day, and there is no reason to believe they had not been through and beyond it.</span></p>
+<p><span class="body">Professor Cortesão adds another argument. Quite often, he points out, early maps showed Atlantic islands which some believe were mythical but which actually were in positions corresponding to real islands discovered much later. Madeira, for example, was officially discovered by Portuguese mariners in 1418-19, and the Azores in 1427, but sea charts from as far back as 1370 showed faithful representations of those islands, leading to the conclusion that navigators had reached them at that time and conveyed their knowledge to some chart-maker friend.</span></p>
+<p><span class="body">The same holds true, he concludes, in the case of Antilia. Somebody found the island prior to 1424, and while others, deliberately or by accident of wind and current, may also have seen it, the “official” discovery didn’t come until Columbus’ court-sponsored undertaking of 1492. Dr. Cortesão believes the true discoverer or discoverers were Portuguese because the map, though made by a Venetian, is in the Portuguese language. Moreover, Professor Cortesão points out that the name Antilia is composed of two Portuguese words, <span class="typestyle"> ante</span> or <span class="typestyle"> anti</span> (before) and <span class="typestyle"> illa</span> , an archaic form of <span class="typestyle"> ilha</span> (island), which might possibly mean “the island before” or “the island facing” Europe, or the continent just to its west which was assumed to be Asia. </span></p>
+<p><span class="body">If all this is accepted, the final step is easy: Antilia, the only land west of the Azores, must have been the island forefront or the eastern mainland of America, and the navigators who found it were the true discoverers of the New World. Their importance, above that of the Norsemen, Professor Cortesão says, was that the cartographical representation of what the Portuguese found, such as that shown by the 1424 chart, accelerated the Age of Discovery and gave inspiration and inducement to more aggressive explorers and exploiters like Columbus.</span></p>
+<p><span class="body">Since the completion of Dr. Cortesão’s study, the map has been purchased from Messrs. Robinson by the University of Minnesota Library and has become one of the prized possessions of its famous James Ford Bell Collection. The collection became part of the library in 1953 with funds provided by Mr. Bell, former board chairman of General Mills, and includes rare books and charts relating to the history of exploration and discovery. Some of the earliest accounts of the opening of new trade and travel routes among European nations and between Europe and distant lands are in the group, including the only known copy of the 1507 Waldseemüller globe map using the word “America” for the first time.</span></p>
+<p><span class="body">As the first representation of the real or fancied island of Antilia, bearing the parent name of the Caribbean Antilles of today, the 1424 Chart is a “find” of great historical importance, and a worthy addition to the Bell Collection. It is questionable, however, whether Dr. Cortesão’s conclusions concerning the map’s evidence of a pre-Columbian discovery of America will be generally accepted. He recognizes that, without the documentary proof of a specific voyage, the subject will ever remain in the realm of speculation and contention—“I know it only too well, alas,” he says. But the proof may yet show up, for the chart itself is impressive evidence that the final word on history is never written.</span></p>
+<div class="img-block"> </div>
+</div>
+      <div class="field field--name-field-article-keywords field--type-entity-reference field--label-hidden field--entity-reference-target-type-taxonomy-term clearfix">
+    <ul class='links field__items'>
+          <li><a href="/category/article-keywords/christopher-columbus" hreflang="en">Christopher Columbus</a></li>
+          <li><a href="/category/article-keywords/armando-cortesao" hreflang="en">Armando Cortesao</a></li>
+          <li><a href="/category/article-keywords/bartolome-de-las-casas" hreflang="en">Bartolome de Las Casas</a></li>
+          <li><a href="/category/article-keywords/pre-columbian-america" hreflang="en">Pre-Columbian America</a></li>
+          <li><a href="/category/article-keywords/first-contact" hreflang="en">First Contact</a></li>
+          <li><a href="/category/article-keywords/age-discovery" hreflang="en">Age of Discovery</a></li>
+          <li><a href="/category/article-keywords/paolo-dal-pozzo-toscanelli" hreflang="en">Paolo dal Pozzo Toscanelli</a></li>
+          <li><a href="/category/article-keywords/henry-navigator" hreflang="en">Henry the Navigator</a></li>
+          <li><a href="/category/article-keywords/azores" hreflang="en">Azores</a></li>
+          <li><a href="/category/article-keywords/antilles" hreflang="en">Antilles</a></li>
+      </ul>
+</div>
+     <div class="taboola-content">
+    <div id="taboola-below-article-thumbnails"></div>
+    <script type='text/javascript'>
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-a',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix'
+  });
+</script>
+          
+    </div>
+  </div>
+</article>
+
+    </div>
+  </div>
+<div id="block-donationbox" class="block block-block-content block-block-content548955bb-7b30-49a2-aab2-b965c882f5aa">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="widget widget_text widget-content-bottom" id="text-4">
+<h4 class="widgettitle">We hope you enjoyed this essay.</h4>
+<div class="textwidget">
+<p>Please support this 70-year tradition of trusted historical writing and the volunteers that sustain it with a donation to <i>American Heritage</i>.</p>
+<p><a class="btn btn--red" href="https://ahsociety.org/civicrm/contribute/transact?reset=1&amp;id=8">Donate</a></p>
+</div>
+</div>
+</div>
+      
+    </div>
+  </div>
+
+    </div>
+  
+                
+              </div>
+                          </section>
+
+            
+                        <aside class="col-md-4">
+                            <section id="sidebar-second" class="sidebar clearfix "
+                >
+                      <div class="region region-sidebar-second">
+      <div id="block-dfptagopenads-zone-block-zone-1-300x250" class="block block-dfp block-dfp-ad9866bd14-fbc9-4220-9d00-5cdf5bdf48ec">
+  
+    
+      <div class="content">
+      <div id="js-dfp-tag-openads_zone_block_zone_1_300x250">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-openads_zone_block_zone_1_300x250');
+        });
+    </script>
+</div>
+
+    </div>
+  </div>
+<div id="block-donationad" class="block block-block-content block-block-contenta3a2f0aa-e26a-49be-ba15-931a4617a12e">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+.slider {
+  margin: 0;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.anc {
+  position: absolute;
+  -webkit-animation: round 40s infinite;
+  opacity: 0;
+}
+
+.img_tag {
+  width: 100%;
+}
+
+@-webkit-keyframes round {
+  25% {
+    opacity: 1;
+    z-index: 9000;
+  }
+  40% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+.slider a:nth-child(2) {
+  -webkit-animation-delay: 20s;
+  -moz-animation-delay: 20s;
+  -ms-animation-delay: 20s;
+  -o-animation-delay: 20s;
+  animation-delay: 20s;
+}
+.slider a:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+/*--><!]]>*/
+</style><div class="slider"><a class="photo anc" href="https://ahsociety.org/civicrm/contribute/transact?reset=1&amp;id=8" target="_parent"><img alt="Help us save" class="img_tag" src="/sites/default/files/inline-images/020118HelpSaveAH-01.jpg" /></a> <a class="photo" href="https://ahsociety.org/civicrm/contribute/transact?reset=1&amp;id=9" target="_parent"><img alt="Free Subscription" class="img_tag" src="/sites/default/files/inline-images/020118FreeSubscriptions-01.jpg" /></a></div>
+</div>
+      
+    </div>
+  </div>
+<div id="block-dfptagopenads-zone-block-zone-5-300x250" class="block block-dfp block-dfp-ad4289ec23-3529-4dcb-992e-aac3a0956a55">
+  
+    
+      <div class="content">
+      <div id="js-dfp-tag-openads_zone_block_zone_5_300x250">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-openads_zone_block_zone_5_300x250');
+        });
+    </script>
+</div>
+
+    </div>
+  </div>
+<div id="block-dfptagopenads-zone-block-zone-6-300x250" class="block block-dfp block-dfp-ad091c9dbd-df96-4686-9c1f-e72507dd3947">
+  
+    
+      <div class="content">
+      <div id="js-dfp-tag-openads_zone_block_zone_6_300x250">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-openads_zone_block_zone_6_300x250');
+        });
+    </script>
+</div>
+
+    </div>
+  </div>
+<div id="block-dfptagopenads-zone-block-zone-7-300x250" class="block block-dfp block-dfp-ad845b0c8c-d516-4173-b1ea-690124d7678a">
+  
+    
+      <div class="content">
+      <div id="js-dfp-tag-openads_zone_block_zone_7_300x250">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-openads_zone_block_zone_7_300x250');
+        });
+    </script>
+</div>
+
+    </div>
+  </div>
+<div id="block-dfptagopenads-zone-block-zone-8-300x250" class="block block-dfp block-dfp-ad4f835e7d-c607-4914-83d7-9fdcbec7b6eb">
+  
+    
+      <div class="content">
+      <div id="js-dfp-tag-openads_zone_block_zone_8_300x250">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-openads_zone_block_zone_8_300x250');
+        });
+    </script>
+</div>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockmt-tags-cloud-block-1" id="block-views-block-mt-tags-cloud-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-mt-tags-cloud view-id-mt_tags_cloud view-display-id-block_1 js-view-dom-id-2bba10ba0511cd86b0108aec34b7ba929865170a6d23e5d01043278b63f89cfb">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/world-war-ii" hreflang="en">World War II</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/art-culture" hreflang="en">Art &amp; Culture</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/literature" hreflang="en">Literature</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/civil-war" hreflang="en">Civil War</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/george-washington" hreflang="en">George Washington</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/new-york" hreflang="en">New York</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/abraham-lincoln" hreflang="en">Abraham Lincoln</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/franklin-roosevelt" hreflang="en">Franklin Roosevelt</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/journalism" hreflang="en">Journalism</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/thomas-jefferson" hreflang="en">Thomas Jefferson</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/personal-history" hreflang="en">Personal history</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/american-revolution" hreflang="en">American Revolution</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/artists" hreflang="en">Artists</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/photography" hreflang="en">Photography</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/revolutionary-war" hreflang="en">Revolutionary War</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/world-war-i" hreflang="en">World War I</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/architecture" hreflang="en">Architecture</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/new-york-city" hreflang="en">New York City</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/theodore-roosevelt" hreflang="en">Theodore Roosevelt</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-name"><span class="field-content tag-cloud-row"><a href="/category/article-keywords/business-finance" hreflang="en">Business &amp; Finance</a></span></div></div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+  
+              </section>
+                          </aside>
+            
+          </div>
+
+        </div>
+        
+      </div>
+      
+    </div>
+
+  </div>
+  
+
+          <footer id="footer" class="clearfix">
+      <div class="container">
+
+        <div class="row">
+                      <div class="col-sm-4">
+              <div class="footer-area "
+                >
+                      <div class="region region-footer">
+      <div id="block-aboutamericanheritage" class="block block-block-content block-block-content81414c43-c514-4aa0-8b7a-1ab2ebfc1e7f">
+  
+      <h2 class="block__title title">About American Heritage</h2>
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>For 70 years, <em>American Heritage </em>has been the leading magazine of U.S. history, politics, and culture. <strong><em><a href="/about/magazine">Read more &gt;&gt;</a></em></strong></p>
+</div>
+      
+    </div>
+  </div>
+
+    </div>
+  
+              </div>
+            </div>
+          
+                      <div class="col-sm-4">
+              <div class="footer-area "
+                >
+                      <div class="region region-footer-second">
+      <div class="views-element-container block block-views block-views-blockarchive-block-1" id="block-views-block-archive-block-1">
+  
+      <h2 class="block__title title">Monthly archive</h2>
+    
+      <div class="content">
+      <div><div class="view view-archive view-id-archive view-display-id-block_1 js-view-dom-id-ad574ca4f280158eccbe617e828c264046f81caf5a452c683c90a9a608fe43dd">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  <ul class="views-summary">
+      <li>
+      <span class="item-list-link">
+        <a href="/archive/199709">September 1997</a>
+      </span>
+      <span class="count">
+                  1 post              </span>
+    </li>
+      <li>
+      <span class="item-list-link">
+        <a href="/archive/199802">February 1998</a>
+      </span>
+      <span class="count">
+                  1 post              </span>
+    </li>
+      <li>
+      <span class="item-list-link">
+        <a href="/archive/199805">May 1998</a>
+      </span>
+      <span class="count">
+                  2 posts              </span>
+    </li>
+      <li>
+      <span class="item-list-link">
+        <a href="/archive/199910">October 1999</a>
+      </span>
+      <span class="count">
+                  1 post              </span>
+    </li>
+      <li>
+      <span class="item-list-link">
+        <a href="/archive/200206">June 2002</a>
+      </span>
+      <span class="count">
+                  2 posts              </span>
+    </li>
+    </ul>
+</div>
+
+    </div>
+  
+          <div class="more-link"><a href="/archive">More</a></div>
+
+      </div>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+  
+              </div>
+            </div>
+          
+                      <div class="col-sm-4">
+              <div class="footer-area "
+                >
+                      <div class="region region-footer-third">
+      <div id="block-staytunedwithus" class="block block-block-content block-block-contentf337ca2e-88c0-48a5-a919-5bcbc606de69">
+  
+      <h2 class="block__title title">Stay tuned with us</h2>
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<ul class="icons-list"><li>
+<a class="hover-effect-1" href="https://www.facebook.com/ameriheritage/"><i class="fa fa-facebook"></i><span class="sr-only">Facebook</span></a>
+</li>
+<li>
+<a class="hover-effect-1" href="https://twitter.com/AmeriHeritage"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span></a>
+</li>
+<li>
+<a class="hover-effect-1" href="https://plus.google.com/posts"><i class="fa fa-google-plus"></i><span class="sr-only">Google+</span></a>
+</li>
+<li>
+<a class="hover-effect-1" href="http://www.linkedin.com/company/AmeriHeritage"><i class="fa fa-linkedin"></i><span class="sr-only">Linkedin</span></a>
+</li>
+<li>
+<a class="hover-effect-1" href="http://www.youtube.com/AmeriHeritage/"><i class="fa fa-youtube-play"></i><span class="sr-only">Youtube</span></a>
+</li>
+<li>
+<a class="hover-effect-1" href="http://instagram.com/AmeriHeritage"><i class="fa fa-instagram"></i><span class="sr-only">Instagram</span></a>
+</li>
+<!-- 
+<li><p><a href="http://www.flickr.com/photos/morethanthemes/"><i class="fa fa-flickr"></i><span class="sr-only">Flickr</span></a>
+</li>
+<li>
+<a href="http://vimeo.com/morethanthemes"><i class="fa fa-vimeo-square"></i><span class="sr-only">Vimeo</span></a>
+</li>
+<li>
+<a href="http://www.pinterest.com/morethanthemes/"><i class="fa fa-pinterest"></i><span class="sr-only">Pinterest</span></a>
+</li>
+<li>
+<a href="#"><i class="fa fa-skype"></i><span class="sr-only">Skype</span></a>
+</li>
+<p> -->
+</ul></div>
+</div>
+      
+    </div>
+  </div>
+
+    </div>
+  
+              </div>
+            </div>
+          
+                  </div>
+
+      </div>
+    </footer>
+      
+          <div id="subfooter" class="clearfix">
+      <div class="container">
+                <div id="subfooter-inside" class="clearfix">
+          <div class="row row--md-vcentered">
+                                        <div class="col-md-4">
+                <div class="subfooter-area first">
+                      <div class="region region-sub-footer-first">
+      <div id="block-copyright" class="block block-block-content block-block-content367510b9-2c00-45cd-b1d7-f766d2b0a1b0">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>© Copyright 1949-2018 American Heritage Publishing Co. All Rights Reserved. To license content, please contact licenses [at] americanheritage.com.</p></div>
+      
+    </div>
+  </div>
+
+    </div>
+  
+                </div>
+              </div>
+                                                                  <div class="col-md-4">
+                <div class="subfooter-area second">
+                        <div class="region region-sub-footer-second">
+      <div id="block-journaleight-sitebranding" class="clearfix site-branding block block-system block-system-branding-block">
+  
+    
+    <div class="logo-and-site-name-wrapper clearfix">
+              <div class="site-name site-branding__name">
+        <a href="/" title="Home" rel="home">AMERICAN HERITAGE</a>
+      </div>
+              <div class="site-slogan site-branding__slogan">Trusted Writing on History, Travel, Food and Culture Since 1949</div>
+      </div>
+</div>
+
+    </div>
+  
+                </div>
+              </div>
+                                                                  <div class="col-md-4">
+                <div class="subfooter-area third">
+                        <div class="region region-sub-footer-third">
+      <nav aria-labelledby="block-footermenulinks-menu" id="block-footermenulinks" class="block block-menu navigation menu--menu-footer-menu-links">
+            
+  <h2 class="visually-hidden block__title title" id="block-footermenulinks-menu">Footer menu links</h2>
+  
+
+    <div class="content">
+        <div class="menu-toggle-target menu-toggle-target-show" id="show-block-footermenulinks"></div>
+    <div class="menu-toggle-target" id="hide-block-footermenulinks"></div>
+    <a class="menu-toggle" href="#show-block-footermenulinks">Menu</a>
+    <a class="menu-toggle menu-toggle--hide" href="#hide-block-footermenulinks">Menu</a>
+    
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="http://www.ahsociety.org/">About the Society</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/advertising/media-kit" data-drupal-link-system-path="node/103845">Advertise With Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contact" data-drupal-link-system-path="contact">Contact Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/magazine/permissions-and-rights" data-drupal-link-system-path="node/54017">Licensing &amp; Permissions</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.americanheritage.com/node/132706">Privacy Policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+                <li class="menu-item">
+        <a href="/content/terms-of-use" data-drupal-link-system-path="node/62535">Terms of Use</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+</nav>
+
+    </div>
+  
+                </div>
+              </div>
+                                    </div>
+        </div>
+              </div>
+    </div>
+      
+        <div id="toTop"><i class="fa fa-long-arrow-up"></i></div>
+    
+</div>
+
+<script type='text/javascript'>
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/62006","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/base,classy\/messages,classy\/node,core\/html5shiv,core\/normalize,google_analytics\/google_analytics,journaleight\/bootstrap,journaleight\/color-light-indigo,journaleight\/fixed-header,journaleight\/flexslider,journaleight\/fontawesome,journaleight\/fonts-oswald,journaleight\/fonts-roboto-slab,journaleight\/global-styling,journaleight\/local-stylesheets,journaleight\/messages,journaleight\/node-features,journaleight\/to-top,openads\/openadgeneral,popup_dialog\/dialog_box,statistics\/drupal.statistics,superfish\/superfish,superfish\/superfish_smallscreen,superfish\/superfish_supersubs,system\/base,thunder_media\/gallery,views\/views.module","theme":"journaleight","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"enabled":1,"title":"","body":"\u003Cdiv class=\u0022popup-wrapper\u0022\u003E\r\n\u003Cdiv class=\u0022popup-left\u0022\u003E\u003Cimg alt=\u0022AH\u0022 data-entity-type=\u0022file\u0022 data-entity-uuid=\u00229ab6ce71-47ed-4e27-8fda-d5997fdcc533\u0022 src=\u0022\/sites\/default\/files\/AHcover_Summer2017.jpg\u0022 \/\u003E\u003C\/div\u003E\r\n\r\n\u003Cdiv class=\u0022popup-right\u0022\u003E\r\n\u003Ch2 class=\u0022hero-title\u0022\u003EWelcome to the relaunched \u003Cspan\u003EAmerican Heritage\u003C\/span\u003E\u003C\/h2\u003E\r\n\r\n\u003Cdiv class=\u0022popup-content\u0022\u003E\r\n\u003Cdiv class=\u0022popup-text clearfix\u0022\u003E\r\n\u003Cdiv class=\u0022text-left\u0022\u003E\r\n\u003Cp\u003ESignup for a FREE digital subscription!\u003C\/p\u003E\r\n\u003C\/div\u003E\r\n\r\n\u003Cdiv class=\u0022popup-btn\u0022\u003E\u003Ca class=\u0022button\u0022 href=\u0022https:\/\/ahsociety.org\/civicrm\/contribute\/transact?reset=1\u0026amp;id=9\u0022\u003ESign Up\u003C\/a\u003E\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n\r\n\u003Cdiv class=\u0022popup-text clearfix\u0022\u003E\r\n\u003Cdiv class=\u0022text-left\u0022\u003E\r\n\u003Cp\u003ESupport our nonprofit society and volunteers\u003C\/p\u003E\r\n\u003C\/div\u003E\r\n\r\n\u003Cdiv class=\u0022popup-btn\u0022\u003E\u003Ca class=\u0022button\u0022 href=\u0022https:\/\/ahsociety.org\/civicrm\/contribute\/transact?reset=1\u0026amp;id=8\u0022\u003EDonate\u003C\/a\u003E\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n\r\n\u003Cdiv class=\u0022popup-text clearfix\u0022\u003E\r\n\u003Cdiv class=\u0022text-left\u0022\u003E\r\n\u003Cp\u003ERead about our plans\u003C\/p\u003E\r\n\u003C\/div\u003E\r\n\r\n\u003Cdiv class=\u0022popup-btn\u0022\u003E\u003Ca class=\u0022button\u0022 href=\u0022https:\/\/ahsociety.org\/content\/plan-save-american-heritage\u0022\u003EInfo\u003C\/a\u003E\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n\r\n\u003Cp\u003EIn these divided times, knowledge about our shared history is more needed than ever.\u003C\/p\u003E\r\n\r\n\u003Cp\u003EHelp us provide trusted writing on American history for another 70 years.\u003C\/p\u003E\r\n\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n","delay":"5","top":"150","journaleight":{"sliderRevolutionBoxedInit":{"sliderRevolutionSlideshowBoxedEffectTime":5000,"sliderRevolutionSlideshowBoxedInitialHeight":610},"flexsliderMainInit":{"slideshowEffect":"fade","slideshowEffectTime":10000},"flexsliderInternalBannerSliderInit":{"internalBannerEffect":"slide"},"flexsliderBreakingSliderInit":{"breakingEffect":"fade","breakingEffectTime":5000}},"statistics":{"data":{"nid":"62006"},"url":"\/core\/modules\/statistics\/statistics.php"},"superfish":{"superfish-main":{"id":"superfish-main","sf":{"pathClass":"active-trail","pathLevels":"0","animation":{"opacity":"show","height":"show"},"speed":"fast","disableHI":true},"plugins":{"smallscreen":{"mode":"window_width","title":"Main navigation"},"supersubs":true}}},"user":{"uid":0,"permissionsHash":"1207304dc9f90ca9fc4932ebd7d80abb0f56c7eff504131117573b4b72072d82"}}</script>
+<script src="/core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.2.1"></script>
+<script src="/core/assets/vendor/jquery/jquery-extend-3.4.0.js?v=3.2.1"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.0"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.7.10"></script>
+<script src="/core/misc/drupal.js?v=8.7.10"></script>
+<script src="/core/misc/drupal.init.js?v=8.7.10"></script>
+<script src="/modules/google_analytics/js/google_analytics.js?v=8.7.10"></script>
+<script src="/modules/openads/openads.js?q67aq5"></script>
+<script src="/core/misc/progress.js?v=8.7.10"></script>
+<script src="/core/modules/responsive_image/js/responsive_image.ajax.js?v=8.7.10"></script>
+<script src="/core/misc/ajax.js?v=8.7.10"></script>
+<script src="/modules/popup_dialog/js/popup_dialog.js?q67aq5"></script>
+<script src="/themes/journaleight/bootstrap/js/bootstrap.min.js?v=8.7.10"></script>
+<script src="/themes/journaleight/js/flexslider/jquery.flexslider-min.js?v=8.7.10"></script>
+<script src="/profiles/thunder/modules/thunder_media/js/thunder_gallery.js?v=8.7.10"></script>
+<script src="/core/modules/statistics/statistics.js?v=8.7.10"></script>
+<script src="/themes/journaleight/js/custom/node-features.js?v=8.7.10"></script>
+<script src="/themes/journaleight/js/custom/jQuery.paginate.js?v=8.7.10"></script>
+<script src="/themes/journaleight/js/custom/body-pager.js?v=8.7.10"></script>
+<script src="/libraries/superfish/superfish.js?q67aq5"></script>
+<script src="/libraries/superfish/sfsmallscreen.js?q67aq5"></script>
+<script src="/libraries/superfish/supersubs.js?q67aq5"></script>
+<script src="/modules/superfish/js/superfish.js?v=2.0"></script>
+<script src="/themes/journaleight/js/custom/to-top.js?v=8.7.10"></script>
+<script src="/themes/journaleight/js/custom/fixed-header.js?v=8.7.10"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"137fa3d47f","applicationID":"60282449","transactionName":"NFVQYhFWCEVWAhIPWw0fc1UXXglYGBEHAVE8U1NVC1I=","queueTime":0,"applicationTime":26,"atts":"GBJTFFlMG0s=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

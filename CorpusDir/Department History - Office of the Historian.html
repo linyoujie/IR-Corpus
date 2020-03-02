@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html data-template="pages:app-root" lang="en" data-app="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="history.state.gov 3.0 shell">
+        <meta name="creator" content="">
+        <link href="/resources/images/favicon.ico" rel="shortcut icon">
+        <link href="/resources/css/all.css" rel="stylesheet" type="text/css">
+        <title>Department History - Office of the Historian</title>
+    </head>
+    <body id="body">
+        <header class="hsg-header" data-template="app:fix-links">
+            <section class="hsg-grid hsg-header-inner">
+                <div class="container hsg-header-content">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <a href="/">
+                                <img src="/resources/images/Office-of-the-Historian-logo_500x168.jpg" class="img-responsive" width="400" alt="Office of the Historian">
+                            </a>
+                        </div>
+                        <div class="col-sm-5">
+                            
+                                <div class="searchbox">
+                                    <form action="/search" method="get" class="main-form" id="navigationSearchForm">
+                                        <p class="form-group">
+                                            <!-- Search: -->
+                                            <input type="text" size="15" name="q" placeholder="Search..." class="form-control" id="search-box">
+                                            <button type="submit" class="hsg-link-button search-button btn">
+                                                <i class="hsg-search-button-icon"></i>
+                                            </button>
+                                        </p>
+                                    </form>
+                                </div>
+                            
+                        </div>
+                     </div>
+                </div>
+            </section>
+        </header>
+
+        <nav role="navigation" class="hsg-nav navbar navbar-default" data-template="app:fix-links">
+            <div class="container hsg-nav-content">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Menu</span>
+                        <i class="fa fa-bars"></i>
+                        <span class="toggle-text">Menu</span>
+                    </button><!--<a data-template="config:app-title" class="navbar-brand" href="./index.html">App Title</a>-->
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="/" shape="rect">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/historicaldocuments" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span>Historical Documents</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/historicaldocuments">
+                                        <em>Foreign Relations of the United States</em>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/historicaldocuments/about-frus">About the <em>Foreign Relations</em> Series</a>
+                                </li>
+                                <li>
+                                    <a href="/historicaldocuments/status-of-the-series">Current Status of the <em>Foreign Relations</em> Series</a>
+                                </li>
+                                <li>
+                                    <a href="/historicaldocuments/frus-history">History of the <em>Foreign Relations</em> Series</a>
+                                </li>
+                                <li>
+                                    <a href="/historicaldocuments/ebooks">Ebooks Initiative</a>
+                                </li>
+                                <li>
+                                    <a href="/historicaldocuments/quarterly-releases">Quarterly Releases</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="index_nav" class="dropdown">
+                            <a href="/departmenthistory" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span>Department History</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/departmenthistory">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/timeline">Administrative Timeline</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/people/secretaries">Biographies
+                                        of the Secretaries of State</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/people/principals-chiefs">Principal Officers and Chiefs of
+                                        Mission</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/travels/secretary">Travels of the Secretary of State</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/travels/president">Travels of the President</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/visits">Visits by Foreign Heads of State</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/wwi">World War I and the Department</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/buildings">Buildings of the Department of State</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/diplomatic-couriers">U.S. Diplomatic Couriers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="countries_nav" class="dropdown">
+                            <a href="/countries" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span>Guide to Countries</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/countries">Guide to Country Recognition and Relations</a>
+                                </li>
+                                <li>
+                                    <a href="/countries/archives">World Wide Diplomatic Archives Index</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="resources_nav" class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span>More Resources</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/tags">Browse Resources by Subject Tag</a>
+                                </li>
+                                <li>
+                                    <a href="/conferences">Conferences</a>
+                                </li>
+                                <li>
+                                    <a href="/about/contact-us">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="/developer">Developer Resources &amp; APIs</a>
+                                </li>
+                                <li>
+                                    <a href="/education">Educational Resources</a>
+                                </li>
+                                <li>
+                                    <a href="/about/faq">Frequently Asked Questions</a>
+                                </li>
+                                <li>
+                                    <a href="/milestones">Key Milestones</a>
+                                </li>
+                                <li>
+                                    <a href="/open">Open Government Initiative</a>
+                                </li>
+                                <li>
+                                    <a href="/departmenthistory/short-history">A Short History of the Department</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/about" shape="rect">
+                                <span>About Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hsg-main">
+            <section class="hsg-grid hsg-main-inner">
+                <div class="container hsg-main-content">
+                    <main id="content">
+    <div class="row">
+            <div class="hsg-breadcrumb-wrapper">
+                <ol class="breadcrumb" data-template="app:fix-links">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="/departmenthistory">Department History</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+                        <div class="row">
+            <div class="hsg-width-two-thirds">
+                <div id="content-inner" data-template="app:fix-links">
+                    <h1>Department History</h1>
+                    <p>Since its creation in 1789, the Department of State has carried out a series
+                        of reorganizations and has created new offices and bureaus to deal with new
+                        diplomatic challenges.</p>
+                    <p>This portion of our website contains 
+                        <a href="/departmenthistory/timeline">an Administrative Timeline of the
+                            Department of State</a>, <a href="/departmenthistory/people/secretaries">biographies of the Secretaries of State</a>, a database of <a href="/departmenthistory/people/principals-chiefs">Principal
+                            Officers and Chiefs of Mission</a>, and a history of <a href="/departmenthistory/buildings">the buildings of the Department
+                            of State</a>.</p>
+                    <p>The Department of State has grown significantly over the years. The first
+                        Secretary of State, Thomas Jefferson, oversaw a small staff of one chief
+                        clerk, three other clerks, a translator, and a messenger and only maintained
+                        two diplomatic posts, in London and Paris, as well as 10 consular posts. </p>
+                    <p>World War I (1914–1918) and World War II (1939–1945) brought vastly increased
+                        global responsibilities to the United States as it emerged as a preeminent
+                        power. New challenges after the end of the Cold War and the fall of the
+                        Soviet Union, included: <ul>
+                            <li>the newly independent states,</li>
+                            <li>the global economy,</li>
+                            <li>terrorism, and</li>
+                            <li>the security of the American overseas presence. </li>
+                        </ul>
+                    </p>
+                    <p>To address these changing global circumstances, the number of domestic and
+                        overseas employees (not counting local employees) grew to: <ul>
+                            <li>1,228 in 1900,</li>
+                            <li>1,968 in 1940,</li>
+                            <li>13,294 in 1960,</li>
+                            <li>and 15,751 in the year 2000.</li>
+                        </ul>
+                    </p>
+                    <p>The number of diplomatic posts increased from 41 in 1900 to 168 in 2004 and
+                        continues to grow.</p>
+                </div>
+            </div>
+            <aside class="hsg-width-one-third">
+                <div id="sections" class="hsg-panel" data-template="app:fix-links">
+                    <div class="hsg-panel-heading">
+                        <h2 class="hsg-sidebar-title">Department History</h2>
+                    </div>
+                    <ul class="hsg-list-group">
+                        <li class="hsg-list-group-item">
+                            <a href="/departmenthistory/timeline">Administrative Timeline of the
+                                Department of State</a>
+                        </li>
+                        <li class="hsg-list-group-item">
+                            <a href="/departmenthistory/buildings">Buildings of the
+                                Department</a>
+                        </li>
+                        <li class="hsg-list-group-item">
+                            <a href="/departmenthistory/people">People</a>
+                            <ul>
+                                <li class="hsg-list-group-item">
+                                    <a href="/departmenthistory/people/secretaries">Biographies
+                                        of the Secretaries of State</a>
+                                </li>
+                                <li class="hsg-list-group-item">
+                                    <a href="/departmenthistory/people/principals-chiefs">Principal Officers and Chiefs of Mission</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hsg-list-group-item">
+                            <a href="/departmenthistory/travels">Travels</a>
+                            <ul>
+                                <li class="hsg-list-group-item">
+                                    <a href="/departmenthistory/travels/secretary">Travels of
+                                        the Secretary</a>
+                                </li>
+                                <li class="hsg-list-group-item">
+                                    <a href="/departmenthistory/travels/president">Travels of
+                                        the President</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hsg-list-group-item">
+                            <a href="/departmenthistory/visits">Visits by Foreign Leaders</a>
+                        </li>
+                        <li class="hsg-list-group-item">
+                            <a href="/departmenthistory/wwi">World War I and the Department</a>
+                        </li>
+                        <li class="hsg-list-group-item">
+                            <a href="/departmenthistory/diplomatic-couriers">U.S. Diplomatic
+                                Couriers</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+</main>
+                </div>
+            </section>
+        </div>
+
+        <footer class="hsg-footer" data-template="app:fix-links">
+            <section class="hsg-grid hsg-footer-top">
+                <div class="container">
+                    <nav class="row">
+                        <ul class="hsg-footer-list">
+                            <h4>Learn more</h4>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/search">Search</a></li>
+                            <li><a href="/about/faq">FAQ</a></li>
+                        </ul>
+
+                        <ul class="hsg-footer-list">
+                            <h4>Topics</h4>
+                            <li><a href="/historicaldocuments/">Historical Documents</a></li>
+                            <li><a href="/departmenthistory/">Department History</a></li>
+                            <li><a href="/countries/">Countries</a></li>
+                        </ul>
+                        <ul class="hsg-footer-list">
+                            <h4>Contact</h4>
+                            <li><a href="/about/">About Us</a></li>
+                            <li><a href="/about/contact-us">Contact Us</a></li>
+                        </ul>
+
+                        <ul class="hsg-footer-list">
+                            <h4>Policies</h4>
+                            <li><a href="https://www.state.gov/misc/207091.htm">Accessibility Statement</a></li>
+                            <li><a href="https://www.state.gov/misc/415.htm">Privacy Policy</a></li>
+                            <li><a href="https://www.state.gov/misc/152386.htm">External Link Policy</a></li>
+                            <li><a href="https://www.state.gov/misc/87529.htm">Copyright Information</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <section class="hsg-grid hsg-footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <address class="col-xs-12 col-sm-12 col-md-12">
+                            <h4>Office of the Historian, Foreign Service Institute <br> <a href="http://www.state.gov">United States Department of State</a></h4>
+                            <p><a href="mailto:history@state.gov">history@state.gov</a></p>
+                            <p>Phone: 202-955-0200</p>
+                            <p>Fax: 202-955-0268</p>
+                        </address>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+        <script src="/resources/scripts/app.all.js" type="text/javascript" async></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-23344799-1']);
+          _gaq.push(['_setDomainName', 'history.state.gov']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {{
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          }})();
+        </script>
+        <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+        <script type="text/javascript" async src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOS" id="_fed_an_ua_tag"></script>
+    </body>
+</html>

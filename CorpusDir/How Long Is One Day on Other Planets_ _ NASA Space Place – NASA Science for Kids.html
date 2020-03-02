@@ -1,0 +1,787 @@
+<!doctype html>
+
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+  <title>How Long Is One Day on Other Planets? | NASA Space Place – NASA Science for Kids</title>
+  <meta name="description" content="Learn to make a graph with the answer!">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="p:domain_verify" content="6118cfa3a4def878b65ea2c155a245fc"/>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/css/all-styles.css?v=19">
+  <link rel="stylesheet" href="/css/css/solar-system.css?v=3">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <script src="/js/libs/modernizr-2.6.2.min-ck.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="/js/libs/jquery-ui-1.8.13.custom.min.js"></script>
+  <script src="/js/libs/jquery.beforeafter-1.4.min.js"></script>
+  <script src="/js/features.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0070/1109.js" async="async"></script>
+  
+  <!--<script type="text/javascript" src="/js/uncompressed/federated-analytics.js"></script>-->
+
+  <script>!window.jQuery && document.write('<script src="/js/jquery-1.4.2.min-ck.js"><\/script>')</script>
+  
+</head>
+
+<body class ="solar-system en">
+
+<!--[if lt IE 8]>
+    <link rel = "stylesheet" href = "/css/css/ie7.css"/>
+<![endif\-->
+
+<!--[if lt IE 7]>
+    <div class = "outdated-browser-warning">
+        <p>
+            You are using an outdated browser.  For a faster, safer, and more beautiful web upgrade for free today.
+            <a href = "http://www.apple.com/safari/" target="_blank"><img src = "/resources/icons/safari-logo.png" alt = "safari logo"></a>
+            <a href = "http://www.mozilla.com/en-US/firefox/" target="_blank"><img src = "/resources/icons/firefox-logo.png" alt = "firefox logo"></a>
+            <a href = "http://chrome.google.com" target="_blank"><img src = "/resources/icons/chrome-logo.png" alt = "google chrome logo"></a>
+        </p>
+    </div>
+<![endif]-->
+
+<div id="container" class ="container">
+
+
+    <div style = "display:none;" id = "page-uri-holder">days</div>
+    <div class = "tooltip">
+        <span class = "content"></span>
+        <div class = "tooltip-tip"></div>
+    </div><header id = "nasa-header">
+    <a href = "https://www.nasa.gov" target = "_blank">
+        <img id = "nasa-logo" src = "/resources/homepage/nasa.png">
+    </a>
+    <!--<a href = "https://science.nasa.gov" target = "_blank">
+        <img id = "nasa-science-logo" src = "/resources/homepage/nasa-science-logo.png">
+    </a>-->
+    <div id="site-logo-holder">
+	    <a href = "https://science.nasa.gov" target = "_blank">
+	        <img id = "nasa-science-logo" src = "/resources/homepage/nasa-science-logo-horizontal.png">
+	    </a>
+	    <a href = "/">
+	        <div id="spaceplace-text" class=""></div>
+	    </a>
+    </div>
+    <div id = "search-bar">
+                <form id = "search-form" action = "/search/" method="get">
+            <input type = "search" id = "search-input" class = "search-input" name = "q">
+            <img src = "/resources/homepage/search-button.png" alt="search button">
+        </form>
+    </div>
+    <div class = "clearfix"></div>
+</header>
+<header>
+    
+    
+    <div class = "clearfix"></div>
+    <nav class = "category-nav">
+	    
+	    <a href = "/menu/earth" class = "navItem"><div class="navIcon navEarth"></div><div class="navText">Earth</div></a>
+	    <a href = "/menu/sun" class = "navItem"><div class="navIcon navSun"></div><div class="navText">Sun</div></a>
+	    <a href = "/menu/solar-system" class = "navItem"><div class="navIcon navSolarSystem"></div><div class="navText">Solar System</div></a>
+	    <a href = "/menu/space" class = "navItem"><div class="navIcon navSpace"></div><div class="navText">Universe</div></a>
+	    <a href = "/menu/science-and-technology" class = "navItem"><div class="navIcon navScience"></div><div class="navText">Science and Tech</div></a>
+	    <a href = "/menu/parents-and-educators" class = "navItem"><div class="navIcon navEducators"></div><div class="navText">Educators</div></a>
+        
+    </nav>
+    <div class = "clearfix"></div>
+</header>
+    
+<div id = 'mission-tags'></div>
+
+<style type = "text/css">
+    #share-links{
+        position:absolute;
+        right:30px;
+        bottom:5px;
+    }
+    #share-links.long-title{
+        bottom:-28px;
+    }
+    #share-links div{
+        width:20px;
+        height:20px;
+        float:left;
+        margin-left:4px;
+        position:relative;
+    }
+
+    #share-links div.label{
+        width:30px;
+        color:black;
+        font-size:12px;
+        height:20px;
+        line-height:20px;
+        font-weight:bold;
+    }
+
+    #google-share{
+        width:32px !important;
+    }
+    #facebook-share{
+        width:55px !important;
+        margin-top:-5px;
+    }
+    #twitter-share{
+        background:url(/resources/icons/twitter.en.png);
+        text-indent:-10000px;
+        overflow:hidden;
+    }
+    #twitter-share a,
+    #facebook-share a{
+        position:absolute;
+        top:0;
+        left:0;
+        width:20px;
+        height:20px;
+    }
+    #email-share{
+        background:url(/resources/icons/email.en.png);
+    }
+
+</style>
+
+<div id = "content-wrapper">
+
+    <div id = "main">
+        <div class = "title">
+            <h1 style="font-size:16pt !important; margin-top:-5px; color:black !important;">How Long Is One Day on Other Planets?</h1>
+        </div>
+        <div class = "content">
+            <style>
+	img{
+		padding:0 !important;
+	}
+	
+	.slideShowCards{
+		position:relative;
+		background:#2a3890;
+	}
+	
+	.slideShowCard{
+		position:relative;
+		display:none;
+	}
+	
+	.slideShowCardImage{
+		background:#c6e7f6;
+	}
+	
+	.slideShowCardText{
+		padding:10px;
+		background:#2a3890;
+		color:white;
+		padding-bottom:40px;
+	}
+	
+	.leftArrow{
+		bottom:0;
+		margin-left:0px;
+	}
+	
+	.rightArrow{
+		bottom:0;
+		right:0px;
+	}
+	
+	.arrow{
+		position:absolute;
+		height:30px;
+		color:white;
+		cursor:pointer;
+		text-align:center;
+		line-height: 30px;
+		-webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	    -khtml-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	    padding:10px;
+	    font-size:25px;
+	}
+	
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var slideshow = $(".slides");
+		
+		slideshow.each(function(){
+			$(this).children().first().show();
+			$(this).parent().attr("currSlide", $(this).children().first().index());
+		});
+		
+		//wait until all images load in slideshow
+		var numSlides = $(".slideShowImg").length;
+		var numLoaded = 0;
+		$(".slideShowImg").each(function(){
+			$(this).load(function(){
+				/*numLoaded++;
+				
+				//if they are all loaded, set height of container div
+				if(numLoaded == numSlides){
+					setSlideshowHeight();
+				}*/
+				
+				//just check every time...
+				setSlideshowHeight();
+			});
+		});
+		//check height now anyway in case they are already loaded
+		setSlideshowHeight();
+		
+		//set up arrows
+		$(".rightArrow").click(function(){
+			var currSlide = parseInt($(this).parent().attr("currSlide"));
+			var slides = $(this).parent().find(".slides").children();
+			
+			//fade in left arrow
+			$(this).parent().find(".leftArrow").fadeIn();
+			
+			if(currSlide + 1 < parseInt(slides.length)){
+				slides.eq(currSlide).hide();
+				slides.eq(currSlide + 1).show();
+				$(this).parent().attr("currSlide", currSlide+1);
+				
+				//remove it if at end
+				if(currSlide + 2 >= parseInt(slides.length)){
+					$(this).fadeOut();
+				}
+			}
+		});
+		
+		$(".leftArrow").hide();
+		$(".leftArrow").click(function(){
+			var currSlide = parseInt($(this).parent().attr("currSlide"));
+			var slides = $(this).parent().find(".slides").children();
+			
+			//fade in right arrow
+			$(this).parent().find(".rightArrow").fadeIn();
+			
+			if(currSlide - 1 >= 0){
+				slides.eq(currSlide).hide();
+				slides.eq(currSlide - 1).show();
+				$(this).parent().attr("currSlide", currSlide-1);
+				
+				//remove it if at beginning
+				if(currSlide - 2 < 0){
+					$(this).fadeOut();
+				}
+			}
+		});
+	});
+	
+	function setSlideshowHeight(){
+		//figure out tallest div in each slideshow
+		$(".slideShowCards").each(function(){
+			var tallest = 0;
+			$(this).find(".slides").children().each(function(){
+				if($(this).height() > tallest){
+					tallest = $(this).height();
+				}
+			});
+			$(this).height(tallest);
+		});
+	}
+</script>
+
+<span class="standardFontSize">
+
+<div class="wh-featured-snippet" style="position:relative">
+	<div style="border:5px solid #01118e;padding:25px;max-width:100%;margin:15px 0">
+		<div style="position: absolute;top:-15px;margin-left: 25px;background: #fff;padding: 5px;"><strong>The Short Answer:</strong></div>
+		<div>
+			<table width = "100%">
+			<tr>	
+				<td width="50%"><h4><p>Planet</p></h4></td>
+				<td><h4><p>Day Length</p></h4></td>
+			</tr>
+			<tr>
+				<td>Mercury</td>
+				<td>1,408 hours</td>
+			</tr>
+			<tr>
+				<td>Venus</td>
+				<td>5,832 hours</td>
+			</tr>
+			<tr>
+				<td>Earth</td>
+				<td>24 hours</td>
+			</tr>
+			<tr>
+				<td>Mars</td>
+				<td>25 hours</td>
+			</tr>
+			<tr>
+				<td>Jupiter</td>
+				<td>10 hours</td>
+			</tr>
+			<tr>
+				<td>Saturn</td>
+				<td>11 hours</td>
+			</tr>
+			<tr>
+				<td>Uranus</td>
+				<td>17 hours</td>
+			</tr>
+			<tr>
+				<td>Neptune</td>
+				<td>16 hours</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<p>When you think of a day, you normally think of one cycle of daytime to nighttime. That is called a <b>solar day</b>. On Earth, a solar day is around 24 hours. However, Earth’s orbit is elliptical, meaning it’s not a perfect circle. That means some solar days on Earth are a few minutes longer than 24 hours and some are a few minutes shorter.</p>
+
+<div class = "image-with-caption right" style = "width:320px">  
+<a href = "/review/days/earth-cartoons-01.en.png" class = "lightbox"><img src = "/review/days/earth-cartoons-01.en.png" alt = "earth days are 23.934 hours long" width = "300"></a>
+</div>
+ 
+<p>Another way to measure a day is to count the amount of time it takes for a planet to completely spin around and make one full rotation. This is called a <b>sidereal day</b>. On Earth, a sidereal day is almost exactly 23 hours and 56 minutes.</p>
+ 
+<p>We know how long an Earth day is, but how about the other planets in our solar system? How long does it take for those planets to spin one full rotation? And what is the best way to show the answer to this question?<br><br>Let’s look at a few options.</p>
+
+<br>
+
+<h2 class="Quicksand">Option 1: A Paragraph</h2>
+
+<p>We can write a paragraph about how long days last on other planets.</p>
+
+<div class = "image-with-caption right" style = "width:320px">  
+<a href = "/review/days/earth-cartoons-02.en.png" class = "lightbox"><br><img src = "/review/days/earth-cartoons-02.en.png" alt = "earth says, this isn't very helpful" width = "300"></a>
+</div>
+
+<p><i>On Mercury a day lasts 1,408 hours, and on Venus it lasts 5,832 hours. On Earth and Mars it’s very similar. Earth takes 24 hours to complete one spin, and Mars takes 25 hours. The gas giants rotate really fast. Jupiter takes just 10 hours to complete one rotation. Saturn takes 11 hours, Uranus takes 17 hours, and Neptune takes 16 hours.</i></p>
+
+<p>Reading that paragraph took a while, and it’s hard to find all the numbers. Let’s see how it looks if we put it in a table.</p>
+
+
+<div class = "image-with-caption right" style = "width:320px">  <br><br><br>
+<a href = "/review/days/earth-cartoons-03.en.png" class = "lightbox"><img src = "/review/days/earth-cartoons-03.en.png" alt = "earth says, mmm, this is okay" width = "300"></a>
+</div>
+
+<br>
+<h2 class="Quicksand">Option 2: A Table</h2>
+
+<table width = "200">
+<tr>	
+	<td width="100px"><h4><p>Planet</p></h4></td>
+	<td><h4><p>Day Length</p></h4></td>
+</tr>
+<tr>
+	<td>Mercury</td>
+	<td>1,408 hours</td>
+</tr>
+<tr>
+	<td>Venus</td>
+	<td>5,832 hours</td>
+</tr>
+<tr>
+	<td>Earth</td>
+	<td>24 hours</td>
+</tr>
+<tr>
+	<td>Mars</td>
+	<td>25 hours</td>
+</tr>
+<tr>
+	<td>Jupiter</td>
+	<td>10 hours</td>
+</tr>
+<tr>
+	<td>Saturn</td>
+	<td>11 hours</td>
+</tr>
+<tr>
+	<td>Uranus</td>
+	<td>17 hours</td>
+</tr>
+<tr>
+	<td>Neptune</td>
+	<td>16 hours</td>
+</tr>
+</table>
+</br>
+
+<p>That’s a little bit better. We can look up and down at the numbers and can compare them more easily. But wouldn’t it be nice if we could see how big those differences are?</p>
+
+<p>Let’s make a graph with these numbers!</p>
+<br>
+<h2 class="Quicksand">Option 3: A Graph</h2>
+
+
+
+<div class="slideShowCards">
+	
+	<div class="slides">
+		<div class="slideShowCard">
+			<div class = "slideShowCardImage">  
+				<a href = "/review/days/Graph5-01.en.png" class = "lightbox"><img src = "/review/days/Graph5-01.en.png" alt = "a number line from 0 to 25" width = "100%" class="slideShowImg"></a>
+			</div>
+			<div class="slideShowCardText">
+				<p>To start, make a number line that starts at 0 and goes to the highest number you need to include. This first graph will only have <b>Earth, Mars, Jupiter, Saturn, Uranus,</b> and <b>Neptune</b> on it. We’ll save <b>Mercury</b> and <b>Venus</b> for later. You'll see why in a minute.</p>
+				<p>The longest day among those planets is 25 hours. That means our number line will go up to 25.</p>
+			</div>
+		</div>
+		
+		
+		<div class="slideShowCard">
+			<div class = "slideShowCardImage">  
+				<a href = "/review/days/Graph3-01.en.png" class = "lightbox"><img src = "/review/days/Graph3-01.en.png" alt = "a graph with the y-axis labeled as hours and the x-axis labeled with earth, mars, jupiter, saturn, uranus, and neptune" width = "100%" class="slideShowImg"></a>
+			</div>
+			<div class="slideShowCardText">
+				<p>Label the number line so you remember it represents hours. And write what information the graph will have at the top.</p>
+				<p>Along the bottom, write the names of the planets.</p>
+			</div>		
+		</div>
+		
+		
+		<div class="slideShowCard">
+			<div class = "slideShowCardImage">  
+				<a href = "/review/days/Graph2-01.en.png" class = "lightbox"><img src = "/review/days/Graph2-01.en.png" alt = "graph of lenghts of days on earth, mars, jupiter, saturn, uranus, and neptune" width = "100%" class="slideShowImg"></a>
+			</div>
+			<div class="slideShowCardText">
+				<p>Make a dot above the name of the planet next to the number of hours its day takes.</p>
+				<p>Our graph is coming together!</p>
+				<p>What do we do now? Color in the area below the dot to make a bar graph.</p>
+			</div>
+		</div>
+		
+		
+		<div class="slideShowCard">
+			<div class = "slideShowCardImage">  
+				<a href = "/review/days/Graph1-01.en.png" class = "lightbox"><img src = "/review/days/Graph1-01.en.png" alt = "graph of lenghts of days on earth, mars, jupiter, saturn, uranus, and neptune" width = "100%" class="slideShowImg"></a>
+			</div>
+			<div class="slideShowCardText">
+				<p>Now we can easily see which planet has the longest day, the shortest day, and everything in between. This is much easier that reading a list of numbers, don’t you think?</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="leftArrow arrow">&lt; PREVIOUS</div><div class="rightArrow arrow">NEXT &gt;</div>
+</div>
+
+<br/>
+<!-- NEXT SLIDESHOW -->
+
+<p>But what do we do about Mercury and Venus? Their days are <i>thousands</i> of hours long. How do we make a graph for those?</p>
+<br/>
+
+
+<div class="slideShowCards">
+	
+	<div class="slides">
+		
+		<div class="slideShowCard">
+			<div class = "slideShowCardImage">  
+				<a href = "/review/days/Graph4-02.en.png" class = "lightbox"><img src = "/review/days/Graph4-02.en.png" alt = "a number line from 0 to 6,000 in 1,000 steps" width = "100%" class="slideShowImg"></a>
+			</div>
+			<div class="slideShowCardText">
+				<p>We make a number line, but instead of numbers <i>1, 2, 3…</i> we will use <i>1,000, 2,000, 3,000…</i></p>
+			</div>
+		</div>
+		 
+		 
+		<div class="slideShowCard">
+			<div class = "slideShowCardImage">  
+				<a href = "/review/days/Graph2-02.en.png" class = "lightbox"><img src = "/review/days/Graph2-02.en.png" alt = "graph with mercury and venus day lengths" width = "100%" class="slideShowImg"></a>
+			</div>
+			<div class="slideShowCardText">
+				<p>Make a number line that goes all the way up to 6,000. Along the bottom, write Mercury and Venus. Above Mercury, mark a dot a little less than halfway between 1,000 and 2,000. It’s not going to be perfect, but that’s okay. Now make a dot a little under 6,000 for Venus. </p>
+			</div>
+		</div>
+		
+		
+		<div class="slideShowCard">
+			<div class = "slideShowCardImage">  
+				<a href = "/review/days/Graph1-02.en.png" class = "lightbox"><img src = "/review/days/Graph1-02.en.png" alt = "a graph of all the planets' lenghts of days" width = "100%" class="slideShowImg"></a>
+			</div>
+			<div class="slideShowCardText">
+				<p>Do you think we can include Earth, Mars, Jupiter, Saturn, Uranus, and Neptune on here? Their dots would be so close to 0 it would be hard to tell the difference between them. Graphs work best when the numbers are similar in size, usually with the same number of digits. </p>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="leftArrow arrow">&lt; PREVIOUS</div><div class="rightArrow arrow">NEXT &gt;</div>
+</div>
+
+<br/>
+ 
+<p>Now that you know how to make a graph, you can show all kinds of information this way. You can graph the time it takes to get to school each day, the number of pieces of pizza your friends can eat, and how many people like the color blue or green. Go on and get graphing!</p>
+
+
+<a href = "/review/days/earth-cartoons-05.en.png" class = "lightbox"><img src = "/review/days/earth-cartoons-05.en.png" alt = "earth says woohoo!" width = "500"></a>
+
+</span>
+        </div>
+        <div class="footerArticleUpdated">
+        	article last updated June 27, 2019
+        </div>
+    </div>
+
+
+
+    <style type = "text/css">
+        #similar{
+            float:left;
+            clear:both;
+            margin-top:10px;
+            background: white;
+            border-radius:10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            width:560px;
+        }
+        #similar .content{
+            padding:20px;
+        }
+        #similar .similar-item{
+            display:inline-block;
+            width:30%;
+            text-align:center;
+            margin-right:10px;
+        }
+        .similar-item img{
+            display:block;
+            margin:5px auto;
+        }
+        .similar-item a.similar-title{
+            display:block;
+            height:30px;
+        }
+        .sp #similar{
+        display:none;
+        }
+    </style>
+
+
+    <div id = "sidebar">
+
+        
+
+        <div class = "content">
+            <center>
+
+<h3 class="Quicksand">Explore some more!</h3>
+
+<span class="standardFontSize">
+
+<br>
+
+<a href="/all-about-earth" style="text-decoration: none;"><img src="/review/days/planets-03.en.png" alt="Cartoon Earth saying 'Life is great!'" style="border-radius: 30px" width="90%" >Learn all about Earth!</a>
+
+<br><br<br><br><br>
+
+<a href="/atmosphere" style="text-decoration: none;"><img src="/review/days/ground.en.png" alt="an illustration of Earth's troposphere" style="border-radius: 30px"  width="90%">Earth's Atmosphere</a>
+
+<br><br><br>
+
+</center>
+
+</span>
+
+
+        </div>
+
+    </div>
+    <div id = "similar">
+        <div class = 'content'>
+            <h3 class="Quicksand">If you liked this, you may like:</h3>
+<div class = 'similar-item'>
+    <a href = '/meteor-shower'><img src = "/resources/icons/meteor-shower.en.jpg" alt = "Similar Item 1 : What Is a Meteor Shower?"></a>
+    <a class = 'similar-title' href = '/meteor-shower'>What Is a Meteor Shower?</a>
+</div>
+<div class = 'similar-item'>
+    <a href = '/barycenter'><img src = "/resources/icons/barycenter.en.png" alt = "Similar Item 1 : What Is a Barycenter?"></a>
+    <a class = 'similar-title' href = '/barycenter'>What Is a Barycenter?</a>
+</div>
+<div class = 'similar-item'>
+    <a href = '/how-many-moons'><img src = "/resources/icons/how-many-moons.en.png" alt = "Similar Item 1 : How Many Moons?"></a>
+    <a class = 'similar-title' href = '/how-many-moons'>How Many Moons?</a>
+</div>
+
+        </div>
+    </div>
+    <div class = "clearfix"></div>
+</div>
+<footer>
+    
+    <div id = "skinny-footer">
+
+    <span class = "footer-links">
+        <a href="/about-us">About Us</a>
+        <a href= "https://www.nasa.gov/about/highlights/HP_Privacy.html" target="_blank">Privacy Policy</a>
+        <a href="/image-use">Image Use</a>
+    </span>
+
+    
+
+    <span class = "webmaster">NASA Official: Kristen Erickson</span>
+    <span class = "webmaster">Program Manager: Heather Doyle</span>
+    <span class = "contact"><a id = 'mail-link' href = "spaceplace.nasa.gov">Contact NASA Space Place</a></span>
+    <span class = "last-updated">
+        Last Updated: March 2nd, 2020    </span>
+    <script>
+        var prefix = "mail";
+        prefix = prefix + "to:";
+        prefix = prefix + "info";
+        prefix = prefix + "@";
+        $("#mail-link").attr('href', prefix + $('#mail-link').attr('href'));
+    </script>
+</div></footer>
+
+  </div> <!-- end of #container -->
+
+
+
+
+
+  <div class = "left-tray" id = "left-tray">
+    <div class = 'tab'>
+        <a href = "#left-tray" class = "more">More</a>
+        <a href = "#" class = "less">Less</a>
+    </div>
+    <div class = "tray-bg"></div>
+    <div class = 'content'>
+        <nav>
+            <h3>By Subject</h3>
+            <ul>
+                <li><a href = "/menu/space">Space</a></li>
+                <li><a href = "/menu/sun">Sun</a></li>
+                <li><a href = "/menu/earth">Earth</a></li>
+                <li><a href = "/menu/solar-system">Solar System</a></li>
+                <li><a href = "/menu/people-and-technology">People & Technology</a></li>
+                <li><a href = "/menu/parents-and-educators">Parents & Educators</a></li>
+            </ul>
+            <h3>By Type</h3>
+            <ul>
+                <li><a href = "/menu/explore">Explore</a></li>
+                <li><a href = "/menu/do">Do</a></li>
+                <li><a href = "/menu/play">Play</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+</div>
+
+<div class = "right-tray" id = "right-tray">
+    <div class = 'tab'>
+        <a href = "#right-tray" class = "more">More</a>
+        <a href = "#" class = "less">Less</a>
+    </div>
+    <div class = "tray-bg"></div>
+    <div class = "content sidebar">
+        <center>
+
+<h3 class="Quicksand">Explore some more!</h3>
+
+<span class="standardFontSize">
+
+<br>
+
+<a href="/all-about-earth" style="text-decoration: none;"><img src="/review/days/planets-03.png" alt="Cartoon Earth saying 'Life is great!'" style="border-radius: 30px" width="90%" >Learn all about Earth!</a>
+
+<br><br<br><br><br>
+
+<a href="/atmosphere" style="text-decoration: none;"><img src="/review/days/ground.png" alt="an illustration of Earth's troposphere" style="border-radius: 30px"  width="90%">Earth's Atmosphere</a>
+
+<br><br><br>
+
+</center>
+
+</span>
+
+    </div>
+</div>
+
+
+
+  <!--[if lt IE 7 ]>
+    <script src="js/dd_belatedpng.js?v=1"></script>
+  <![endif]-->
+
+  <!-- <script src="/js/profiling/yahoo-profiling.min.js?v=1"></script>
+  <script src="/js/profiling/config.js?v=1"></script> -->
+  <script src="/js/script-ck.js?v=2"></script>
+
+  
+  
+  <!--<script id="_fed_an_js_tag" type="text/javascript" src="/js/uncompressed/federatedanalytics.all.min.js?agency=NASA&subagency=JPL-Spaceplace"></script>-->
+<!-- <script src = "/js/uncompressed/omniture.js"></script>   -->
+<!--
+<script language="JavaScript" type="text/javascript"><!--
+s.pageName="How Long Is One Day on Other Planets?"
+s.channel="solar-system"
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//-->
+<!-- </script> -->
+
+<script id="_fed_an_ua_tag" type="text/javascript" src="//dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&pua=UA-15623173-3&subagency=JPL-Spaceplace&dclink=true&sp=search,s"></script>
+  
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-15623173-3', 'auto');
+	ga('require', 'linkid');
+	//ga('send', 'pageview');
+
+</script>
+
+<script>
+	
+var hasScrolled25 = false;
+var hasScrolled50 = false;
+var hasScrolled75 = false;
+var hasScrolled90 = false;
+	
+document.addEventListener('scroll', function(){
+ 
+    var h =  document.documentElement,
+        b =  document.body,
+        st =  'scrollTop',
+        sh =  'scrollHeight';
+ 
+    var percent = parseInt ( (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+
+	if (percent >= 25 && !hasScrolled25)
+	{
+		ga('send', 'event', 'Scrolling', 'moreThan25%', window.location.href, { 'nonInteraction': 1 });
+		hasScrolled25 = true;
+	}
+	else if (percent >= 50 && !hasScrolled50)
+	{
+		ga('send', 'event', 'Scrolling', 'moreThan50%', window.location.href, { 'nonInteraction': 1 });
+		hasScrolled50 = true;
+	}
+	else if (percent >= 75 && !hasScrolled75)
+	{
+		ga('send', 'event', 'Scrolling', 'moreThan75%', window.location.href, { 'nonInteraction': 1 });
+		hasScrolled75 = true;
+	}
+	else if (percent >= 90 && !hasScrolled90)
+	{
+		ga('send', 'event', 'Scrolling', 'moreThan90%', window.location.href, { 'nonInteraction': 1 });
+		hasScrolled90 = true;
+	}
+	
+});
+ 
+</script>
+
+
+</body>
+</html>

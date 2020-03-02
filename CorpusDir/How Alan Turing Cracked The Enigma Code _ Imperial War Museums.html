@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"e3073f3a73",applicationID:"106751683"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="How Alan Turing Cracked The Enigma Code | Imperial War Museums" />
+<meta name="twitter:card" content="summary" />
+<meta property="og:site_name" content="Imperial War Museums" />
+<link rel="canonical" href="http://www.iwm.org.uk/history/how-alan-turing-cracked-the-enigma-code" />
+<meta name="twitter:description" content="Until the release of the Oscar-nominated film The Imitation Game in 2014, the name ‘Alan Turing’ was not very widely known. But Turing’s work during the Second World War was so crucial that Winston Churchill acknowledged his role, saying that Turing made the single biggest contribution to Allied victory. " />
+<meta name="twitter:site" content="@I_W_M" />
+<meta name="twitter:title" content="How Alan Turing Cracked The Enigma Code" />
+<meta name="description" content="Until the release of the Oscar-nominated film The Imitation Game in 2014, the name ‘Alan Turing’ was not very widely known. But Turing’s work during the Second World War was so crucial that Winston Churchill acknowledged his role, saying that Turing made the single biggest contribution to Allied victory. " />
+<meta property="fb:app_id" content="585064855202587" />
+<meta name="twitter:site:id" content="23742474" />
+<meta property="og:url" content="http://www.iwm.org.uk/history/how-alan-turing-cracked-the-enigma-code" />
+<meta property="og:title" content="How Alan Turing Cracked The Enigma Code" />
+<meta name="twitter:url" content="http://www.iwm.org.uk/history/how-alan-turing-cracked-the-enigma-code" />
+<meta property="og:description" content="Until the release of the Oscar-nominated film The Imitation Game in 2014, the name ‘Alan Turing’ was not very widely known. But Turing’s work during the Second World War was so crucial that Winston Churchill acknowledged his role, saying that Turing made the single biggest contribution to Allied victory. " />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="http://www.iwm.org.uk/history/how-alan-turing-cracked-the-enigma-code" />
+
+    <title>How Alan Turing Cracked The Enigma Code | Imperial War Museums</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_JQyZ9StD4-4I5jikYtL8icbvn1b-f6xMTWUzpXDhKlc.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_vU2KyPj6buzROU_lawe4E886zQnSSLmKH2yLOqGWUMU.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/default/files/js/js_oNu_ypCeDayaaFVbT-fby-pP1GeihcFX3wKQx4vpBaU.js"></script>
+
+    <!-- Optimize Page Hiding Snippet --> <style>.async-hide { opacity: 0 !important} </style> <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date; h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')}; (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c; })(window,document.documentElement,'async-hide','dataLayer',4000, {'GTM-T3JXXP5':true});</script> <!-- end Optimize Page Hiding Snippet -->
+    <!-- Analytics-Optimize Snippet --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-26036778-10', 'auto', {allowLinker: true}); ga('require', 'GTM-T3JXXP5'); </script> <!-- end Analytics-Optimize Snippet -->
+    <!-- Google Tag Manager --> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-TTB2PZ');</script> <!-- End Google Tag Manager -->
+    <!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+    <script type='text/javascript'>
+    (function(){var g=function(e,h,f,g){
+    this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
+    this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
+    this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
+    this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g+ "&t=" + (new Date()).getTime();document.body&&document.body.appendChild(a)}};
+    this.start=function(){var a=this;window.addEventListener?window.addEventListener("load",function(){a.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){a.go()})}};
+    try{(new g(100,"r","QSI_S_ZN_9AhCpXM9sTF8ZJb","https://zn9ahcpxm9stf8zjb-pearsoninsight.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_9AhCpXM9sTF8ZJb")).start()}catch(i){}})();
+    </script><div id='ZN_9AhCpXM9sTF8ZJb'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+    <!--END WEBSITE FEEDBACK SNIPPET-->
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTB2PZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container">
+
+  <header role="banner">
+      <div>
+    <div id="block-heroblock">
+  
+    
+      
+            <div>
+<div id="text_hero_3077">
+<div class="hero ">
+    <div class="hero__nav ">
+    <div class="hero__menu">
+      <div class="header ">
+  <ul>
+    <li><button role="button" aria-haspopup="true" aria-controls="header__menu-wrap"><span class="header__button-text">Menu</span></button>
+      <div id="header__menu-wrap" class="header__menu-wrap--hidden">
+        <div class="menu-main">
+  <div class="menu-main__hold">
+    <div id="main-menu__close" class="menu-main__close">
+      <button aria-controls="header__menu-wrap" data-hide-class="header__menu-wrap--hidden">
+        <span class="menu-main__close-button">
+          <span class="menu-main__close-button__button">Close</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <g stroke-width="2" stroke-linecap="square">
+              <path d="M1 1 L19 19"/>
+              <path d="M19 1 L1 19"/>
+            </g>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="menu-main__title">Menu</div>
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation">
+            
+  <h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h2>
+  
+
+        
+              <ul>
+                    <li>
+                          <span role="button" tabindex="0" >Visit us</span>
+                                        <ul>
+                    <li>
+                          <a href="/visits/iwm-london" id="iwm-london" data-drupal-link-system-path="node/3">IWM London</a>
+                      </li>
+                <li>
+                          <a href="/visits/iwm-north" id="iwm-north" data-drupal-link-system-path="node/13">IWM North</a>
+                      </li>
+                <li>
+                          <a href="/visits/iwm-duxford" id="iwm-duxford" data-drupal-link-system-path="node/27">IWM Duxford</a>
+                      </li>
+                <li>
+                          <a href="/visits/churchill-war-rooms" id="churchill-war-rooms" data-drupal-link-system-path="node/4">Churchill War Rooms</a>
+                      </li>
+                <li>
+                          <a href="/visits/hms-belfast" id="hms-belfast" data-drupal-link-system-path="node/15">HMS Belfast</a>
+                      </li>
+        </ul>
+  
+              </li>
+                <li>
+                          <a href="/whats-on" id="whats-on" data-drupal-link-system-path="whats-on">What&#039;s on</a>
+                      </li>
+                <li>
+                          <a href="/history" id="stories" data-drupal-link-system-path="node/40">Stories</a>
+                      </li>
+                <li>
+                          <a href="/collections" target="_self" id="collections-online" data-drupal-link-system-path="node/28">Collections Online</a>
+                      </li>
+                <li>
+                          <a href="/learning" id="schools" data-drupal-link-system-path="node/42">Schools</a>
+                      </li>
+                <li>
+                          <span role="button" tabindex="0" >Join &amp; Support us</span>
+                                        <ul>
+                    <li>
+                          <a href="/membership" target="_self" id="become-a-member" data-drupal-link-system-path="node/59">Become a member</a>
+                      </li>
+                <li>
+                          <a href="/support-us" target="_self" id="make-a-donation" data-drupal-link-system-path="node/17">Make a donation</a>
+                      </li>
+                <li>
+                          <a href="/volunteer" target="_self" id="volunteer" data-drupal-link-system-path="node/212">Volunteer</a>
+                      </li>
+        </ul>
+  
+              </li>
+                <li>
+                          <a href="http://www.iwmshop.org.uk" id="shop">Shop</a>
+                      </li>
+                <li>
+                          <a href="/" id="home" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+                      </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+</div>
+      </div>
+    </li>
+    <li>
+      <button role="button" aria-haspopup="true" aria-controls="header__search-wrap"><span class="header__button-text">Search</span></button>
+      <div id="header__search-wrap" class="header__search-wrap--hidden">
+        <div class="global-search-bar">
+  <div class="global-search-bar__hold">
+    <div id="global-search-bar__close" class="global-search-bar__close">
+      <button aria-controls="header__search-wrap" data-hide-class="header__search-wrap--hidden">
+        <span class="global-search-bar__close-button">
+          <span class="global-search-bar__close-button__button">Close</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <g stroke-width="2" stroke-linecap="square">
+              <path d="M1 1 L19 19"/>
+              <path d="M19 1 L1 19"/>
+            </g>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="global-search-bar__title">Search</div>
+    
+  
+  
+
+  
+<div class="search-form__wrap  ">
+  <div class="search-form__row">
+    <div class="search-form__contain">
+              <div class="search-form__title">
+            How Alan Turing <em>Cracked The Enigma Code</em>
+      </div>
+            <form class=" search-form__form " action="/search/global">
+        <input class="search-form__form__query" id="search-form__input" value="" name="query" placeholder="Search our website, collections and shop" aria-label="Search our website, collections and shop" autocomplete="off">
+                <label class="search-form__form__submit" aria-labelledby="searchTitle" title="Search">
+          <input type="submit"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="44px" height="44px" viewBox="0 0 44 44">
+          <title id="searchTitle">Search</title>
+            <g class="search-form__icon" id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Search-Hero-1920px" transform="translate(-1512.000000, -113.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <g id="Group-5" transform="translate(1487.000000, 87.000000)">
+                  <path d="M40.0965801,56.7748918 L26.9734314,69.413964 L25.586036,67.9734314 L38.6556407,55.3859281 C35.7660993,52.2648849 34,48.0886898 34,43.5 C34,33.8350169 41.8350169,26 51.5,26 C61.1649831,26 69,33.8350169 69,43.5 C69,53.1649831 61.1649831,61 51.5,61 C47.1438357,61 43.15942,59.4083549 40.0965801,56.7748918 Z M51.5,59 C60.0604136,59 67,52.0604136 67,43.5 C67,34.9395864 60.0604136,28 51.5,28 C42.9395864,28 36,34.9395864 36,43.5 C36,52.0604136 42.9395864,59 51.5,59 Z" id="search"></path>
+                </g>
+              </g>
+            </g>
+            <g class="search-form__icon--alt" id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Search-Hero-1920px" transform="translate(-1512.000000, -113.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <g id="Group-5" transform="translate(1487.000000, 87.000000)">
+                  <path d="M40.0965801,56.7748918 L26.9734314,69.413964 L25.586036,67.9734314 L38.6556407,55.3859281 C35.7660993,52.2648849 34,48.0886898 34,43.5 C34,33.8350169 41.8350169,26 51.5,26 C61.1649831,26 69,33.8350169 69,43.5 C69,53.1649831 61.1649831,61 51.5,61 C47.1438357,61 43.15942,59.4083549 40.0965801,56.7748918 Z M51.5,59 C60.0604136,59 67,52.0604136 67,43.5 C67,34.9395864 60.0604136,28 51.5,28 C42.9395864,28 36,34.9395864 36,43.5 C36,52.0604136 42.9395864,59 51.5,59 Z" id="search"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </label>
+        <input type="hidden" name="pageSize" value="">
+        </form>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+      </div>
+    </li>
+  </ul>
+</div>
+    </div>
+          <a class="hero__nav__logo" href="/" title="Home">
+        <span class="sr-text">Home</span></a>
+      </div>
+        <div class="hero__contain">
+            <h1
+                >
+        
+            How Alan Turing <em>Cracked The Enigma Code</em>
+      </h1>
+              <div class="hero__subtext-outer">
+          <div class="hero__subtext">
+            <div class="hero__subtext-inner"></div>
+          </div>
+        </div>
+          </div>
+      </div>
+</div></div>
+      
+  </div>
+
+  </div>
+
+  </header>
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+        <div>
+    <div class="iwm-drupal-messages">
+  <div data-drupal-messages-fallback class="hidden"></div>
+</div>
+<div id="block-iwm-theme-content">
+  
+    
+      <article role="article" about="/history/how-alan-turing-cracked-the-enigma-code">
+
+  
+    
+
+  <div class='learning-resource-detail'>
+  <div class='learning-resource-detail__row'>
+        <div class='learning-resource-detail__author'>
+      <span class='learning-resource-detail__name'>IWM Staff</span>    </div>
+    
+    <div class='learning-resource-detail__pub'>
+      <small><span>Friday 5 January 2018</span>
+</small>
+    </div>
+      </div>
+</div>
+
+      <div class="season-link">
+  
+<div class="text-only text-only--center  ">
+  <div class="text-only__row">
+    <div class="text-only__content">
+      
+    </div>
+  </div>
+</div>
+</div>
+  
+  <div>
+    
+      <div>
+              <div><div id="text_only_3078">
+
+<div class="text-only text-only--center  ">
+  <div class="text-only__row">
+    <div class="text-only__content">
+      <p>Until the release of the Oscar-nominated film <em>The Imitation Game</em> in 2014, the name ‘Alan Turing’ was not very widely known. But Turing’s work during the <a href="http://www.iwm.org.uk/history/second-world-war">Second World War</a> was crucial. Who was Turing and what did he do that was so important?</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+              <div><div id="text_with_media_3079">
+<div class="text-with-media text-with-media--portrait ">
+  <div class="text-with-media__row">
+    <h3 class="text-with-media__title"></h3>
+    <div class="text-with-media__media-item">
+      <div class="text-with-media__media-item__contain">
+        
+            <article class="media media-image view-mode-text-with-media">
+  
+      
+            <div class="image-wrapper">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/text_with_media_large_desktop_1x/public/2018-01/npg_mw165875.jpg?itok=BMOpWRFl 1x" media="all and (min-width: 1350px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_desktop_1x/public/2018-01/npg_mw165875.jpg?itok=b7ZCQ6yl 1x" media="all and (min-width: 1024px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_tablet_1x/public/2018-01/npg_mw165875.jpg?itok=oU9Cl3zP 1x" media="all and (min-width: 768px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_mobile_/public/2018-01/npg_mw165875.jpg?itok=xsoD_kDD 1x" media="all and (min-width: 500px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_mobile_1x/public/2018-01/npg_mw165875.jpg?itok=vYpyoBGJ 1x, /sites/default/files/styles/text_with_media_mobile_2x/public/2018-01/npg_mw165875.jpg?itok=vLX5kJRE 2x" media="all and (min-width: 0px)"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="lazyload" data-aspectratio="525/727" src="/sites/default/files/styles/text_with_media_desktop_1x/public/2018-01/npg_mw165875.jpg?itok=b7ZCQ6yl" alt="Alan Turing in 1951" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+        <div class="caption">
+  <div class="caption__contain">
+    © National Portrait Gallery
+  </div>
+</div>
+  </article>
+
+      
+      </div>
+    </div>
+    <div class="text-with-media__text">
+      <h3 class="text-with-media__title--secondary"></h3>
+      
+            <h2><em>Mathematician</em></h2>
+
+<p>Alan Turing was a brilliant mathematician. Born in London in 1912, he studied at both Cambridge and Princeton universities. He was already working part-time for the British Government’s Code and Cypher School before the Second World War broke out. In 1939, Turing took up a full-time role at Bletchley Park in Buckinghamshire – where <a href="https://www.iwm.org.uk/history/secret-war-what-you-need-to-know">top secret work</a> was carried out to decipher the military codes used by Germany and its allies.</p>
+      
+    </div>
+  </div>
+</div></div></div>
+              <div><div id="text_with_media_3080">
+<div class="text-with-media text-with-media--portrait text-with-media--align-right">
+  <div class="text-with-media__row">
+    <h3 class="text-with-media__title"></h3>
+    <div class="text-with-media__media-item">
+      <div class="text-with-media__media-item__contain">
+        
+            <article class="media media-image view-mode-text-with-media">
+  
+      
+            <div class="image-wrapper">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/text_with_media_large_desktop_1x/public/2018-01/large_0.jpg?itok=Liw8W0Qm 1x" media="all and (min-width: 1350px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_desktop_1x/public/2018-01/large_0.jpg?itok=P8tYbQLB 1x" media="all and (min-width: 1024px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_tablet_1x/public/2018-01/large_0.jpg?itok=fvr_iZf1 1x" media="all and (min-width: 768px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_mobile_/public/2018-01/large_0.jpg?itok=UGnIy4A0 1x" media="all and (min-width: 500px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_mobile_1x/public/2018-01/large_0.jpg?itok=u28qXSTQ 1x, /sites/default/files/styles/text_with_media_mobile_2x/public/2018-01/large_0.jpg?itok=X5JHWjGS 2x" media="all and (min-width: 0px)"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="lazyload" data-aspectratio="625/713" src="/sites/default/files/styles/text_with_media_desktop_1x/public/2018-01/large_0.jpg?itok=P8tYbQLB" alt="The &#039;Enigma&#039;: A three-rotor German Enigma enciphering machine, built into a wooden case." typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+        <div class="caption">
+  <div class="caption__contain">
+    © IWM (COM 921)
+  </div>
+</div>
+  </article>
+
+      
+      </div>
+    </div>
+    <div class="text-with-media__text">
+      <h3 class="text-with-media__title--secondary"></h3>
+      
+            <h2><em>Enigma</em> and the Bombe</h2>
+
+<p>The main focus of Turing’s work at Bletchley was in cracking the ‘Enigma’ code. The Enigma was a type of enciphering machine used by the German armed forces to send messages securely. Although Polish mathematicians had worked out how to read Enigma messages and had shared this information with the British, the Germans increased its security at the outbreak of war by changing the cipher system daily. This made the task of understanding the code even more difficult.</p>
+
+<p>Turing played a key role in this, inventing – along with fellow code-breaker Gordon Welchman – a machine known as the Bombe. This device helped to significantly reduce the work of the code-breakers. From mid-1940, German Air Force signals were being read at Bletchley and the intelligence gained from them was helping the war effort.</p>
+      
+    </div>
+  </div>
+</div></div></div>
+              <div><div id="text_with_media_3081">
+<div class="text-with-media  ">
+  <div class="text-with-media__row">
+    <h3 class="text-with-media__title"></h3>
+    <div class="text-with-media__media-item">
+      <div class="text-with-media__media-item__contain">
+        
+            <article class="media media-image view-mode-text-with-media">
+  
+      
+            <div class="image-wrapper">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/text_with_media_large_desktop_1x/public/2018-01/by_draco2008_from_uk_bletchley_park_-_copy_2.jpg?itok=VzKw69Va 1x" media="all and (min-width: 1350px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_desktop_1x/public/2018-01/by_draco2008_from_uk_bletchley_park_-_copy_2.jpg?itok=BHbsZtg6 1x" media="all and (min-width: 1024px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_tablet_1x/public/2018-01/by_draco2008_from_uk_bletchley_park_-_copy_2.jpg?itok=7Vj-mBa3 1x" media="all and (min-width: 768px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_mobile_/public/2018-01/by_draco2008_from_uk_bletchley_park_-_copy_2.jpg?itok=fG0HomXd 1x" media="all and (min-width: 500px)"/>
+              <source srcset="/sites/default/files/styles/text_with_media_mobile_1x/public/2018-01/by_draco2008_from_uk_bletchley_park_-_copy_2.jpg?itok=QcanjJYj 1x, /sites/default/files/styles/text_with_media_mobile_2x/public/2018-01/by_draco2008_from_uk_bletchley_park_-_copy_2.jpg?itok=-rV4EUZs 2x" media="all and (min-width: 0px)"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="lazyload" data-aspectratio="800/600" src="/sites/default/files/styles/text_with_media_desktop_1x/public/2018-01/by_draco2008_from_uk_bletchley_park_-_copy_2.jpg?itok=BHbsZtg6" alt="Bletchley Park" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+        <div class="caption">
+  <div class="caption__contain">
+    © Draco2008
+  </div>
+</div>
+  </article>
+
+      
+      </div>
+    </div>
+    <div class="text-with-media__text">
+      <h3 class="text-with-media__title--secondary"></h3>
+      
+            <h2><em>Hut 8, </em>Bletchley Park</h2>
+
+<p>Turing also worked to decrypt the more complex German naval communications that had defeated many others at Bletchley. <a href="https://www.iwm.org.uk/history/what-you-need-to-know-about-the-battle-of-the-atlantic">German U-boats were inflicting heavy losses on Allied shipping</a> and the need to understand their signals was crucial. With the help of captured Enigma material, and Turing’s work in developing a technique he called 'Banburismus', the naval Enigma messages were able to be read from 1941.</p>
+
+<p>He headed the ‘Hut 8’ team at Bletchley, which carried out cryptanalysis of all German naval signals. This meant that – apart from during a period in 1942 when the code became unreadable – Allied convoys could be directed away from the U-boat 'wolf-packs'. Turing’s role was pivotal in helping the Allies during the Battle of the Atlantic.</p>
+      
+    </div>
+  </div>
+</div></div></div>
+              <div><div id="text_only_3082">
+
+<div class="text-only text-only--center  ">
+  <div class="text-only__row">
+    <div class="text-only__content">
+      <h3><em>Turingery and Delilah</em></h3>
+
+<p>In July 1942, Turing developed a complex code-breaking technique he named ‘Turingery’. This method fed into work by others at Bletchley in understanding the ‘Lorenz’ cipher machine. Lorenz enciphered German strategic messages of high importance: the ability of Bletchley to read these contributed greatly to the Allied war effort.</p>
+
+<p>Turing travelled to the United States in December 1942, to advise US military intelligence in the use of Bombe machines and to share his knowledge of Enigma. Whilst there, he also saw the latest American progress on a top secret speech enciphering system. Turing returned to Bletchley in March 1943, where he continued his work in cryptanalysis. Later in the war, he developed a speech scrambling device which he named ‘Delilah’. In 1945, Turing was awarded an OBE for his wartime work.</p>
+
+<h3><em>The Universal Turing Machine</em></h3>
+
+<p>In 1936, Turing had invented a hypothetical computing device that came to be known as the ‘universal Turing machine’. After the Second World War ended, he continued his research in this area, building on his earlier work and incorporating all he'd learnt during the war. Whilst working for the National Physical Laboratory (NPL), Turing published a design for the ACE (Automatic Computing Engine), which was arguably the forerunner to the modern computer. The ACE project was not taken forward, however, and he later left the NPL.</p>
+
+<h3><em>Legacy</em></h3>
+
+<p>In 1952, Alan Turing was arrested for homosexuality – which was then illegal in Britain. He was found guilty of ‘gross indecency’ (this conviction was overturned in 2013) but avoided a prison sentence by accepting chemical castration. In 1954, he was found dead from cyanide poisoning. An inquest ruled that it was suicide.</p>
+
+<p>The legacy of Alan Turing’s life and work did not fully come to light until long after his death. His impact on computer science has been widely acknowledged: the annual ‘Turing Award’ has been the highest accolade in that industry since 1966. But the work of Bletchley Park – and Turing’s role there in cracking the Enigma code – was kept secret until the 1970s, and the full story was not known until the 1990s. It has been estimated that the efforts of Turing and his fellow code-breakers shortened the war by several years. What is certain is that they saved countless lives and helped to determine the course and outcome of the conflict.</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+              <div><div id="newsletter_signup_19471">
+  
+<div class="newsletter-signup   ">
+  <div class="newsletter-signup__row">
+    <div class="newsletter-signup__container">
+
+            <div class="newsletter-signup__form-content">
+        <div class="newsletter-signup__title">
+          
+            Ordinary People, Extraordinary Stories…
+      
+        </div>
+        <div class="newsletter-signup__form-lower-row">
+          <div class="newsletter-signup__form-lower-content">
+            <div class="newsletter-signup__desc">
+              
+            <p><span><span>Sign up for more fascinating stories from our collections and be the first to hear about the latest exhibitions, events and offers from IWM.</span></span></p>
+      
+            </div>
+            <div class="newsletter-signup__form">
+              <form class="" action="/enews/signup" method="get">
+                <label for="email">
+                  <span>Email Address</span>
+                  <input type="email" name="email" placeholder="example@iwm.org.uk">
+                </label>
+                <button class="newsletter-signup__form-button" type="submit" name="button">Sign up</button>
+              </form>
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
+              <div><div id="teaser_listing_15173">
+
+<div class="teaser-listing teaser-listing--align-right ">
+  <div class="teaser-listing__row">
+          <h2>
+            <em> Explore </em> More Stories
+      </h2>
+        <div class="teaser-listing__subheading-container">
+      <div class="teaser-listing__subheading">
+        
+      </div>
+    </div>
+    <div class="teaser-listing__list">
+          <div class="teaser-listing__item teaser-listing__item--normal">
+        <div class="teaser">
+  <div class="teaser__wrapper">
+    <div class="teaser__media teaser__media--fix-ratio">
+      <div class="teaser__media-wrap">
+        <article class="media media-image view-mode-teaser-responsive">
+  
+      
+            <div class="image-wrapper">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://media.iwm.org.uk/loris/578/899/large_HU_067287.jpg/full/510,/0/default.jpg 1x" media="all and (min-width: 768px)"/>
+              <source srcset="https://media.iwm.org.uk/loris/578/899/large_HU_067287.jpg/full/340,/0/default.jpg 1x" media="all and (min-width: 500px) and (max-width: 767px)"/>
+              <source srcset="https://media.iwm.org.uk/loris/578/899/large_HU_067287.jpg/full/455,/0/default.jpg 1x, https://media.iwm.org.uk/loris/578/899/large_HU_067287.jpg/full/910,/0/default.jpg 2x" media="all and (min-width: 0px)"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="lazyload" data-aspectratio="800/565" src="https://media.iwm.org.uk/ciim5/578/899/large_HU_067287.jpg" alt="The Blitz." typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+        <div class="caption">
+  <div class="caption__contain">
+    © IWM (HU 067287)
+  </div>
+</div>
+  </article>
+
+        <div class="teaser__media-controls teaser__media-controls--none"></div>
+      </div>
+    </div>
+    <div class="teaser__content">
+              <div class="teaser__top-line">Second World War</div>
+            <h6 class="teaser__title"><a href="/history/amazing-colour-footage-of-london-during-the-blitz"><em>Amazing Colour Footage</em> Of London During The Blitz</a></h6>
+      <div class="teaser__body">From Piccadilly Circus to shop windows in Mayfair, discover what the scenes were like in London during The Blitz in these short clips filmed by amateur filmmaker Rosie Newman as part of her film<em> Britain At War.</em></div>
+    </div>
+      </div>
+</div>
+
+      </div>
+          <div class="teaser-listing__item teaser-listing__item--normal">
+        <div class="teaser">
+  <div class="teaser__wrapper">
+    <div class="teaser__media teaser__media--fix-ratio">
+      <div class="teaser__media-wrap">
+        <article class="media media-image view-mode-teaser-responsive">
+  
+      
+            <div class="image-wrapper">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://media.iwm.org.uk/loris/14/239/large_000000.jpg/full/510,/0/default.jpg 1x" media="all and (min-width: 768px)"/>
+              <source srcset="https://media.iwm.org.uk/loris/14/239/large_000000.jpg/full/340,/0/default.jpg 1x" media="all and (min-width: 500px) and (max-width: 767px)"/>
+              <source srcset="https://media.iwm.org.uk/loris/14/239/large_000000.jpg/full/455,/0/default.jpg 1x, https://media.iwm.org.uk/loris/14/239/large_000000.jpg/full/910,/0/default.jpg 2x" media="all and (min-width: 0px)"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="lazyload" data-aspectratio="790/800" src="https://media.iwm.org.uk/ciim5/14/239/large_000000.jpg" alt="The Home Guard: Photograph contrasting a 1940 Local Defence volunteer with a 1944 Home Guard. Both were members of 32 Surrey Battalion." typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+
+        <div class="teaser__media-controls teaser__media-controls--none"></div>
+      </div>
+    </div>
+    <div class="teaser__content">
+              <div class="teaser__top-line">Home front</div>
+            <h6 class="teaser__title"><a href="/history/the-real-dads-army">The Real <em>'Dad's Army'</em></a></h6>
+      <div class="teaser__body">The Home Guard was set up in May 1940 as Britain's 'last line of defence' against German invasion. Members of this 'Dad's Army' were usually men above or below the age of conscription and those unfit or ineligible for front line military service. </div>
+    </div>
+      </div>
+</div>
+
+      </div>
+          <div class="teaser-listing__item teaser-listing__item--normal">
+        <div class="teaser">
+  <div class="teaser__wrapper">
+    <div class="teaser__media teaser__media--fix-ratio">
+      <div class="teaser__media-wrap">
+        <article class="media media-image view-mode-teaser-responsive">
+  
+      
+            <div class="image-wrapper">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://media.iwm.org.uk/loris/49/841/super_000000.jpg/full/510,/0/default.jpg 1x" media="all and (min-width: 768px)"/>
+              <source srcset="https://media.iwm.org.uk/loris/49/841/super_000000.jpg/full/340,/0/default.jpg 1x" media="all and (min-width: 500px) and (max-width: 767px)"/>
+              <source srcset="https://media.iwm.org.uk/loris/49/841/super_000000.jpg/full/455,/0/default.jpg 1x, https://media.iwm.org.uk/loris/49/841/super_000000.jpg/full/910,/0/default.jpg 2x" media="all and (min-width: 0px)"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="lazyload" data-aspectratio="619/800" src="https://media.iwm.org.uk/ciim5/49/841/super_000000.jpg" alt="A member of the French Forces of the Interior (FFI) uses a truck for cover during gun battles with German snipers in Dreux, August 1944. During this period several French towns were liberated by the FFI in advance of Allied forces." typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+
+        <div class="teaser__media-controls teaser__media-controls--none"></div>
+      </div>
+    </div>
+    <div class="teaser__content">
+              <div class="teaser__top-line">Second World War</div>
+            <h6 class="teaser__title"><a href="/history/spies-saboteurs-and-d-day">Spies, Saboteurs And <em>D-Day</em></a></h6>
+      <div class="teaser__body">Resistance groups were active throughout German-occupied France and made important contributions to the Allied invasion of Normandy in June 1944. Special Operations Executive (SOE) had been set up in 1940 to coordinate and carry out subversive action against German forces in occupied countries, including France.</div>
+    </div>
+      </div>
+</div>
+
+      </div>
+        </div>
+    </div>
+  <div class="teaser-listing__bottom-text-container">
+    <div class="teaser-listing__bottom-text">
+      
+    </div>
+  </div>
+</div>
+</div></div>
+          </div>
+  
+            <div><div id="social_share_3083">
+<div class="social-share ">
+  <div class="social-share__content">
+    <span>Share this </span><span class="social-share__twitter"><a href="https://twitter.com/intent/tweet?text=How%20Alan%20Turing%20Cracked%20The%20Enigma%20Code&amp;url=http%3A//www.iwm.org.uk/history/how-alan-turing-cracked-the-enigma-code&amp;via=I_W_M">Share on twitter</a></span> <span class="social-share__facebook"><a href="https://www.facebook.com/share.php?u=http%3A//www.iwm.org.uk/history/how-alan-turing-cracked-the-enigma-code&amp;title=How%20Alan%20Turing%20Cracked%20The%20Enigma%20Code">Share on facebook</a></span>   </div>
+</div>
+</div></div>
+      
+  </div>
+
+</article>
+  </div>
+
+  </div>
+
+    </div>
+  </main>
+
+  
+  <footer class="footer">
+  <div class="footer__contain">
+    <div class="footer__logo">
+      <a href="/" title="Imperial War Museums Home">
+        <img src="/themes/custom/iwm_theme/assets/components/footer/logo-title.svg" alt="IWM Logo">
+      <span class="sr-text">Imperial War Museums home</span></a>
+      <a class="footer__connect" href="/connect" title="Connect with IWM">
+        <span>Connect with IWM</span>
+      </a>
+    </div>
+    <div class="footer__content">
+
+      <div class="footer__container">
+        <div class="footer__container-row">
+                      <div class="footer__menu">
+              <nav role="navigation" aria-labelledby="block-footeraboutiwm-menu" id="block-footeraboutiwm">
+      
+  <h2 id="block-footeraboutiwm-menu">What we do</h2>
+  
+
+        
+              <ul>
+                    <li>
+                          <a href="/about" target="_self" class="footer-link" id="about-us" data-drupal-link-system-path="node/631">About us</a>
+                      </li>
+                <li>
+                          <a href="https://www.iwm.org.uk/collections/managing" target="_self" class="footer-link" id="our-collections">Our collections</a>
+                      </li>
+                <li>
+                          <a href="/research" target="_self" class="footer-link" id="research" data-drupal-link-system-path="node/24">Research</a>
+                      </li>
+                <li>
+                          <a href="/partnerships" target="_self" class="footer-link" id="partnerships" data-drupal-link-system-path="node/19">Partnerships</a>
+                      </li>
+                <li>
+                          <a href="/iwm-institute" target="_self" class="footer-link" id="iwm-institute" data-drupal-link-system-path="node/865">IWM Institute</a>
+                      </li>
+                <li>
+                          <a href="/corporate" target="_self" class="footer-link" id="governance" data-drupal-link-system-path="node/38">Governance</a>
+                      </li>
+                <li>
+                          <a href="/corporate/press" target="_self" class="footer-link" id="press" data-drupal-link-system-path="node/72">Press</a>
+                      </li>
+                <li>
+                          <a href="/corporate/jobs" target="_self" class="footer-link" id="jobs" data-drupal-link-system-path="node/73">Jobs</a>
+                      </li>
+        </ul>
+  
+
+
+  </nav>
+
+            </div>
+                      <div class="footer__menu">
+              <nav role="navigation" aria-labelledby="block-footerplanavisit-menu" id="block-footerplanavisit">
+      
+  <h2 id="block-footerplanavisit-menu">Plan a Visit</h2>
+  
+
+        
+              <ul>
+                    <li>
+                          <a href="/visits/iwm-london" target="_self" class="footer-link" id="iwm-london" data-drupal-link-system-path="node/3">IWM London</a>
+                      </li>
+                <li>
+                          <a href="/visits/iwm-north" target="_self" class="footer-link" id="iwm-north" data-drupal-link-system-path="node/13">IWM North</a>
+                      </li>
+                <li>
+                          <a href="/visits/iwm-duxford" target="_self" class="footer-link" id="iwm-duxford" data-drupal-link-system-path="node/27">IWM Duxford</a>
+                      </li>
+                <li>
+                          <a href="/visits/churchill-war-rooms" target="_self" class="footer-link" id="churchill-war-rooms" data-drupal-link-system-path="node/4">Churchill War Rooms</a>
+                      </li>
+                <li>
+                          <a href="/visits/hms-belfast" target="_self" class="footer-link" id="hms-belfast" data-drupal-link-system-path="node/15">HMS Belfast</a>
+                      </li>
+                <li>
+                          <a href="/whats-on" target="_self" class="footer-link" id="exhibitions-events" data-drupal-link-system-path="whats-on">Exhibitions &amp; Events</a>
+                      </li>
+                <li>
+                          <a href="http://www.iwmshop.org.uk" target="_self" class="footer-link" id="shop">Shop</a>
+                      </li>
+        </ul>
+  
+
+
+  </nav>
+
+            </div>
+                      <div class="footer__menu">
+              <nav role="navigation" aria-labelledby="block-footersupportus-menu" id="block-footersupportus">
+      
+  <h2 id="block-footersupportus-menu">Support Us</h2>
+  
+
+        
+              <ul>
+                    <li>
+                          <a href="/membership" target="_self" class="footer-link" id="membership" data-drupal-link-system-path="node/59">Membership</a>
+                      </li>
+                <li>
+                          <a href="/support-us" target="_self" class="footer-link" id="donations" data-drupal-link-system-path="node/17">Donations</a>
+                      </li>
+                <li>
+                          <a href="/support-us/individuals" target="_self" class="footer-link" id="patrons" data-drupal-link-system-path="node/44">Patrons</a>
+                      </li>
+                <li>
+                          <a href="/support-us/corporate-partnerships" target="_self" class="footer-link" id="corporate-partnerships" data-drupal-link-system-path="node/47">Corporate partnerships</a>
+                      </li>
+                <li>
+                          <a href="/volunteer" target="_self" class="footer-link" id="volunteer" data-drupal-link-system-path="node/212">Volunteer</a>
+                      </li>
+        </ul>
+  
+
+
+  </nav>
+
+            </div>
+                      <div class="footer__menu">
+              <nav role="navigation" aria-labelledby="block-footeriwmfilmimages-menu" id="block-footeriwmfilmimages">
+      
+  <h2 id="block-footeriwmfilmimages-menu">IWM Film &amp; Images</h2>
+  
+
+        
+              <ul>
+                    <li>
+                          <a href="/commercial/licensing" target="_self" class="footer-link" id="media-licensing">Media licensing</a>
+                      </li>
+                <li>
+                          <a href="http://film.iwmcollections.org.uk" target="_self" class="footer-link" id="iwm-film">IWM Film</a>
+                      </li>
+                <li>
+                          <a href="http://www.iwmprints.org.uk" target="_self" class="footer-link" id="iwm-prints">IWM Prints</a>
+                      </li>
+        </ul>
+  
+
+
+  </nav>
+
+            </div>
+                      <div class="footer__menu">
+              <nav role="navigation" aria-labelledby="block-footeriwmcommercial-menu" id="block-footeriwmcommercial">
+      
+  <h2 id="block-footeriwmcommercial-menu">IWM Commercial</h2>
+  
+
+        
+              <ul>
+                    <li>
+                          <a href="/commercial/publishing" target="_self" class="footer-link" id="publishing" data-drupal-link-system-path="node/52">Publishing</a>
+                      </li>
+                <li>
+                          <a href="/commercial/brand-licensing" target="_self" class="footer-link" id="brand-licensing" data-drupal-link-system-path="node/50">Brand licensing</a>
+                      </li>
+                <li>
+                          <a href="/commercial/retail" target="_self" class="footer-link" id="retail" data-drupal-link-system-path="node/53">Retail</a>
+                      </li>
+                <li>
+                          <a href="/commercial/curator-consultancy" target="_self" class="footer-link" id="consultancy" data-drupal-link-system-path="node/1922">Consultancy</a>
+                      </li>
+        </ul>
+  
+
+
+  </nav>
+
+            </div>
+                      <div class="footer__menu">
+              <nav role="navigation" aria-labelledby="block-footeriwmvenues-menu" id="block-footeriwmvenues">
+      
+  <h2 id="block-footeriwmvenues-menu">IWM Hire</h2>
+  
+
+        
+              <ul>
+                    <li>
+                          <a href="/commercial/venue-hire" target="_self" class="footer-link" id="venue-hire" data-drupal-link-system-path="node/55">Venue hire</a>
+                      </li>
+                <li>
+                          <a href="/commercial/filming" target="_self" class="footer-link" id="film-locations" data-drupal-link-system-path="node/56">Film locations</a>
+                      </li>
+        </ul>
+  
+
+
+  </nav>
+
+            </div>
+                  </div>
+      </div>
+
+      <div class="footer__form-container">
+        <div class="footer__form-title-container">
+          <div class="footer__form-title">
+            Sign up to our eNews
+          </div>
+        </div>
+        <div class="footer__form">
+          <form action="/enews/signup">
+          <label for="email">
+            <span>Email Address</span>
+            <input type="email" name="email" placeholder="example@iwm.org.uk">
+          </label>
+          <button class="footer__form-button" type="submit" name="button">Sign up</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer__copy">
+      <a class="footer__connect" href="/connect" title="Connect with IWM">Connect with IWM</a>
+      <div class="footer__form-container footer__form-lower-container">
+        <div class="footer__form-title-container">
+          <div class="footer__form-title">
+            Sign up to our eNews
+          </div>
+        </div>
+        <div class="footer__form">
+          <form class="" action="/enews/signup">
+          <label for="email">
+            <span>Email Address</span>
+            <input type="email" name="email" placeholder="example@iwm.org.uk">
+          </label>
+          <button class="footer__form-button" type="submit" name="button">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <p><small>&copy; IWM 2020</small></p>
+      <p class="footer__copy__links"><small><a href="/corporate/policies/accessibility-statement">Accessibility statement</a></small><small><a href="/corporate/policies/privacy-copyright">Privacy and cookies</a></small><small><a href="/corporate/policies/copyright">Copyright</a></small><small><a href="/contact-us">Contact us</a></small></p>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/457","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","cookieconsent":{"message":"We use cookies and similar technologies to optimise your experience when using this site and to help tailor our digital advertising on third party sites. View our \u003Ca href=\u0022\/corporate\/policies\/cookies\u0022\u003Ecookie policy\u003C\/a\u003E and our \u003Ca href=\u0022\/corporate\/policies\/privacy\u0022\u003EPrivacy policies\u003C\/a\u003E.","dismiss":"Continue","learnMore":"Manage cookies","link":"\/corporate\/policies\/cookies\/manage","path":"\/","expiry":365,"target":"_self","domain":".www.iwm.org.uk","markup":"\u003Cdiv class=\u0022cc_banner cc_container cc_container--open\u0022\u003E\n  \u003Cdiv class=\u0022cc_contain\u0022\u003E\n    \u003Cp class=\u0022cc_message\u0022\u003EWe use cookies and similar technologies to optimise your experience when using this site and to help tailor our digital advertising on third party sites. View our \u003Ca href=\u0022\/corporate\/policies\/cookies\u0022\u003Ecookie policy\u003C\/a\u003E and our \u003Ca href=\u0022\/corporate\/policies\/privacy\u0022\u003EPrivacy policies\u003C\/a\u003E.\u003C\/p\u003E\n    \u003Cdiv class=\u0022cc_action\u0022\u003E\n      \u003Ca href=\u0022#null\u0022 data-cc-event=\u0022click:dismiss\u0022 target=\u0022_blank\u0022 class=\u0022cc_btn cc_btn_accept_all\u0022\u003E\u003C\/a\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","container":null,"theme":""},"user":{"uid":0,"permissionsHash":"d04c95117e4ddc10ddd327415b1a5934b2593020076cdb17383bc7cddcc2937c"}}</script>
+<script src="/sites/default/files/js/js_tGItmAd_RYzOYtchT7Pi9IIJKU33poDqfCkZUBhO9xc.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e3073f3a73","applicationID":"106751683,103530856","transactionName":"YV0EbUMDDxFUV0VeV1gXJ1pFCw4MGkRQUF1pWwdaWQc=","queueTime":0,"applicationTime":53,"atts":"TRoHGwsZHB8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>  ENIAC at Penn Engineering			
+</title>
+<meta name="description" content="  ENIAC at Penn Engineering" />
+<!-- favicon -->
+<link rel="icon" href="https://www.seas.upenn.edu/wp-content/uploads/2017/10/cropped-penn-engineering-favicon.png" type="image/png">
+<!-- favicon -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Penn Engineering &raquo; Feed" href="https://www.seas.upenn.edu/feed/" />
+<!-- This site uses the Google Analytics by ExactMetrics plugin v6.0.2 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var em_version         = '6.0.2';
+	var em_track_user      = true;
+	var em_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-1517333-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+
+	if ( 'undefined' === typeof gaOptout ) {
+		function gaOptout() {
+			__gaTrackerOptout();
+		}
+	}
+	
+	if ( em_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+window.ga = __gaTracker;		__gaTracker('create', 'UA-1517333-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+		__gaTracker( function() { window.ga = __gaTracker; } );
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + em_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+			window.ga = __gaTracker;		})();
+		}
+</script>
+<!-- / Google Analytics by ExactMetrics -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.seas.upenn.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.seas.upenn.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='page-list-style-css'  href='https://www.seas.upenn.edu/wp-content/plugins/page-list/css/page-list.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='https://www.seas.upenn.edu/wp-content/themes/Penn/_/css/normalize.min.css?ver=3.0.3' type='text/css' media='' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://www.seas.upenn.edu/wp-content/themes/Penn/_/css/bootstrap.css?ver=1.0' type='text/css' media='' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.seas.upenn.edu/wp-content/themes/Penn/_/css/font-awesome.min.css?ver=5.3.2' type='text/css' media='' />
+<link rel='stylesheet' id='owl-css'  href='https://www.seas.upenn.edu/wp-content/themes/Penn/_/js/owl.carousel.css?ver=5.3.2' type='text/css' media='' />
+<link rel='stylesheet' id='build-css'  href='https://www.seas.upenn.edu/wp-content/themes/Penn/_/css/build.css?ver=5.3.2' type='text/css' media='' />
+<link rel='stylesheet' id='styles-css'  href='https://www.seas.upenn.edu/wp-content/themes/Penn/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tmm-css'  href='https://www.seas.upenn.edu/wp-content/plugins/team-members/inc/css/tmm_style.css?ver=5.3.2' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,mp3,mpeg,pdf,docx,pptx,xlsx,rar","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/www.seas.upenn.edu","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend.min.js?ver=6.0.2'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.seas.upenn.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.seas.upenn.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.seas.upenn.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="https://www.seas.upenn.edu/about/history-heritage/eniac/" />
+<link rel='shortlink' href='https://www.seas.upenn.edu/?p=811' />
+<link rel="alternate" type="application/json+oembed" href="https://www.seas.upenn.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.seas.upenn.edu%2Fabout%2Fhistory-heritage%2Feniac%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.seas.upenn.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.seas.upenn.edu%2Fabout%2Fhistory-heritage%2Feniac%2F&#038;format=xml" />
+<link rel="icon" href="https://www.seas.upenn.edu/wp-content/uploads/2017/10/cropped-penn-engineering-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.seas.upenn.edu/wp-content/uploads/2017/10/cropped-penn-engineering-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.seas.upenn.edu/wp-content/uploads/2017/10/cropped-penn-engineering-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.seas.upenn.edu/wp-content/uploads/2017/10/cropped-penn-engineering-favicon-270x270.png" />
+<link rel="stylesheet" type="text/css" href="https://www.seas.upenn.edu/wp-content/themes/Penn/style.css" />
+<!-- Type Kit Start -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+<!-- Type Kit End -->
+
+
+</head>
+<body class="page-template page-template-template-fluidcontent page-template-template-fluidcontent-php page page-id-811 page-child parent-pageid-555">
+	<style type="text/css">
+		html { margin-top: 0px !important; }
+		* html body { margin-top: 0px !important; }
+		@media screen and ( max-width: 782px ) {
+			html { margin-top: 0px !important; }
+			* html body { margin-top: 0px !important; }
+		}
+	</style>
+	<div id="main_wrapper">
+		<header id="header" class="inside-page">
+			<div id="push_nav">
+												<div id="mobile-nav">
+					<div id="mobile-logo">
+						<a href="https://www.seas.upenn.edu/">
+							<img src="https://www.seas.upenn.edu/wp-content/uploads/2017/08/penn_logo.png" alt="Logo" id="mobile_logo">
+						</a>
+					</div>
+					<div id="mobile_search_toggle" class="search_toggle">
+						<i class="fa fa-search"></i>
+					</div>
+					<div id="mobile-toggle">
+						<span></span>
+					</div>
+
+				</div>
+								<div id="mobile--nav" class="nav">
+					<ul id="menu-main-nav" class="menu"><li id="menu-item-660" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-660"><a href="#">Academics</a>
+<ul class="sub-menu">
+	<li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="https://www.seas.upenn.edu/admissions/">Admissions</a></li>
+	<li id="menu-item-520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a href="https://www.seas.upenn.edu/academic-departments/">Departments</a></li>
+	<li id="menu-item-656" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="https://onlinelearning.seas.upenn.edu/">Online Learning</a></li>
+	<li id="menu-item-521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="https://www.seas.upenn.edu/opportunities-for-global-learning/">Global Learning</a></li>
+	<li id="menu-item-657" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-657"><a href="https://ugrad.seas.upenn.edu">Undergraduate Affairs</a></li>
+	<li id="menu-item-658" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-658"><a href="https://grad.seas.upenn.edu">Graduate Affairs</a></li>
+	<li id="menu-item-659" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-659"><a href="https://ras.seas.upenn.edu/k-12-programs/">K-12 Programs</a></li>
+</ul>
+</li>
+<li id="menu-item-662" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-662"><a href="#">Research</a>
+<ul class="sub-menu">
+	<li id="menu-item-663" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-663"><a href="https://research.seas.upenn.edu/strategic-initiatives/">Strategic Initiatives</a></li>
+	<li id="menu-item-664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-664"><a href="https://research.seas.upenn.edu/centers-institutes/">Centers + Institutes</a></li>
+	<li id="menu-item-665" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-665"><a href="https://research.seas.upenn.edu/undergraduate-research/">Undergraduate Research</a></li>
+	<li id="menu-item-666" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-666"><a href="https://research.seas.upenn.edu/collaboration/">Collaboration</a></li>
+	<li id="menu-item-667" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-667"><a href="http://www.seas.upenn.edu/directory/">Faculty Directory</a></li>
+</ul>
+</li>
+<li id="menu-item-668" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-668"><a href="#">Community</a>
+<ul class="sub-menu">
+	<li id="menu-item-672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-672"><a href="https://www.seas.upenn.edu/global-and-local-engagement/">Global and Local Engagement</a></li>
+	<li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="https://www.seas.upenn.edu/student-life-and-wellness/">Student Life and Wellness</a></li>
+	<li id="menu-item-670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-670"><a href="https://www.seas.upenn.edu/diversity-and-inclusion/">Diversity and Inclusion</a></li>
+	<li id="menu-item-669" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-669"><a href="https://www.seas.upenn.edu/energy-and-the-environment/">Energy and the Environment</a></li>
+</ul>
+</li>
+<li id="menu-item-661" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-661"><a href="#">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-569" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-569"><a href="https://www.seas.upenn.edu/about/">Overview</a></li>
+	<li id="menu-item-568" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-568"><a href="https://www.seas.upenn.edu/about/penn-engineering-2020/">Penn Engineering 2020</a></li>
+	<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-567"><a href="https://www.seas.upenn.edu/about/history-heritage/">History + Heritage</a></li>
+	<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566"><a href="https://www.seas.upenn.edu/about/school-leadership/">School Leadership</a></li>
+	<li id="menu-item-565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-565"><a href="https://www.seas.upenn.edu/about/board-of-overseers/">Board of Overseers</a></li>
+	<li id="menu-item-1005" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="https://www.seas.upenn.edu/about/office-site-list/">Administrative Office Websites</a></li>
+	<li id="menu-item-564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-564"><a href="https://www.seas.upenn.edu/about/visit-penn-engineering/">Visit Penn Engineering</a></li>
+</ul>
+</li>
+<li id="menu-item-673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-673"><a href="#">News + Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-674" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-674"><a href="https://news.seas.upenn.edu/newsroom/">Engineering News</a></li>
+	<li id="menu-item-675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-675"><a target="_blank" rel="noopener noreferrer" href="https://medium.com/penn-engineering">Engineering Blog</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-676"><a href="https://events.seas.upenn.edu/calendar/">Events</a></li>
+	<li id="menu-item-677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-677"><a href="https://news.seas.upenn.edu/penn-engineering-magazine/">Penn Engineering Magazine</a></li>
+	<li id="menu-item-678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-678"><a href="https://news.seas.upenn.edu/identity-kit/">Identity Kit</a></li>
+</ul>
+</li>
+</ul>					<div class="aux_right">
+					<ul id="menu-aux-right" class="menu"><li id="menu-item-927" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-927"><a href="https://www.seas.upenn.edu/admissions/">Apply</a></li>
+<li id="menu-item-533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-533"><a href="https://giving.aws.cloud.upenn.edu/?program=ENG">Make a Gift</a></li>
+<li id="menu-item-8" class="search_toggle menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="#">Search <i class="fa fa-search"></i></a></li>
+</ul>					</div>
+					<div class="aux_left">
+					<ul id="menu-aux-left" class="menu"><li id="menu-item-534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-534"><a href="https://ras.seas.upenn.edu">Current Students</a></li>
+<li id="menu-item-535" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-535"><a href="https://facultyaffairs.seas.upenn.edu">Faculty</a></li>
+<li id="menu-item-536" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-536"><a href="https://hr.seas.upenn.edu/">Staff</a></li>
+<li id="menu-item-537" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-537"><a href="https://dar.seas.upenn.edu">Alumni</a></li>
+</ul>					</div>
+				</div>
+				<div id="search-bar">
+					<div class="container">
+						<div class="row">
+							<script>
+ (function() {
+	 var cx = '013858703957139678513:03bertgvh3k';
+	 var gcse = document.createElement('script');
+	 gcse.type = 'text/javascript';
+	 gcse.async = true;
+	 gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+	 var s = document.getElementsByTagName('script')[0];
+	 s.parentNode.insertBefore(gcse, s);
+ })();
+</script>
+<gcse:search></gcse:search>	
+							<div class="search_toggle" id="search-close"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="aux_nav">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 nav aux_left">
+							<ul id="menu-aux-left-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-534"><a href="https://ras.seas.upenn.edu">Current Students</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-535"><a href="https://facultyaffairs.seas.upenn.edu">Faculty</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-536"><a href="https://hr.seas.upenn.edu/">Staff</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-537"><a href="https://dar.seas.upenn.edu">Alumni</a></li>
+</ul>						</div>
+						<div class="col-sm-12 nav aux_right">
+							<ul id="menu-aux-right-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-927"><a href="https://www.seas.upenn.edu/admissions/">Apply</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-533"><a href="https://giving.aws.cloud.upenn.edu/?program=ENG">Make a Gift</a></li>
+<li class="search_toggle menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="#">Search <i class="fa fa-search"></i></a></li>
+</ul>						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main_nav">
+				<div class="container">
+					<div class="row">
+						<div id="main_logo">
+							<a href="https://www.seas.upenn.edu/">
+								<img src="https://www.seas.upenn.edu/wp-content/uploads/2017/08/penn_logo.png" alt="Logo">
+							</a>		
+						</div>
+													<div id="main-nav">
+								<ul id="menu-main-nav-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-660"><a href="#">Academics</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="https://www.seas.upenn.edu/admissions/">Admissions</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a href="https://www.seas.upenn.edu/academic-departments/">Departments</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="https://onlinelearning.seas.upenn.edu/">Online Learning</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="https://www.seas.upenn.edu/opportunities-for-global-learning/">Global Learning</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-657"><a href="https://ugrad.seas.upenn.edu">Undergraduate Affairs</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-658"><a href="https://grad.seas.upenn.edu">Graduate Affairs</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-659"><a href="https://ras.seas.upenn.edu/k-12-programs/">K-12 Programs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-662"><a href="#">Research</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-663"><a href="https://research.seas.upenn.edu/strategic-initiatives/">Strategic Initiatives</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-664"><a href="https://research.seas.upenn.edu/centers-institutes/">Centers + Institutes</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-665"><a href="https://research.seas.upenn.edu/undergraduate-research/">Undergraduate Research</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-666"><a href="https://research.seas.upenn.edu/collaboration/">Collaboration</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-667"><a href="http://www.seas.upenn.edu/directory/">Faculty Directory</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-668"><a href="#">Community</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-672"><a href="https://www.seas.upenn.edu/global-and-local-engagement/">Global and Local Engagement</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="https://www.seas.upenn.edu/student-life-and-wellness/">Student Life and Wellness</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-670"><a href="https://www.seas.upenn.edu/diversity-and-inclusion/">Diversity and Inclusion</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-669"><a href="https://www.seas.upenn.edu/energy-and-the-environment/">Energy and the Environment</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-661"><a href="#">About</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-569"><a href="https://www.seas.upenn.edu/about/">Overview</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-568"><a href="https://www.seas.upenn.edu/about/penn-engineering-2020/">Penn Engineering 2020</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-567"><a href="https://www.seas.upenn.edu/about/history-heritage/">History + Heritage</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566"><a href="https://www.seas.upenn.edu/about/school-leadership/">School Leadership</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-565"><a href="https://www.seas.upenn.edu/about/board-of-overseers/">Board of Overseers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="https://www.seas.upenn.edu/about/office-site-list/">Administrative Office Websites</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-564"><a href="https://www.seas.upenn.edu/about/visit-penn-engineering/">Visit Penn Engineering</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-673"><a href="#">News + Events</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-674"><a href="https://news.seas.upenn.edu/newsroom/">Engineering News</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-675"><a target="_blank" rel="noopener noreferrer" href="https://medium.com/penn-engineering">Engineering Blog</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-676"><a href="https://events.seas.upenn.edu/calendar/">Events</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-677"><a href="https://news.seas.upenn.edu/penn-engineering-magazine/">Penn Engineering Magazine</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-678"><a href="https://news.seas.upenn.edu/identity-kit/">Identity Kit</a></li>
+</ul>
+</li>
+</ul>							</div>
+											</div>
+											
+				</div>
+			</div>
+		</header>
+		<div id="header_clear"></div>
+		<div id="content_wrapper">
+
+	<div id="penn_breadcrumbs">
+	<div class="container">
+		<div class="row">
+		<div class="col-sm-24">
+
+				
+		<ul id="p_bc">
+				 			 		<li>
+		 			<a href="https://www.seas.upenn.edu/about/">About</a>
+		 		</li>
+		 			 			 		<li>
+		 			<a href="https://www.seas.upenn.edu/about/history-heritage/">History + Heritage</a>
+		 		</li>
+		 			 				<li class="current_page">ENIAC at Penn Engineering</li>			
+		</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="single-page">
+	<div id="single-page-content">
+		<div class="content-holder" id="fluid_content_page">
+																
+			<div class="fluid_content_row " >
+				<div class="container">
+											<div class="row equalflx">
+																<div class="col-md-10 col-sm-11 align-fcimg-top">
+									<img src="https://www.seas.upenn.edu/wp-content/uploads/2018/01/ENIAC1.jpg">	
+								</div>
+								<div class="col-md-13 col-md-offset-1 col-sm-13">
+																			<h2>Celebrating Penn Engineering History: ENIAC</h2>
+																		<p>Originally announced on February 14, 1946, the Electronic Numerical Integrator and Computer (ENIAC), was the first general-purpose electronic computer. Hailed by <em>The New York Times</em> as &#8220;an amazing machine which applies electronic speeds for the first time to mathematical tasks hitherto too difficult and cumbersome for solution,&#8221; the ENIAC was a revolutionary piece of machinery in its day. It was constructed and operated here at The Moore School of Electrical Engineering, now part of the School of Engineering and Applied Science.</p>
+<p>Today, it is difficult to imagine how we could manage without the myriad electronic devices that we utilize each day. From our smartphones, touch screens, and tiny cameras to our automobiles, airplanes and medical equipment and devices, electronics is the engine driving us forward. And it was here at the University of Pennsylvania that it all began.</p>
+<p>The School of Engineering and Applied Science is proud to have on display four of the original 40 panels of the ENIAC, located on the ground floor of the <a href="https://www.facilities.upenn.edu/maps/locations/moore-school-building" target="_blank" rel="noopener">Moore School Building</a>. The artifacts represent approximately one-tenth of its original size.</p>
+																	</div>
+							</div>
+				
+
+				</div>			</div>
+										
+			<div class="fluid_content_row noBorder" >
+				<div class="container">
+											<div class="row">
+								<div class="col-sm-24">
+																											<div class="fc_accordion_holder row">
+																																						<div class="pe_accordion ">
+											<div class="pe_accordion_title">
+												<h3>Preceding Technologies</h3>
+												<span></span>
+											</div>
+											<div class="pe_accordion_content clearfix" >
+												<div class="pe_accordion_content_inner col-md-16 col-sm-18">
+													<p>Computation devices themselves are as ancient as the human race, and their story has also been rehearsed all the way back to the earliest digital devices &#8211; the fingers &#8211; by way of piles of stones to &#8220;Napier&#8217;s Bones,&#8221; an analogue device invented by the father of logarithms. The abacus is still in use after 5,000 years, while the slide rule, invented in 1621, was only superseded by the modern computer. Read on to learn about the inventions which contributed to the development of ENIAC and eventually, the computers we use today.</p>
+<p><strong>Mechanical Brains </strong> &#8211; These allowed humans to calculate larger mathematical operations faster than could be done &#8220;in the head&#8221; alone. Examples of these are:</p>
+<p style="padding-left: 30px;"><strong>The Abacus:</strong> Decks of beads and rods used to calculate addition, subtraction, division and multiplication, along with being able to extract square and cube roots. <a href="http://www.ee.ryerson.ca:8080/~elf/abacus/intro.html" target="_blank" rel="noopener">Learn more.</a></p>
+<p style="padding-left: 30px;"><strong>The Slide Rule: </strong>Ruler-shaped device used to calculate multiplication and division, along with more advanced functions such as logarithms and trigonometry. <a href="http://en.wikipedia.org/wiki/Slide_rule" target="_blank" rel="noopener">Learn more</a>.</p>
+<p style="padding-left: 30px;"><strong>The Difference Engine:</strong> Developed by Charles Babbage, this machine was an automatic calculator used to calculate polynomial functions. <a href="http://en.wikipedia.org/wiki/Difference_engine" target="_blank" rel="noopener">Learn more.</a></p>
+<p style="padding-left: 30px;"><strong>Mechanical Calculators:</strong> Various calculating machines, from desk-top size to hand-held, that allowed users to perform advanced mathematical functions. <a href="http://www.vintagecalculators.com/html/mechanical_calculators.html" target="_blank" rel="noopener">Learn more</a>.</p>
+<p style="padding-left: 30px;"><strong>The Differential Analyser:</strong> At Penn Engineering, the Differential Analyser was in use and operated by secret human &#8220;computors,&#8221; women during World War II who were employed at The Moore School doing ballistics calculations for the war effort. The Differential Analyser is considered by many to be ENIAC&#8217;s closest relative. <a href="http://en.wikipedia.org/wiki/Differential_analyser" target="_blank" rel="noopener">Learn more</a>.</p>
+<p><strong>Vacuum Tubes</strong> &#8211; used to create switches by manipulating the flow of electrons. Common uses were found in early radio and television sets. The better the tubes became, the faster switches were able to be turned on and off. This led to a faster computer, because computers at the time relied on these switches. <a href="http://en.wikipedia.org/wiki/Vacuum_tubes" target="_blank" rel="noopener">Learn more</a>.</p>
+<p><strong>Punched Cards</strong> &#8211; this technology was in the form of paper cards that contained digital information by the punched out holes in predetermined patterns on the cards. These cards were used in such areas as fairgrounds (to operate the player-pianos and organs) to controlling the textile looms in industrial mills. Punch cards were one of the earliest forms of data storage and programming of computers. <a href="http://en.wikipedia.org/wiki/Punched_cards">Learn more</a>.</p>
+												</div>
+											</div>
+										</div>
+																				<div class="pe_accordion ">
+											<div class="pe_accordion_title">
+												<h3>The Inventors: John W. Mauchly and J. Presper Eckert, Jr.</h3>
+												<span></span>
+											</div>
+											<div class="pe_accordion_content clearfix" >
+												<div class="pe_accordion_content_inner col-md-16 col-sm-18">
+													<p><img class="alignleft wp-image-818 size-full" src="https://www.seas.upenn.edu/wp-content/uploads/2018/01/eniac-mauchly.jpg" alt="John W. Mauchly" width="152" height="180" /></p>
+<p>The operators of the Differential Analyser &#8211; the team of women dubbed &#8220;human computors&#8221; and who were recruited and trained to run ballistics calculations for the war effort, were not the only ones working under top secret conditions at The Moore School.</p>
+<p><img class="size-full wp-image-817 alignright" src="https://www.seas.upenn.edu/wp-content/uploads/2018/01/eniac-eckert.jpg" alt="" width="152" height="180" />During the war, interest in speeding up computation was underlined by the need to be able to calculate the speed and trajectory of bombs and missiles. The government at this time funded a course taught at The Moore School called the Engineering, Science, Management War Training (ESMWT) course. It offered instruction in electronics and other subject relevant to the war effort. John Mauchly was a professor at Urisinus College when he enrolled in the course. Later, because of his outstanding performance at ESMWT, he was hired at Penn to replace professors called away to active duty. It was during this time that Mauchly met J. Presper Eckert, who was a graduate of Penn and hired to run the laboratory for the ESMWT course.</p>
+<p>Both men were keenly interested in speeding up the ability to perform computations. Despite the secret staffs of women at Penn and other locations, there was a backlog of ballistics computation building up, hampering the efforts of the troops fighting abroad. After securing a contract from the military&#8217;s Ballistics Research Laboratory (BRL), development of the ENIAC began.</p>
+<p>Mauchly was very much the visionary of the ENIAC&#8217;s use of mechanical and vacuum tube technologies. Eckert was the engineer of the project who solved it&#8217;s technical problems. The chief challenge was tube reliability in the operation of ENIAC. Eckert was able to get good reliability by running the tubes at one-quarter power. Together with a team of wiremen, programmers and draftsmen, the ENIAC was built. When it was operational, the machine was run by a team of six women.</p>
+<p>For the next nine years, the ENIAC served as the primary computing engine for the Army.</p>
+												</div>
+											</div>
+										</div>
+																				<div class="pe_accordion ">
+											<div class="pe_accordion_title">
+												<h3>The Women of ENIAC</h3>
+												<span></span>
+											</div>
+											<div class="pe_accordion_content clearfix" >
+												<div class="pe_accordion_content_inner col-md-16 col-sm-18">
+													<p>When ENIAC was finally unveiled at Penn in February 1946, two women had created the test run that wowed the media. But their work, and that of four other women who helped get ENIAC off the ground, was literally erased. Archival photos (such as the one at the top of this page) show both women and men working on the massive machine, but the articles and pictures published at the time feature only men.</p>
+<p>As modern engineers, we now celebrate the contributions of Kathleen McNulty Mauchly Antonelli, Jean Jennings Bartik, Frances (Betty) Snyder Holberton, Marlyn Wescoff Meltzer, Frances Bilas Spence, and Ruth Lichterman Teitelbaum. These women were hired as civil service employees by the U.S. Army during World War II to calculate bullet and missile trajectories at the Ballistic Research Laboratory, which consisted of staff from both the Army and The Moore School at Penn. They then went on to become the developers and eventual programmers of ENIAC.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Kathleen_Antonelli">Kathleen McNulty Mauchly Antonelli</a> graduated in 1942 from Chestnut Hill College with a degree in mathematics, one of only a few mathematics majors out of a class of 92 women.</li>
+<li><a href="https://en.wikipedia.org/wiki/Jean_Bartik">Jean Jennings Bartik</a> attended Northwest Missouri State Teachers College (now known Northwest Missouri State University), majoring in mathematics with a minor in English. She graduated in 1945 with the only mathematics degree in her class.</li>
+<li><a href="https://en.wikipedia.org/wiki/Betty_Holberton">Frances (Betty) Snyder Holberton</a> studied journalism at the University of Pennsylvania, and is credited with inventing breakpoints in computer debugging.</li>
+<li><a href="https://en.wikipedia.org/wiki/Marlyn_Meltzer">Marlyn Wescoff Meltzer</a> graduated from Temple University in 1942 and was one of the two women who carried out the 1946 public demonstration of ENIAC.</li>
+<li><a href="https://en.wikipedia.org/wiki/Frances_Spence">Frances Bilas Spence</a> was also a 1942 graduate of Chestnut Hill College, with a degree in mathematics and a minor in physics.</li>
+<li><a href="https://en.wikipedia.org/wiki/Ruth_Teitelbaum">Ruth Lichterman Teitelbaum</a> graduated from Hunter College with a degree in Mathematics. With Marlyn Meltzer, she carried out the February 1946 public demonstration of ENIAC.</li>
+</ul>
+<p>These women were among the very first programmers anywhere. During the year it was operational at The Moore School, they worked throughout each computation to direct ENIAC and its punch-card equipment, programmed it for each job by plugging in cables and setting switches, and partnered with scientists to develop programs for new problems.</p>
+<p>Thanks to historians, filmmakers and women in computer science who looked to them as role models, the “ENIAC Six” gained much-deserved recognition decades later and were inducted into the <a href="https://www.witi.com/halloffame/298369/ENIAC-Programmers-Kathleen-/">Women in Technology International Hall of Fame</a> in 1997.</p>
+<p>To learn more about the contributions of these women, click <a href="https://medium.com/penn-engineering/on-eniacs-anniversary-a-nod-to-its-female-computers-267c97a0a17">here</a>.</p>
+												</div>
+											</div>
+										</div>
+																				<div class="pe_accordion ">
+											<div class="pe_accordion_title">
+												<h3>What ENAIC Was and How it Worked</h3>
+												<span></span>
+											</div>
+											<div class="pe_accordion_content clearfix" >
+												<div class="pe_accordion_content_inner col-md-16 col-sm-18">
+													<p>When fully operational, ENIAC occupied a room 30 by 50 feet in size and weighed 30 tons. A total of 40 panels were arranged in a U-shape that measured 80 feet long at the front, and the 18,000 vacuum tubes required were more than 20 times as many as the total employed by all various systems aboard a wartime B-29 bomber. ENIAC&#8217;s circuits included 500,000 soldered joints with 70,000 resistors and 10,000 capacitors. ENIAC also had its own dedicated power lines and used 150 kilowatts of electricity.</p>
+<p>The operational characteristics of ENIAC included arithmetic, memory and control elements. Concerned with the arithmetic operations twenty accumulators for addition and subtraction, a multiplier and a combination divider and square rooter. The memory elements were composed of an &#8220;internal memory&#8221; consisting of two parts: the twenty ten-digit accumulators and the 6,000 switches and cables on the function tables, accumulators and &#8220;constant transmitters.&#8221; The unlimited &#8220;external memory&#8221; was supplied from outside the machine in the form of punch cards.</p>
+<p>The ENIAC now sits in the ground floor of the Moore Building, appropriately part of a computer lab. Now students sit within the shadow of its vacuum tubes and use descendants of ENIAC to accomplish their own tasks. In the lab, the parts of the ENIAC on display include the Cycling Unit, the Master Programmer Unit, a Function Table, an Accumulator and Digit Trays. Other parts of the original ENIAC were a Punch Card Reader, a Card Puncher, a Card Printer, a Division Unit, and a Square-root Unit.</p>
+<p>After construction, the ENIAC was shipped to the military&#8217;s Aberdeen Proving Ground in Aberdeen, Maryland. There, it produced firing tables used for the military to correctly fire weapons at specific trajectories to accurately hit targets. In addition to ballistics, the ENIAC&#8217;s field of application included weather prediction, atomic-energy calculations, cosmic-ray studies, thermal ignition, random-number studies, wind-tunnel design, and other scientific uses. It is recalled that no electronic computers were being applied to commercial problems until about 1951.</p>
+<p>With the ability to perform math at blinding speed, the ENIAC gave scientists a tool unlike any calculator that had come before. The ballistics calculation that previously took 12 hours on a hand calculator could be done in just 30 seconds. That means the ENIAC was faster by a factor of 1,440. Because of the associated drastic reduction in the cost of computing, calculation-intensive research proceeded in directions previously unavailable. This led to new consumer products and opened the vast new markets.</p>
+												</div>
+											</div>
+										</div>
+																				<div class="pe_accordion ">
+											<div class="pe_accordion_title">
+												<h3>The ENIAC Effect: Dawn of the Information Age</h3>
+												<span></span>
+											</div>
+											<div class="pe_accordion_content clearfix" >
+												<div class="pe_accordion_content_inner col-md-16 col-sm-18">
+													<p>The first contribution of the ENIAC beyond its operational capacity was that it proved you could build a computer. There had been many detractors of computing technologies, but the success of Mauchly and Eckert inspired others to build improved computers. As a result, over the years computers were developed to be both smaller, more capable, and more affordable.</p>
+<p>ENIAC led to EDVAC, and soon IBM began making computers. Vacuum tubes gave way to transistors, and in turn led to smaller, faster, cheaper computers. The integrated circuit paved the way for the microprocessor. By the mid-1970&#8217;s, computers were starting to become affordable by average individuals.</p>
+<p>Later, computing networks formed. IBM eventually produced the PC in 1981. The World Wide Web exploded onto the world in the mid-1990&#8217;s, and now wireless computing is ubiquitous. New handheld devices are being developed to be smaller, smarter and more powerful. The march of technology continues on. All thanks to the ENIAC!</p>
+												</div>
+											</div>
+										</div>
+																				<div class="pe_accordion ">
+											<div class="pe_accordion_title">
+												<h3>Of ENIAC Interest</h3>
+												<span></span>
+											</div>
+											<div class="pe_accordion_content clearfix" >
+												<div class="pe_accordion_content_inner col-md-16 col-sm-18">
+													<p>Visit ENIAC: <a href="http://explorepahistory.com/hmarker.php?markerId=1-A-2F3" target="_blank" rel="noopener">The Historic Marker</a> and <a href="http://www.facilities.upenn.edu/maps/locations/moore-school-building" target="_blank" rel="noopener">Location</a>.</p>
+<p><a href="https://news.seas.upenn.edu/pieces-of-penn-history-return-from-space/" target="_blank" rel="noopener">An ENIAC knob returns from space! </a>Engineering Alum Dr. Garrett Reisman brings back the ENIAC knob from the International Space Station.</p>
+<p><a href="http://www.topsecretrosies.com/" target="_blank" rel="noopener">&#8220;Top Secret Rosies</a>&#8221; – a documentary of the women employed as “human computors” at Penn during World War II.  Some of them got to see ENIAC before anyone else!</p>
+<p><a href="http://en.wikipedia.org/wiki/ENIAC" target="_blank" rel="noopener">ENIAC on Wikipedia</a></p>
+<p><a href="http://www.computerworld.com/s/article/108790/The_Eckert_Tapes_Computer_Pioneer_Says_ENIAC_Team_Couldn_t_Afford_to_Fail_and_Didn_t?taxonomyId=012" target="_blank" rel="noopener">60th Anniversary Press Coverage</a></p>
+<p>In 1997, a team of engineering students led by Professor Jan Van der Spiegel created a replica of the ENIAC on a single integrated circuit. <a href="http://www.seas.upenn.edu/~jan/eniacproj.html" target="_blank" rel="noopener">More information is available at the ENIAC-on-a-chip web page</a>.</p>
+<p><a href="http://ftp.arl.mil/%7Emike/comphist/eniac-story.html" target="_blank" rel="noopener">The ENIAC story</a>, by Martin H. Weik of Ballistic Research Laboratories</p>
+<p><a href="http://ei.cs.vt.edu/%7Ehistory/ENIAC.Richey.HTML" target="_blank" rel="noopener">The ENIAC</a>, by Kevin W. Richey</p>
+<p><a href="http://select.nytimes.com/gst/abstract.html?res=F30B15FC385D107A93C7A81789D85F428485F9&amp;scp=7&amp;sq=ENIAC&amp;st=cse" target="_blank" rel="noopener">New York Times announcement of ENIAC</a></p>
+												</div>
+											</div>
+										</div>
+																												</div>
+								</div>
+							</div>
+				
+
+				</div>			</div>
+							
+		</div>	
+	</div>
+</div>
+
+
+		</div><!-- end of #content_wrapper -->
+		<footer class="inside-page-footer">
+			<div id="footer">
+				<div class="container">
+					<div class="row" id="footer_top">
+						<div class="col-md-7 col-xs-24 col-sm-24 pull-right pe_quick_actions">
+							<div class="dd_menu_holder dd_menu_above">
+								<div class="quick_actions pe_f_qa btn dd_menu" data-target=".pe_f_qa">
+									Quick Actions
+								</div>
+								<div class="dd_menu_pop pe_f_qa text-center">
+									<ul id="menu-quick-actions" class="menu"><li id="menu-item-531" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-531"><a target="_blank" rel="noopener noreferrer" href="https://directory.apps.upenn.edu/directory/jsp/fast.do">Find a person</a></li>
+<li id="menu-item-530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-530"><a target="_blank" rel="noopener noreferrer" href="https://www.facilities.upenn.edu/maps?location_type=School+of+Engineering+and+Applied+Science&#038;search=&#038;glid=">Find a building</a></li>
+<li id="menu-item-529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-529"><a href="https://www.seas.upenn.edu/about/visit-penn-engineering/">Visit Penn Engineering</a></li>
+<li id="menu-item-706" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-706"><a target="_blank" rel="noopener noreferrer" href="https://cets.seas.upenn.edu">Report computing issues (CETS)</a></li>
+<li id="menu-item-707" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-707"><a href="https://eos.seas.upenn.edu">Report facilities issues (EOS)</a></li>
+<li id="menu-item-708" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-708"><a href="https://ras.seas.upenn.edu/student-wellness/">Student health and safety concerns</a></li>
+<li id="menu-item-709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-709"><a target="_blank" rel="noopener noreferrer" href="https://www.publicsafety.upenn.edu/contact/">Contact Penn Public Safety (DPS)</a></li>
+</ul>								</div>
+							</div>
+						</div>
+						<div class="pe_social col-md-11 col-xs-24 col-sm-24 pull-right">
+							<a href="https://www.facebook.com/PennEngineering" target="_blank" aria-label="Facebook"><span class="footer_social" id="footer_fb"><i class="fa fa-facebook"></i></span></a>							<a href="https://twitter.com/PennEngineers" target="_blank" aria-label="Twitter"><span class="footer_social" id="footer_twitter"><i class="fa fa-twitter"></i></span></a>							<a href="https://www.youtube.com/user/pennengineering" target="_blank" aria-label="Youtube"><span class="footer_social" id="footer_youtube"><i class="fa fa-youtube"></i></span></a>							<a href="https://www.linkedin.com/school/penn-engineering/" target="_blank" aria-label="LinkedIn"><span class="footer_social" id="footer_linkedin"><i class="fa fa-linkedin-square"></i></span></a>							<a href="https://www.instagram.com/pennengineering/" target="_blank" aria-label="Instagram"><span class="footer_social" id="footer_instagram"><i class="fa fa-instagram"></i></span></a>						</div>
+						<div class="pe_footer_logo col-md-6 col-xs-24 col-sm-24 pull-right">
+							<a href="https://www.seas.upenn.edu/"><img src="https://www.seas.upenn.edu/wp-content/uploads/2017/08/penn_footer_logo.png" alt="Penn Engineering"></a>
+						</div>
+					</div>
+					<div class="row" id="footer_bottom">
+						<div class="col-md-20 col-md-offset-2 text-center">
+							<div class="nomobile">
+								<p style="text-align: center;"><a href="https://www.seas.upenn.edu/"><strong>PENN ENGINEERING </strong></a>©2017 |<a href="http://www.upenn.edu/" target="_blank" rel="noopener"><strong> UNIVERSITY OF PENNSYLVANIA </strong></a>|<strong> <a href="https://www.seas.upenn.edu/">SCHOOL OF ENGINEERING AND APPLIED SCIENCE</a><br />
+</strong> 220 South 33rd Street | 107 Towne Building | Philadelphia, PA 19104-6391 | 215-898-7246<br />
+<a href="mailto:ras@seas.upenn.edu"><strong>Contact us</strong></a> with questions about admissions or academic programs | For website issues, <a href="mailto:webmaster@seas.upenn.edu"><strong>email</strong></a> the webmaster<br />
+<a href="https://accessibility.web-resources.upenn.edu/get-help" target="_blank" rel="noopener"><strong>Report accessibility issues and get help</strong></a></p>
+	
+							</div>
+							<div class="mobileonly">
+								<p style="text-align: center;"><strong><a href="https://www.seas.upenn.edu/">PENN ENGINEERING </a>©2017</strong></p>
+<p style="text-align: center;"><strong><a href="http://www.upenn.edu/" target="_blank" rel="noopener"> UNIVERSITY OF PENNSYLVANIA </a></strong></p>
+<p style="text-align: center;"><strong> <a href="https://www.seas.upenn.edu/">SCHOOL OF ENGINEERING AND APPLIED SCIENCE</a></strong></p>
+<p style="text-align: center;">220 South 33rd Street | 107 Towne Building | Philadelphia, PA 19104-6391 | 215-898-7246</p>
+<p style="text-align: center;"><a href="mailto:ras@seas.upenn.edu"><strong>Contact us </strong></a>with questions about admissions or academic programs | For website issues, <a href="mailto:webmaster@seas.upenn.edu"><strong>email</strong></a> the webmaster</p>
+<p style="text-align: center;"><a href="https://accessibility.web-resources.upenn.edu/get-help" target="_blank" rel="noopener"><strong>Report accessibility issues and get help</strong></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div id="footer-clear" class=""></div>
+	</div> 	
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"ajaxurl":"https:\/\/www.seas.upenn.edu\/wp-admin\/admin-ajax.php","expand":"expand child menu","collapse":"collapse child menu","noposts":"No More Resources","loadmore":"Load more Resources <i class=\"chevron-down-em-icon\"><\/i>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-content/themes/Penn/_/functions/filter/pefilter.js?ver=1.0'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-content/themes/Penn/_/js/matchHeight.js?ver=6.0'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-content/themes/Penn/_/js/z5_base.js?ver=1.0'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-content/themes/Penn/_/js/bootstrap.min.js?ver=3.0'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-content/themes/Penn/_/js/owl.carousel.min.js?ver=1.0'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-content/themes/Penn/_/js/parallax.min.js?ver=1.0'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-content/themes/Penn/_/js/scripts.js?ver=1.0'></script>
+<script type='text/javascript' src='https://www.seas.upenn.edu/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+</body>
+</html>

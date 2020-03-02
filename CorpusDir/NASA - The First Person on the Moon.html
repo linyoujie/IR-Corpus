@@ -1,0 +1,184 @@
+<!DOCTYPE "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'"><!--Get Meta Data starts--><!--Get Meta Data ends--><html xmlns:java_code="xalan://gov.nasa.build.Utils2"><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--Meta Data starts--><!--SYSTEM DEFINED METADATA--><META content="IE=7" http-equiv="X-UA-Compatible"><META NAME="CMS Document Id" CONTENT="113420"><META NAME="dc.title" CONTENT="NASA - The First Person on the Moon"><META NAME="dc.format" CONTENT="text/html"><META NAME="dc.date.modified" CONTENT="2008-02-01"><META NAME="dc.language" CONTENT="en"><META NAME="dc.publisher" CONTENT="Brian Dunbar"><META NAME="dc.publisher.tool" CONTENT="eTouch Digital Asset Management(CMS)"><META NAME="dc.description" CONTENT="Feature article about the Apollo 11 mission"><META NAME="dc.identifier" CONTENT="http://www.nasa.gov/audience/forstudents/k-4/stories/first-person-on-moon.html"><!--USER DEFINED METADATA--><META NAME="dc.subject" CONTENT="Apollo 11, first moon landing, Neil Armstrong, Buzz Aldrin, Michael Collins,United States,astronauts,males,moon,naphthalene"><META NAME="dc.type.difficulty" CONTENT="Medium"><META NAME="dc.contributor" CONTENT="NASAexplores, Denise Miller:MSFC"><META NAME="dc.type" CONTENT="Feature Articles, Text, Feature"><META NAME="dc.subject.mission" CONTENT="Apollo 11 (Human Exploration and Development of Space [HEDS])"><META NAME="dc.creator" CONTENT="Heather Deiss : MSFC"><META NAME="dc.category" CONTENT="Other"><META NAME="dc.subject.organization" CONTENT="Marshall Space Flight Center (MSFC)"><META NAME="dc.audience.level" CONTENT="Students.K-4, Teachers.K-4"><META NAME="dc.audience" CONTENT="Parents, Students, Teachers"><META NAME="dc.type.interactivitylevel" CONTENT="Passive - medium"><META NAME="dc.subject.discipline" CONTENT="Astronautics, Education.History, Education.Life Science.Living and Working in Space, Education.Technology.Space Vehicles"><META NAME="dc.imagesearch.code" CONTENT="detail"><META NAME="dc.imagesearch.image_url" CONTENT="/images/content/207883main_apollo-11-astronauts-ltn.jpg"><META NAME="dc.imagesearch.image_alt" CONTENT="Apollo 11 astronauts in their spacesuits in front of an image of the moon"><META NAME="bn_title" CONTENT="The First Person on the Moon"><META NAME="dc.imggallery.tnurl" CONTENT="/images/content/207883main_apollo-11-astronauts-ltn.jpg"><META NAME="dc.imggallery.tnalt" CONTENT="Apollo 11 astronauts in their spacesuits in front of an image of the moon"><!--Meta Data ends--><title>NASA - 
+The First Person on the Moon
+</title><!--Standard Include starts--><script src="/js/196918main_browser_message.js" type="text/javascript" language="javascript"></script>
+
+
+<script type="text/javascript">
+	/**
+	 *  Browser Detect Class
+	 */
+	function detectBrowserClass(modern){
+		var nBrowser = navigator.appName;
+		var nVersion = navigator.appVersion;
+		var nAgent = navigator.userAgent;
+		this.version;
+		this.browser;
+		this.os;
+		this.modern = (typeof modern == 'object') == true ? modern:0;
+		if(nVersion.indexOf('Windows') !=-1){
+		     this.os = 'win';
+		}else{
+		    this.os = (nVersion.indexOf('Macintosh') !=-1) == true ? 'mac':'other';
+		}
+		if (nAgent.indexOf('Opera') !=-1){
+		    var strIndex = nAgent.indexOf('Opera');
+		    this.version = nAgent.substring((strIndex + 6), (strIndex + 9));
+		    this.browser = 'opera';
+		}
+		else if (nAgent.indexOf('Firefox') !=-1){
+		    var strIndex = nAgent.indexOf('Firefox');
+		    this.version = nAgent.substring((strIndex + 8), (strIndex + 11));
+		    this.browser = 'firefox';
+		}
+		else if(nAgent.indexOf('MSIE') !=-1){
+		    var strIndex = nAgent.indexOf('MSIE');
+		    this.version = nAgent.substring((strIndex + 5), (strIndex + 8));
+		    this.browser = 'ie';
+		}
+		else if (nAgent.indexOf('Safari') !=-1){
+		     if (nAgent.indexOf('Version') !=-1){
+		          var strIndex = nAgent.indexOf('Version')
+		          this.version = nAgent.substring((strIndex + 8), (strIndex + 11))
+		     }else{
+		          this.version = 2;
+		     }
+		this.browser = 'safari';
+		}
+		else if (nAgent.indexOf('Netscape') !=-1){
+		     var strIndex = nAgent.indexOf('Netscape');
+		     this.version = nAgent.substring((strIndex + 9), (strIndex + 12));
+		     this.browser = 'netscape';
+		}else{
+		     this.browser = nBrowser.toLowerCase();
+		     this.version = null;
+		}
+		this.whichBrowser = function (){ return this.browser; }
+		this.whichVersion = function (){ return this.version; }
+		this.whichOS = function (){	return this.os; }
+		this.getInfo = function (){
+		     var info = "Browser name: " + nBrowser + "<br />" +
+		     "Browser version: "+ nVersion + "<br />" +
+		     "User Agent: " + nAgent;
+		      return info;
+		}
+		this.modernBrowser = function (){
+		     var isModern = false;
+		     if(typeof(this.modern[this.browser])=='number' || this.version === null){
+		     isModern = ( this.modern[this.browser] <= this.version || this.version === null ) == true ? true :0;
+		}
+		return isModern;
+		}
+		}
+		// Instantiate browser detect
+		var detectBrowser = new detectBrowserClass({
+		      'opera': 9,
+		      'safari': 2,
+		      'firefox': 1.5,
+		      'ie': 6
+		});			
+                                /* Support legacy browsers*/
+		if(detectBrowser.modernBrowser() == true){
+                                     var css = '<link href="/css/207071main_allpages.css" rel="stylesheet" type="text/css" />';
+                                 if(detectBrowser.whichBrowser()=='firefox'){
+			 css= css + '<link href="/css/207947main_etouch_firefox.css" rel="stylesheet" type="text/css" />';
+			 }
+
+
+		document.write(css);
+		}else{
+		document.write(legacyMsg);
+		}
+
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="/css/207072main_allmodules.css"><script language="javascript" type="text/javascript" src="/templateimages/redesign/browser/js/conditionalBrowser.js"></script><script src="/js/191731main_prototype.js" type="text/javascript" language="javascript"></script><script src="/js/191696main_builder.js" type="text/javascript" language="javascript"></script><script src="/js/191704main_effects.js" type="text/javascript" language="javascript"></script><script src="/js/191701main_dragdrop.js" type="text/javascript" language="javascript"></script><script src="/js/191738main_slider.js" type="text/javascript" language="javascript"></script><script src="/js/191739main_sound.js" type="text/javascript" language="javascript"></script><script src="/js/191698main_controls.js" type="text/javascript" language="javascript"></script><script src="/js/194940main_RoundedMorph.js" type="text/javascript" language="javascript"></script><script src="/js/191745main_transitions.js" type="text/javascript" language="javascript"></script><script src="/js/191713main_global.js" type="text/javascript" language="javascript"></script><script src="/js/191734main_ScrollRegion.js" type="text/javascript" language="javascript"></script><script src="/js/191730main_PrettyCounter.js" type="text/javascript" language="javascript"></script><script src="/js/191737main_SkinnedSelect.js" type="text/javascript" language="javascript"></script><script src="/js/257141main_SkinnedSelectsearch.js" type="text/javascript" language="javascript"></script><script src="/js/191695main_Blinds.js" type="text/javascript" language="javascript"></script><script src="/js/194933main_FloatingInfoClass.js" type="text/javascript" language="javascript"></script><script src="/js/191742main_Tabs.js" type="text/javascript" language="javascript"></script><script src="/js/191702main_DropDownMenu.js" type="text/javascript" language="javascript"></script><script src="/js/194938main_may-common_rd.js" type="text/javascript" language="javascript"></script><script src="/js/4564main_index.js" type="text/javascript" language="javascript"></script><script src="/js/196917main_flash_rd.js" type="text/javascript" language="javascript"></script><script src="/js/207384main_club2_detailpage.js" type="text/javascript" language="javascript"></script><script src="/tvschedule/js/tvsked.js" type="text/javascript" language="javascript"></script><script src="http://www.nasa.gov/templateimages/redesign/flash_player/js/swfobject.js" type="text/javascript" language="javascript"></script><script src="/js/196887main_externalsource_header.js" type="text/javascript" language="javascript"></script></head><body><!--No Script Include starts here-->
+<!--googleoff: snippet-->
+<noscript>
+       <center>
+	<div class="site_errors">
+		<div class="floatType_site_error_top"></div>
+		<div class="floatType_site_error">
+		          <table summary="layout table">
+ 			<tr>
+			   <td bgcolor="#000000">
+			       <font color="#ffffff">
+				<h2><img src="/templateimages/redesign/modules/overlay/site_error.gif" 					 	        alt=""/>There's a problem with your browser or settings.
+                                                                </h2>
+			       </font>
+			      <font color="#ffffff">
+			            <p>Your browser or your browser's settings are not supported. To get the 						   best experience possible, please download a compatible browser. If you 						   know your browser is up to date, you should check to ensure that 
+                                                                   javascript is enabled.
+ 			            </p>
+			      </font>
+ 		            <p><a target="_blank" href="/home/How_to_enable_Javascript.html">&rsaquo; Learn How</a></p>
+			    </td>
+			</tr>
+		          </table>
+		</div>
+		<div class="floatType_site_error_bottom"></div>
+	</div>
+        </center>
+</noscript>
+<!--googleon: snippet-->
+<!--No Script Include ends here--><!--Content Body Starts Here--><div class="content_body"><!--Top Starts Here --><div class="top"><script src="/js/194928main_ShowRSS.js" type="text/javascript" language="javascript"></script><input value="" id="curr_rssurl" type="hidden"><!-- Skip navigation link --><div class="skiplink"><a href="#maincontent">Follow this link to skip to the main content</a></div><div id="top_header" class="top_header"><div class="header"><h1><a class="nasa_logo" href="/home/index.html"><span class="hide">NASA - National Aeronautics and Space Administration</span></a></h1><div id="header_form"></div><script language="javascript" type="text/javascript">
+		var search_list = [   ];
+                             </script><script>createLoginForm();</script><script>createSearchForm();</script></div><div class="dropper 74" id="main-nav"><script type="text/javascript">
+             addMenuSupport();
+     </script></div></div><div class="top_audience"><ul class="audiences_nav"><!----><a name="top" id="bctop"></a><li><a href="/home/index.html">NASA Home</a></li><li><span class="light_grey">&#160;&#160;&#160;&#160;<b>></b>&#160;&#160;&#160;&#160;</span><a href="/offices/education/about/index.html">Education</a></li><!----><li><span class="light_grey">&#160;&#160;&#160;&#160;<b>></b>&#160;&#160;&#160;&#160;</span><a href="/audience/forstudents/index.html">For Students</a></li><!----><li><span class="light_grey">&#160;&#160;&#160;&#160;<b>></b>&#160;&#160;&#160;&#160;</span><a href="/audience/forstudents/k-4/index.html">Grades K-4</a></li><!----><li><span class="light_grey">&#160;&#160;&#160;&#160;<b>></b>&#160;&#160;&#160;&#160;</span><a href="/audience/forstudents/k-4/stories/stories_archive_1.html">Stories</a></li><!--starting show text--><li id="right_menu"><ul id="utilities_nav"><li><span class="hide"><form method="post" target="myNewWin" name="emailForm" action="http://mynasa.nasa.gov/portal/util/email/nasa_emailform_2007.jsp"><input value="http://www.nasa.gov/audience/forstudents/k-4/stories/first-person-on-moon.html" id="url" name="url" type="hidden"><input value="The First Person on the Moon" id="titleUrl" name="titleUrl" type="hidden"><input value="The First Person on the Moon" id="promoTitle" name="promoTitle" type="hidden"><input value="01.16.08" id="promoDate" name="promoDate" type="hidden"><input value="asan" id="flag" name="flag" type="hidden"><input value="It has been 35 years since the first person stepped on the moon." id="leaderSentence" name="leaderSentence" type="hidden"><input value="113420" id="documentId" name="documentId" type="hidden"></form></span><a class="icons_black icon_send" href="javascript:submitPopUpEmail();">Send</a></li><li><a class="icons_black                                                                                                                 icon_print" href="javascript:openPopUpWindowNoMenubar('/audience/forstudents/k-4/stories/first-person-on-moon_prt.htm')">Print</a></li><li><a class="myOverlayBookmark bookmark bottom null icons_black                                                                                    icon_bookmark" href="">Bookmark</a></li></ul></li></ul></div><!--Top ends Here --></div><!--Left Starts Here --><input name="menu_item_id" id="menu_item_id" value="" type="hidden"><div id="left" class="left_232"><script type="text/javascript">	
+		var itemIdAndJSFileURL= 'forstudents-k-4_stories$/templateimages/redesign/leftnav-htmls/forstudents-k-4_.js';
+		var splitResult = itemIdAndJSFileURL.split("$");
+		  $('menu_item_id').value = splitResult[0];		
+		
+		var url = splitResult[1];
+		var defPage = '/templateimages/redesign/leftnav-htmls/home_.js';
+		if(url == '.js') url = defPage;
+
+                                                         
+ document.write('<script src=' + url + ' type="text/javascript" language="javascript" >' + '</scr' + 'ipt>');
+</script><!--Left Ends Here --></div><a name="maincontent"></a><!--Wide Right Starts Here --><div id="backtoTop" class="wide_right"><!-- Center Banner starts Here--><!-- Center Banner ends Here--><!-- Body starts Here--><div class="box_710_cap"><div class="top_cap_white"></div><div class="box_710 box_white box_710_white"><div style="clear:both"></div><h2>Feature</h2><div style="clear:both"></div><div class="text_adjust"><p>Text Size</p><div><a href="javascript:textSizeAdjuster('grow')" class="icons_winter icon_plus">Grow Text  Size</a><a href="javascript:textSizeAdjuster('shrink')" class="icons_winter icon_minus">Shrink Text Size</a></div><div class="rating" id="rating_avg"><div title="2454699100" id="ratingSiteId"></div></div><script type="text/javascript" src="http://comments.nasa.gov/ratingresources/js/nasa-rating.js"></script>
+</div><div style="clear:both"></div><div class="white_article_wrap_detail text_adjust_me"><div class="default_style_wrap prejs_body_adjust_detail"><!-- Body starts --><!--Promo date and doctitle starts--><div style="clear:both"></div><div class="name_address"><div class="address"><span class="bold">The First Person on the Moon</span></div><div class="promodatepress"><span class="bold">01.16.08</span></div><div style="clear:both"></div></div><div style="clear:both"></div><!--Promo date and doctitle ends-->
+<span class="img_comments_right"> 
+<IMG  WIDTH="226"  ALT="Apollo 11 astronauts in their spacesuits in front of an image of the moon"  TITLE="Apollo 11 astronauts in their spacesuits in front of an image of the moon"  SRC="/images/content/207884main_apollo-11-astronauts-xltn.jpg"  HEIGHT="170"  ALIGN="Bottom"  BORDER="0" />
+<p>Astronauts Neil Armstrong, Mike Collins and Buzz Aldrin flew on the Apollo 11 mission. Image Credit: NASA</p> 
+</span>
+
+It was 1961. John F. Kennedy was the president of the United States. He wanted to land humans on the moon. The United States had just started trying to put people in space. Was NASA ready to go to the moon? The president and NASA knew they could do it. They were ready to put people on the moon. Apollo 11's mission was to land two men on the moon. They also had to come back to Earth safely. 
+
+<br /><br /><br />
+
+Apollo 11 blasted off on July 16, 1969.  Neil Armstrong, Edwin "Buzz" Aldrin and Michael Collins were the astronauts on Apollo 11.
+<br /><br /><br />
+
+
+
+Four days later, Armstrong and Aldrin landed on the moon. They landed on the moon in the Lunar Module. It was called the Eagle. Collins stayed in orbit around the moon. He did experiments and took pictures. 
+<br /><br /><br />
+
+<span class="img_comments_right"> 
+<IMG  WIDTH="226"  ALT="Plaque left on the moon by the Apollo 11 crew"  TITLE="Plaque left on the moon by the Apollo 11 crew"  SRC="/images/content/207885main_apollo-11-plaque-xltn.jpg"  HEIGHT="170"  ALIGN="Bottom"  BORDER="0" />
+<p>The sign the astronauts left on the moon says, "Here men from the planet Earth first set foot upon the moon July 1969, A.D.  We came in peace for all mankind." Image Credit: NASA</p> 
+</span>
+
+On July 20, 1969, Neil Armstrong became the first human to step on the moon.  He and Aldrin walked around for three hours.  They did experiments.  They picked up bits of moon dirt and rocks.  
+<br /><br /><br />
+
+
+
+They put a U.S. flag on the moon.  They also left a sign on the moon.<br /><br /><br />
+
+
+The two astronauts returned to orbit, joining Collins.  On July 24, 1969, all three astronauts came back to Earth safely.
+<br /><br /><br />
+
+President Kennedy's wish came true.  It took less than 10 years.  Humans had walked on the moon.
+<br clear="all">&nbsp;<br>
+<!-- Credits starts --><!-- Credits ends --><!-- Body ends --></div><!--Related Content Starts Here --><!--Related Content Ends Here --><div style="clear:both"></div><div class="space_div"></div><div class="back_to_top"><a href="#backtoTop">&rsaquo;&nbsp;Back To Top</a></div><div class="space_div"></div></div></div><div class="bottom_cap_white"></div><!-- Body Ends Here--></div><!-- Comments section starts Here--><!-- Comments section ends Here--><!--Wide Right Ends Here --></div><!--Content body ends Here --></div><!--Footer Include Here--><!--Footer Starts Here--><div id="footer"><script type="text/javascript">
+                     createFooterlogo();
+                     createFooterContent('Shelley Canright',
+                                    'April 9, 2009',
+                                    'Brian Dunbar',
+                                   'Contact NASA',
+                                   '/about/contact/index.html',
+                                   '/sitemap/sitemap_nasa.html');
+                  </script><!--Footer Ends Here--></div><!--Footer Include ends Here--><div class="background_layer">&nbsp;</div><script src="/js/196888main_externalsource_footer.js" type="text/javascript" language="javascript"></script></body></html>

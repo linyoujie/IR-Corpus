@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"073b4df364",applicationID:"19026893"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/><script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"  data-cbid="188c69c6-9484-473a-b30b-8e6a2bb8ba61" data-culture="EN" type="text/javascript" async></script><title>What was the first state in the USA?</title>
+
+		<style type="text/css">
+			#genesis-slider, #slides, .genesis-slider-wrap { height: 321px; width: 610px; }
+			.slide-excerpt { width: 500px; }
+			.slide-excerpt { bottom: 0; }
+			.slide-excerpt { left: 0; }
+			div.slider-next, div.slider-previous { top: 130px; }
+		</style>
+<!-- This site is optimized with the Yoast SEO plugin v13.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="What was the first state in the USA? a) Delaware b) New Hampshire c) Virginia d) Massachusetts e) Connecticut"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What was the first state in the USA?" />
+<meta property="og:description" content="What was the first state in the USA? a) Delaware b) New Hampshire c) Virginia d) Massachusetts e) Connecticut" />
+<meta property="og:url" content="https://travelmamas.com/what-was-the-first-state-in-the-usa/" />
+<meta property="og:site_name" content="TravelMamas.com" />
+<meta property="article:tag" content="Travel Trivia" />
+<meta property="article:tag" content="U.S." />
+<meta property="article:section" content="BLOG" />
+<meta property="article:published_time" content="2012-08-11T04:02:07+00:00" />
+<meta property="article:modified_time" content="2016-11-01T17:44:44+00:00" />
+<meta property="og:updated_time" content="2016-11-01T17:44:44+00:00" />
+<meta property="og:image" content="https://travelmamas.com/media/trivia_flag.jpg" />
+<meta property="og:image:secure_url" content="https://travelmamas.com/media/trivia_flag.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="What was the first state in the USA? a) Delaware b) New Hampshire c) Virginia d) Massachusetts e) Connecticut" />
+<meta name="twitter:title" content="What was the first state in the USA?" />
+<meta name="twitter:image" content="https://travelmamas.com/media/trivia_flag.jpg" />
+<meta name="twitter:creator" content="@travelmamas" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://travelmamas.com/#organization","name":"Travel Mamas","url":"https://travelmamas.com/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://travelmamas.com/#logo","inLanguage":"en-US","url":"https://s31395.pcdn.co/wp-content/uploads/2017/01/logo2.png","width":377,"height":266,"caption":"Travel Mamas"},"image":{"@id":"https://travelmamas.com/#logo"}},{"@type":"WebSite","@id":"https://travelmamas.com/#website","url":"https://travelmamas.com/","name":"TravelMamas.com","inLanguage":"en-US","description":"Discover the world through travel and beyond!","publisher":{"@id":"https://travelmamas.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://travelmamas.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#primaryimage","inLanguage":"en-US","url":"https://travelmamas.com/media/trivia_flag.jpg"},{"@type":"WebPage","@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#webpage","url":"https://travelmamas.com/what-was-the-first-state-in-the-usa/","name":"What was the first state in the USA?","isPartOf":{"@id":"https://travelmamas.com/#website"},"inLanguage":"en-US","primaryImageOfPage":{"@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#primaryimage"},"datePublished":"2012-08-11T04:02:07+00:00","dateModified":"2016-11-01T17:44:44+00:00","description":"What was the first state in the USA? a) Delaware b) New Hampshire c) Virginia d) Massachusetts e) Connecticut","breadcrumb":{"@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://travelmamas.com/","url":"https://travelmamas.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://travelmamas.com/category/blog/","url":"https://travelmamas.com/category/blog/","name":"BLOG"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/","url":"https://travelmamas.com/what-was-the-first-state-in-the-usa/","name":"What was the first state in the USA?"}}]},{"@type":"Article","@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#article","isPartOf":{"@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#webpage"},"author":{"@id":"https://travelmamas.com/#/schema/person/2ca2079b779a81bc7672cd7790442f48"},"headline":"What was the first state in the USA?","datePublished":"2012-08-11T04:02:07+00:00","dateModified":"2016-11-01T17:44:44+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#webpage"},"publisher":{"@id":"https://travelmamas.com/#organization"},"image":{"@id":"https://travelmamas.com/what-was-the-first-state-in-the-usa/#primaryimage"},"keywords":"Travel Trivia,U.S.","articleSection":"BLOG,TRAVEL TRIVIA","inLanguage":"en-US"},{"@type":["Person"],"@id":"https://travelmamas.com/#/schema/person/2ca2079b779a81bc7672cd7790442f48","name":"Colleen Lanin","image":{"@type":"ImageObject","@id":"https://travelmamas.com/#authorlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/faf32ab29e0b858ee0862ed1b13ff61b?s=96&d=blank&r=g","caption":"Colleen Lanin"},"description":"Colleen Lanin is the founder/editor-in-chief of TravelMamas.com. As the author of her book, \"The Travel Mamas' Guide,\" she teaches parents not only how to survive a trip with children, but also how to love exploring the world with their offspring. Her stories have appeared online and in print for such outlets as the \"Today\" show, NBCNews.com,  Parenting Magazine, Orlando Sentinel, Chicago Tribune, Expedia, San Diego Family Magazine, and more. Colleen gives tips on television, radio, and as a public speaker. She has a master\u2019s degree in business administration with a background in marketing. She lives in Arizona with her husband and two kids.","sameAs":["https://twitter.com/travelmamas"]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<script type='text/javascript'>console.log('PixelYourSite Free version 7.1.4');</script>
+<link rel='dns-prefetch' href='//travelmamas.com' />
+<link rel='dns-prefetch' href='//scripts.mediavine.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="TravelMamas.com &raquo; Feed" href="https://travelmamas.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="TravelMamas.com &raquo; Comments Feed" href="https://travelmamas.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="TravelMamas.com &raquo; What was the first state in the USA? Comments Feed" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/feed/" />
+<link id="dashicons-css" rel="stylesheet" href="https://c0.wp.com/c/5.3.2/wp-includes/css/dashicons.min.css" type="text/css" media="none" onload="this.media='all'"/><link id="magazine-theme-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/cache/css/2649b796f2d5e03d47f234cbe3aed0e9.min.css" type="text/css" media="all"/><link id="wp-block-library-css" rel="stylesheet" href="https://c0.wp.com/c/5.3.2/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="none" onload="this.media='all'"/><style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link id="foundry-lazy-load-style-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/mu-plugins/foundry-mu/inc/performance/assets/css/lazy-load.min.css?ver=1.9.1" type="text/css" media="none" onload="this.media='all'"/><link id="sb_instagram_styles-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/cache/css/5dd8d7dba9528c7ff1ef664af70e710b.min.css" type="text/css" media="none" onload="this.media='all'"/><link id="sbi-font-awesome-css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css?ver=4.6.3" type="text/css" media="none" onload="this.media='all'"/><link id="foundry-jetpack-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/plugins/mamas-jetpack-foundry-helper/jetpack-foundry-helper.css?ver=1.3" type="text/css" media="none" onload="this.media='all'"/><link id="foundrysl-fa-css-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/plugins/social-networks-links-by-performance-foundry/assets/css/font-awesome.min.css?ver=0.1.1" type="text/css" media="none" onload="this.media='all'"/><link id="foundrysl-css-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/plugins/social-networks-links-by-performance-foundry/assets/css/foundrysl.css?ver=0.1.1" type="text/css" media="none" onload="this.media='all'"/><link id="ez-icomoon-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/plugins/easy-table-of-contents/vendor/icomoon/style.min.css?ver=2.0-rc5" type="text/css" media="none" onload="this.media='all'"/><link id="ez-toc-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0-rc5" type="text/css" media="none" onload="this.media='all'"/><style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}
+</style>
+<link id="social-logos-css" rel="stylesheet" href="https://c0.wp.com/p/jetpack/8.2.3/_inc/social-logos/social-logos.min.css" type="text/css" media="none" onload="this.media='all'"/><link id="jetpack_css-css" rel="stylesheet" href="https://c0.wp.com/p/jetpack/8.2.3/css/jetpack.css" type="text/css" media="none" onload="this.media='all'"/><link id="slider_styles-css" rel="stylesheet" href="https://s31395.pcdn.co/wp-content/cache/css/7da515033e913f6d2dc1d3ba67d5f194.min.css" type="text/css" media="none" onload="this.media='all'"/><script type="text/javascript" src="https://c0.wp.com/c/5.3.2/wp-includes/js/jquery/jquery.js" ></script><script type="text/javascript" src="https://c0.wp.com/c/5.3.2/wp-includes/js/jquery/jquery-migrate.min.js" defer="defer"></script><script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h5"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/p/jetpack/8.2.3/_inc/build/related-posts/related-posts.min.js" defer="defer"></script><script type="text/javascript" async="async" data-noptimize="1" data-cfasync="false" src="https://scripts.mediavine.com/tags/travel-mamas.js?ver=5.3.2" defer="defer"></script><script type="text/javascript" src="https://s31395.pcdn.co/wp-content/themes/genesis/lib/js/html5shiv.min.js?ver=3.7.3" defer="defer"></script><script type="text/javascript" src="https://s31395.pcdn.co/wp-content/plugins/pixelyoursite/dist/scripts/jquery.bind-first-0.2.3.min.js?ver=5.3.2" defer="defer"></script><script type="text/javascript" src="https://s31395.pcdn.co/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1" defer="defer"></script><script type='text/javascript'>
+/* <![CDATA[ */
+var pysOptions = {"staticEvents":{"facebook":{"PageView":[{"params":[],"delay":0,"ids":[]}],"GeneralEvent":[{"params":{"post_type":"post","post_id":"11208","content_name":"What was the first state in the USA?","categories":"BLOG, TRAVEL TRIVIA","tags":"Travel Trivia, U.S."},"delay":0,"ids":[]}]}},"facebook":{"pixelIds":["2049624128614684"],"advancedMatching":[],"removeMetadata":false,"contentParams":{"post_type":"post","post_id":11208,"content_name":"What was the first state in the USA?","categories":"BLOG, TRAVEL TRIVIA","tags":"Travel Trivia, U.S."},"commentEventEnabled":true,"wooVariableAsSimple":false,"downloadEnabled":true,"formEventEnabled":true},"debug":"","siteUrl":"https:\/\/travelmamas.com","ajaxUrl":"https:\/\/travelmamas.com\/wp-admin\/admin-ajax.php","commonEventParams":{"domain":"travelmamas.com","user_roles":"guest","plugin":"PixelYourSite"},"commentEventEnabled":"1","downloadEventEnabled":"1","downloadExtensions":["doc","exe","js","pdf","ppt","tgz","zip","xls"],"formEventEnabled":"1","gdpr":{"ajax_enabled":false,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"facebook_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":null,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_google_ads_consent_category":null,"cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","ginger_integration_enabled":false,"cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false},"woo":{"enabled":false,"addToCartOnButtonEnabled":false,"addToCartOnButtonValueEnabled":false,"addToCartOnButtonValueOption":"price","removeFromCartEnabled":true,"removeFromCartSelector":".cart .product-remove .remove"},"edd":{"enabled":false,"addToCartOnButtonEnabled":false,"addToCartOnButtonValueEnabled":false,"addToCartOnButtonValueOption":"price","removeFromCartEnabled":true}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s31395.pcdn.co/wp-content/cache/js/d10c3035801eb2d28e9554dbe907f91d.min.js" defer="defer"></script><link rel='https://api.w.org/' href='https://travelmamas.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://travelmamas.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s31395.pcdn.co/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://travelmamas.com/?p=11208' />
+<link rel="alternate" type="application/json+oembed" href="https://travelmamas.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftravelmamas.com%2Fwhat-was-the-first-state-in-the-usa%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://travelmamas.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftravelmamas.com%2Fwhat-was-the-first-state-in-the-usa%2F&#038;format=xml" />
+<script async defer data-pin-hover="true" data-pin-tall="true" data-pin-lang="en" data-pin-save="true" src="//assets.pinterest.com/js/pinit.js"></script>		<!-- Google Analytics Code added by Foundry Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-1707811-9', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+	<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('img[usemap]').rwdImageMaps();
+	});
+</script>
+<style type="text/css">
+	img[usemap] { max-width: 100%; height: auto; }
+</style>
+
+<link rel='dns-prefetch' href='//c0.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style><link rel="icon" href="https://s31395.pcdn.co/wp-content/plugins/genesis-favicon-uploader/favicons/favicon.ico" />
+<link rel="pingback" href="https://travelmamas.com/xmlrpc.php" />
+<meta name="p:domain_verify" content="3c831a506fc17be5ea5328ab2501ca40"/>
+<meta name='B-verify' content='898776c6896d8baa6a107a718214366736abe5e7' /><style>
+a.subscribe-link {
+    display: inline-block;
+    font-size: 18px;
+    padding: .5rem 1rem;
+    border: 1px solid #c62765;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    max-width: 100%;
+}
+a.subscribe-link:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #c62765;
+}
+</style>
+ <style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://s31395.pcdn.co/wp-content/uploads/2013/04/BG-21.png"); background-position: center top; background-size: auto; background-repeat: repeat; background-attachment: fixed; }
+</style>
+			<style type="text/css" id="wp-custom-css">
+			/*
+You can add your own CSS here. */
+/* Click the help icon above to learn more.
+*/
+
+/* Increase space between content */
+.entry-content div, .entry-content .bottom-space {
+	margin-bottom: 10px;
+}
+/* center align iframes */
+
+.entry-content p iframe {
+	display: block;
+	margin: 0 auto;
+}
+/* center align search */
+#search-3 {
+	text-align: center;
+}
+
+#foundry-featured-post-3 h4, 
+#foundry-featured-post-4 h4 {
+	text-align: center;
+}
+
+body {
+font-size: 16px;
+}
+
+.wmpci-popup-wrp .wmpci-popup-close {
+    right: -5px;
+    top: -5px;
+}
+/* increase paragraph text size */
+.entry-content p {
+    font-size: 16px;
+}
+
+/* Change colore for links IN content */
+
+.entry-content a {
+	color: #3aa1c9;
+}
+
+.entry-content a:hover {
+	color: #f1588a;
+}
+
+/*underline links inside pages and posts*/
+.entry-content a,  .entry-content a:visited {
+    text-decoration: underline;
+}
+/* increase title size on home widgets */
+.home-bottom h4, .home-middle h4 {
+        font-size: 26px;
+}
+.home-top h4 {
+        font-size: 30px;
+}
+.home-middle h2 a {
+    font-size: 22px !important;
+    font-weight: 600;
+    color: #3aa1c9 !important;
+}
+.home-middle h2 a:hover {
+	text-decoration: underline;
+	color: #f1588a !important;
+}
+
+/* featured post title */
+
+#foundry-featured-post-3 
+.widgettitle a, #foundry-featured-post-4 .widgettitle a{
+color: #3aa1c9;
+}
+#foundry-featured-post-3 
+.widgettitle a:hover, #foundry-featured-post-4 .widgettitle a:hover {
+text-decoration: underline;
+	color: #f1588a
+}
+
+/* side bar border removal*/
+.sidebar .widget-wrap, #sidebar .widget, #sidebar-alt .widget, .content-sidebar #sidebar .widget, .sidebar-content-sidebar #sidebar .widget, .content-sidebar-sidebar #sidebar .widget, .content-sidebar-sidebar #sidebar-alt .widget {
+border: 0;
+}
+
+/* color for heading */
+.magazine-red h2 a, .magazine-red h2 a:visited {
+	color: #c72730;
+}
+
+#nav .wrap {
+	text-align: left;
+}
+
+/* center nav menus */
+#menu-primary_at_home,
+#menu-secondary_at_home,
+#menu-primary,
+#menu-secondary {
+  width: 90% !important;
+  margin: 0 auto;
+  float: none !important;
+}
+
+/* remove border around pages/posts */
+#subnav {
+  border: none;
+}
+#inner .wrap, .footer-full-width {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* hide website field in comment form */
+#commentform .comment-form-url {
+	display: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+	div#primary_at_home {
+    display: none;
+	}
+	#menu-mobile-menu > li, #menu-mobile-menu > li:hover {
+	position: static;
+	background-color: #fff !important;
+	}
+	.menu-item-has-children .fa {
+		font-size: 2.5em;
+		line-height: 1.3em;
+		height: 60px;
+		width: 60px;
+		top: 9px;
+		right: 20px;
+	}
+}
+
+.sidebar .widget ul.widgets-list-layout li {
+    background: none !important;
+    padding-left: 0;
+}
+.widgets-list-layout .widgets-list-layout-blavatar {
+	max-width: inherit;
+}
+
+a,
+a:visited {
+	color: #3aa1c9
+}
+
+a:hover{
+	color: #f1588a
+}
+
+.magazine-red a, .magazine-red a:visited {
+    color: #3aa1c9;
+}
+
+.magazine-red a:hover {
+    color: #f1588a;
+}
+
+/* HS #55330 */
+ul.menu-primary li.menu-item-home a {
+    color: #E21E7B !important;
+}		</style>
+		</head>
+<body class="post-template-default single single-post postid-11208 single-format-standard custom-background header-full-width content-sidebar"><div id="nav"><div class="wrap"><ul id="menu-primary" class="menu genesis-nav-menu menu-primary js-superfish"><li id="menu-item-311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-311"><a href="https://travelmamas.com/"><span class="dashicons dashicons-admin-home"></span></a></li>
+<li id="menu-item-15234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15234"><a href="#">ABOUT</a>
+<ul class="sub-menu">
+	<li id="menu-item-313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313"><a href="https://travelmamas.com/about/travelmamas-com/">TRAVELMAMAS.COM</a></li>
+	<li id="menu-item-314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-314"><a rel="author" href="https://travelmamas.com/about/the-travel-mama/">THE TRAVEL MAMA</a></li>
+	<li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><a href="https://travelmamas.com/about/our-team/">CONTRIBUTORS</a></li>
+	<li id="menu-item-29240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-29240"><a href="https://travelmamas.com/privacy-policy/">PRIVACY POLICY</a></li>
+	<li id="menu-item-41511" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41511"><a href="https://travelmamas.com/disclaimer/">DISCLAIMER</a></li>
+	<li id="menu-item-41680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41680"><a href="https://travelmamas.com/terms-of-use/">TERMS OF USE</a></li>
+</ul>
+</li>
+<li id="menu-item-29826" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29826"><a href="https://travelmamas.com/about/the-travel-mamas-guide/">TRAVEL MAMAS&#8217; GUIDE</a></li>
+<li id="menu-item-29828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29828"><a href="https://travelmamas.com/rent-baby-travel-gear/">RENT BABY GEAR</a></li>
+<li id="menu-item-27754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27754"><a href="https://travelmamas.com/packing-lists/">PACKING LISTS</a></li>
+<li id="menu-item-43778" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43778"><a href="https://travelmamas.com/category/destinations/">DESTINATIONS</a></li>
+<li id="menu-item-28328" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-28328"><a href="https://travelmamas.com/category/giveaways/">GIVEAWAYS</a></li>
+<li id="menu-item-28330" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28330"><a href="#">ADVERTISE/PR</a>
+<ul class="sub-menu">
+	<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="https://travelmamas.com/advertise/">ADVERTISE/PR</a></li>
+	<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="https://travelmamas.com/in-the-news/">IN THE NEWS</a></li>
+</ul>
+</li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="https://travelmamas.com/contact-us/">CONTACT</a></li>
+</ul></div></div><div id="wrap"><div id="header"><div class="wrap"><div id="title-area"><p id="title"><a href="https://travelmamas.com/">TravelMamas.com</a></p><p id="description">Discover the world through travel and beyond!</p></div></div></div>
+<div class="header-banner-wrap" style="background-image: url(https://s31395.pcdn.co/wp-content/uploads/2019/10/TMAM-home-1920x1280.jpg);">
+
+	<div class="header-banner">
+		<div class="header-banner-row">
+
+			<div class="site-brand">
+				<a href="https://travelmamas.com/">
+					<img alt="Travel Mamas logo" src="https://s31395.pcdn.co/wp-content/themes/magazine/images/logo_home.png" />
+				</a>
+			</div>
+
+			<div class="site-header-meta default">
+				<span class="likeh1 top-tagline">Discover the world</span>
+				<span class="likeh1 bottom-tagline">through travel &amp; beyond!</span>
+				<div class="socmed-icons-wrap">
+							<div class="foundry-social">
+			<div class="foundry-social__wrapper">
+			<a style="background-color: #d0df52" class="foundry-social__link fa fa-instagram  " href="https://www.instagram.com/travelmamas/" target="_blank" ></a><a style="background-color: #f170aa" class="foundry-social__link fa fa-pinterest  " href="https://www.pinterest.com/travelmamas/" target="_blank" ></a><a style="background-color: #009cbc" class="foundry-social__link fa fa-facebook  " href="https://www.facebook.com/TravelMamas" target="_blank" ></a><a style="background-color: #d0df52" class="foundry-social__link fa fa-twitter  " href="https://twitter.com/travelmamas" target="_blank" ></a><a style="background-color: #f170aa" class="foundry-social__link fa fa-feed  " href="https://travelmamas.com/feed/" target="_blank" ></a><a style="background-color: #009cbc" class="foundry-social__link fa fa-envelope  " href="https://travelmamas.com/subscribe/" target="_blank" ></a><a style="background-color: #d0df52" class="foundry-social__link fa fa-youtube-play  " href="https://www.youtube.com/user/colleenlanin" target="_blank" ></a>			</div>
+		</div>
+						</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+<!-- end of header-banner-wrap -->
+<div id="inner"><div class="wrap"><div id="mobilenav"><button class="fa fa-bars mobile-hamburger"></button><ul id="menu-mobile-menu" class="menu genesis-nav-menu menu-mobile-foundry js-superfish"><li id="menu-item-42892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42892"><a href="https://travelmamas.com/about/">ABOUT</a>
+<ul class="sub-menu">
+	<li id="menu-item-42893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42893"><a href="https://travelmamas.com/about/travelmamas-com/">TRAVELMAMAS.COM</a></li>
+	<li id="menu-item-42894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42894"><a href="https://travelmamas.com/about/the-travel-mama/">THE TRAVEL MAMA</a></li>
+	<li id="menu-item-42895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42895"><a href="https://travelmamas.com/about/our-team/">CONTRIBUTORS</a></li>
+	<li id="menu-item-42896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-42896"><a href="https://travelmamas.com/privacy-policy/">PRIVACY POLICY</a></li>
+	<li id="menu-item-42897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42897"><a href="https://travelmamas.com/disclaimer/">DISCLAIMER</a></li>
+	<li id="menu-item-42923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42923"><a href="https://travelmamas.com/terms-of-use/">TERMS OF USE</a></li>
+</ul>
+</li>
+<li id="menu-item-42925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-42925"><a href="https://travelmamas.com/">TRAVEL MAMAS BLOG</a></li>
+<li id="menu-item-42926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42926"><a href="https://travelmamas.com/at-home/">TRAVEL MAMAS AT HOME BLOG</a></li>
+<li id="menu-item-43781" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43781"><a href="https://travelmamas.com/category/destinations/">DESTINATIONS</a></li>
+<li id="menu-item-42899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42899"><a href="https://travelmamas.com/packing-lists/">PACKING LISTS</a></li>
+<li id="menu-item-42903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42903"><a href="https://travelmamas.com/rent-baby-travel-gear/">RENT BABY GEAR</a></li>
+<li id="menu-item-42928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42928"><a href="https://travelmamas.com/advertise/">ADVERTISE/PR</a></li>
+<li id="menu-item-42902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42902"><a href="https://travelmamas.com/contact-us/">CONTACT US</a></li>
+</ul></div><div id="subnav"><div class="wrap"><ul id="menu-secondary" class="menu genesis-nav-menu menu-secondary js-superfish"><li id="menu-item-47" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47"><a href="https://travelmamas.com/category/family-trips/">FAMILY TRIPS</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-48"><a href="https://travelmamas.com/category/grown-up-getaways/">GROWN-UP GETAWAYS</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a href="https://travelmamas.com/category/travel-tips/">TRAVEL TIPS</a></li>
+<li id="menu-item-29814" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-29814"><a href="https://travelmamas.com/category/travel-products/">TRAVEL PRODUCTS</a>
+<ul class="sub-menu">
+	<li id="menu-item-29815" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29815"><a href="https://travelmamas.com/category/travel-products/travel-gear-for-kids/">FOR KIDS</a></li>
+	<li id="menu-item-29816" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29816"><a href="https://travelmamas.com/category/travel-products/for-parents/">FOR PARENTS</a></li>
+	<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="https://travelmamas.com/rent-baby-travel-gear/">RENT BABY TRAVEL GEAR</a></li>
+</ul>
+</li>
+<li id="menu-item-35474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35474"><a href="https://travelmamas.com/category/theme-parks/">THEME PARKS</a></li>
+<li id="menu-item-15240" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15240"><a href="https://travelmamas.com/category/cruises/">CRUISES</a></li>
+<li id="menu-item-34235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34235"><a href="https://travelmamas.com/hotels-for-families/">HOTELS</a></li>
+<li id="menu-item-29817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-29817"><a href="https://travelmamas.com/at-home/">LIFE AT HOME</a>
+<ul class="sub-menu">
+	<li id="menu-item-29818" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29818"><a href="https://travelmamas.com/category/at-home/home-life/">HOME LIFE</a></li>
+	<li id="menu-item-29819" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29819"><a href="https://travelmamas.com/category/at-home/entertainment/">ENTERTAINMENT</a></li>
+	<li id="menu-item-29820" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29820"><a href="https://travelmamas.com/category/food-drinks/">FOOD &#038; DRINKS</a></li>
+	<li id="menu-item-29821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29821"><a href="https://travelmamas.com/category/at-home/health-beauty/">HEALTH &#038; BEAUTY</a></li>
+	<li id="menu-item-29822" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29822"><a href="https://travelmamas.com/category/at-home/fashion/">FASHION</a></li>
+	<li id="menu-item-29823" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29823"><a href="https://travelmamas.com/category/at-home/technology/">TECHNOLOGY</a></li>
+</ul>
+</li>
+</ul></div></div><div id="content-sidebar-wrap"><div id="content" class="hfeed"><div class="post-11208 post type-post status-publish format-standard hentry category-blog category-travel-trivia tag-travel-trivia-2 tag-u-s entry"><h1 class="entry-title">What was the first state in the USA?</h1>
+<div class="post-info"><span class="author vcard"><span class="fn"><a href="https://travelmamas.com/author/colleen/" rel="author">Colleen Lanin</a></span></span> <span class="date published time" title="2012-08-10T20:02:07-07:00">August 10, 2012</span>  <span class="post-comments"><a href="https://travelmamas.com/what-was-the-first-state-in-the-usa/#respond">Leave a Comment</a></span> </div><p class="disclaimer">Travel Mamas sometimes receives compensation and/or hosted travel and sample products related to blog posts. This story may include affiliate links for which we receive a small commission at no extra cost to consumers.</p><div class="entry-content"><p>What was the first state in the USA?</p>
+<p>a) Delaware<br />
+b) New Hampshire<br />
+c) Virginia<br />
+d) Massachusetts<br />
+e) Connecticut</p>
+<p style="text-align: center;"><i class="ferrari--spinner"></i><img class="ferrari__img ferrari--not-loaded aligncenter" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy-type="image" data-src="https://travelmamas.com/media/trivia_flag.jpg" alt="American flag" width="500" height="326" /><noscript><img class="aligncenter" src="https://travelmamas.com/media/trivia_flag.jpg" alt="American flag" width="500" height="326" /></noscript></p>
+<p>Scroll down for the answer&#8230;!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>This is a tricky one. The first 13 colonies along the Atlantic Coast of North America declared independence from the British Empire in 1776 and became the United States of America. The first colony, established in 1607, was Virginia. This baker&#8217;s dozen of colonies were considered members of the U.S. ever since the signing of the Declaration of Independence on July 4, 1776. Most, however, including the 50 State Quarters program, recognize statehood according the the dates on which the states accepted the current U.S. Constitution. According to this method, a) Delaware holds the title as the first official U.S. state, for ratifying the Constitution on December 7, 1787.</p>
+<p><em><strong>What&#8217;s your favorite U.S. state and why? Let us know in the comments below!</strong></em></p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><p class="sd-title"><span class="ez-toc-section" id="Share_this_post">Share this post:</span></p><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-11208" class="share-twitter sd-button share-icon" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-11208" class="share-facebook sd-button share-icon" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-pinterest"><a rel="nofollow noopener noreferrer" data-shared="sharing-pinterest-11208" class="share-pinterest sd-button share-icon" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-11208" class="share-linkedin sd-button share-icon" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-tumblr"><a rel="nofollow noopener noreferrer" data-shared="" class="share-tumblr sd-button share-icon" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon" href="https://travelmamas.com/what-was-the-first-state-in-the-usa/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-end"></li></ul></div></div></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h4 class="jp-relatedposts-headline"><span class="ez-toc-section" id="You_might_also_like"><em>You might also like:</em></span></h4>
+</div><!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="https://travelmamas.com/what-was-the-first-state-in-the-usa/"
+    dc:identifier="https://travelmamas.com/what-was-the-first-state-in-the-usa/"
+    dc:title="What was the first state in the USA?"
+    trackback:ping="https://travelmamas.com/what-was-the-first-state-in-the-usa/trackback/" />
+</rdf:RDF>-->
+</div><div class="post-meta"><span class="categories">Filed Under: <a href="https://travelmamas.com/category/blog/" rel="category tag">BLOG</a>, <a href="https://travelmamas.com/category/travel-trivia/" rel="category tag">TRAVEL TRIVIA</a></span> <span class="tags">Tagged With: <a href="https://travelmamas.com/tag/travel-trivia-2/" rel="tag">Travel Trivia</a>, <a href="https://travelmamas.com/tag/u-s/" rel="tag">U.S.</a></span></div></div><div class="author-box"><div><i class="ferrari--spinner"></i><img alt='' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy-type="image" data-src='https://secure.gravatar.com/avatar/faf32ab29e0b858ee0862ed1b13ff61b?s=70&#038;d=blank&#038;r=g' srcset="" data-srcset='https://secure.gravatar.com/avatar/faf32ab29e0b858ee0862ed1b13ff61b?s=140&#038;d=blank&#038;r=g 2x' class='ferrari__img ferrari--not-loaded avatar avatar-70 photo' height='70' width='70' /><noscript><img alt='' src='https://secure.gravatar.com/avatar/faf32ab29e0b858ee0862ed1b13ff61b?s=70&#038;d=blank&#038;r=g' srcset='https://secure.gravatar.com/avatar/faf32ab29e0b858ee0862ed1b13ff61b?s=140&#038;d=blank&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' /></noscript> <strong>About Colleen Lanin</strong><br /><p>Colleen Lanin is the founder/editor-in-chief of TravelMamas.com. As the author of her book, "The Travel Mamas' Guide," she teaches parents not only how to survive a trip with children, but also how to love exploring the world with their offspring. Her stories have appeared online and in print for such outlets as the "Today" show, NBCNews.com,  Parenting Magazine, Orlando Sentinel, Chicago Tribune, Expedia, San Diego Family Magazine, and more. Colleen gives tips on television, radio, and as a public speaker. She has a master’s degree in business administration with a background in marketing. She lives in Arizona with her husband and two kids.</p>
+</div></div>	<div id="respond" class="comment-respond">
+		<span id="reply-title" class="likeh3 comment-reply-title">Speak Your Mind <small><a rel="nofollow" id="cancel-comment-reply-link" href="/what-was-the-first-state-in-the-usa/#respond" style="display:none;">Cancel reply</a></small></span><form action="https://travelmamas.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="4" aria-required="true"></textarea></p><p class="comment-form-author"><input id="author" name="author" type="text" value="" size="30" tabindex="1" aria-required="true" /><label for="author">Name</label> <span class="required">*</span></p>
+<p class="comment-form-email"><input id="email" name="email" type="text" value="" size="30" tabindex="2" aria-required="true" /><label for="email">Email</label> <span class="required">*</span></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='11208' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="a7c78bae29" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="49"/></p></form>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p><div class="breadcrumb"><span><span><a href="https://travelmamas.com/" >Home</a> » <span><a href="https://travelmamas.com/category/blog/" >BLOG</a> » <span class="breadcrumb_last" aria-current="page">What was the first state in the USA?</span></span></span></span></div></div><div id="sidebar" class="sidebar widget-area"><div id="custom_html-3" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><span class="likeh4 widget-title widgettitle" style="text-align:center;">Search Travel Mamas</span></div></div></div>
+<div id="search-3" class="widget widget_search"><div class="widget-wrap"><form method="get" class="searchform search-form" action="https://travelmamas.com/" role="search" ><input type="text" value="Search this website &#x02026;" name="s" class="s search-input" onfocus="if ('Search this website &#x2026;' === this.value) {this.value = '';}" onblur="if ('' === this.value) {this.value = 'Search this website &#x2026;';}" /><input type="submit" class="searchsubmit search-submit" value="Search" /></form></div></div>
+<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><div style="border: 1px solid #ccc; padding: 10px;">
+<center><a href="https://travelmamas.com/about/the-travel-mama/"><i class="ferrari--spinner"></i><img class="ferrari__img ferrari--not-loaded" style="border-radius: 50%;float:right;margin:5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy-type="image" data-src="https://s31395.pcdn.co/wp-content/uploads/2019/05/colleen_lanin_bio_pic.jpg" width="150" alt="The Travel Mama Colleen Lanin and Family"/><noscript><img style="border-radius: 50%;float:right;margin:5px;" src="https://s31395.pcdn.co/wp-content/uploads/2019/05/colleen_lanin_bio_pic.jpg" width="150" alt="The Travel Mama Colleen Lanin and Family"/></noscript></a></center>
+<div><p style="font-size:14px!important;">Hi there! I'm Colleen Lanin, the founder of Travel Mamas. I launched this family travel blog in 2009 to help parents and their children connect with each other and the world around them through travel and beyond. I love traveling with my family, swimming in fabulous hotel pools, hiking in nature, and doing Pilates so I can eat lots of gluten-free dessert. Click on the pic to learn more about moi! </p></div>
+</div></div></div></div>
+<div id="text-20" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><div style="text-align: center;">
+<a class="subscribe-link" href="https://travelmamas.com/subscribe/" target="_blank" rel="nofollow noopener noreferrer">Subscribe to our e-newsletter!</a>
+</div></div>
+		</div></div>
+<div id="text-33" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><div style="text-align: center;"><a href="https://travelmamas.com/subscribe/" title="Subscribe"><i class="ferrari--spinner"></i><img class="ferrari__img ferrari--not-loaded alignnone size-full wp-image-34692" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy-type="image" data-src="https://s31395.pcdn.co/wp-content/uploads/2017/04/300x250_webbanner_Travel_Mamas_jpeg2.jpg" alt="" width="300" height="250" /</a><noscript><img class="alignnone size-full wp-image-34692" src="https://s31395.pcdn.co/wp-content/uploads/2017/04/300x250_webbanner_Travel_Mamas_jpeg2.jpg" alt="" width="300" height="250" /</a></noscript>
+</div></div>
+		</div></div>
+<div id="custom_html-4" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><a href="https://travelmamas.com/subscribe/" title="Subscribe"><span class="widget-title widgettitle likeh4">Top Posts &amp; Pages</span></a></div></div></div>
+<div id="top-posts-5" class="widget widget_top-posts"><div class="widget-wrap"><h4 class="widget-title widgettitle"> </h4>
+<ul class='widgets-list-layout no-grav'>
+					<li>
+						<a href="https://travelmamas.com/tips-for-flying-with-baby-toddler/" title="Flying with a Baby or Toddler ~ 15 Tried and True Tips" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i1.wp.com/travelmamas.com/wp-content/uploads/2018/12/flying_with_baby_square_window-1.jpg?resize=158%2C158&#038;ssl=1" alt="Flying with a Baby or Toddler ~ 15 Tried and True Tips" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/tips-for-flying-with-baby-toddler/" title="Flying with a Baby or Toddler ~ 15 Tried and True Tips" class="bump-view" data-bump-view="tp">Flying with a Baby or Toddler ~ 15 Tried and True Tips</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/15-best-san-diego-attractions-for-kids/" title="15 Best San Diego Attractions for Kids" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i1.wp.com/travelmamas.com/wp-content/uploads/2019/10/san_diego_with_kids_birch_new-Courtesy-Birch-Aquarium-2.jpg?resize=158%2C158&#038;ssl=1" alt="15 Best San Diego Attractions for Kids" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/15-best-san-diego-attractions-for-kids/" title="15 Best San Diego Attractions for Kids" class="bump-view" data-bump-view="tp">15 Best San Diego Attractions for Kids</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/best-indoor-hotel-pools-for-kids/" title="11 Best Indoor Hotel Pools for Families" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i1.wp.com/travelmamas.com/wp-content/uploads/2018/09/indoor_hotel_pools_square.jpg?resize=158%2C158&#038;ssl=1" alt="11 Best Indoor Hotel Pools for Families" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/best-indoor-hotel-pools-for-kids/" title="11 Best Indoor Hotel Pools for Families" class="bump-view" data-bump-view="tp">11 Best Indoor Hotel Pools for Families</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/top-10-disneyland-rides-and-attractions-for-babies-and-toddlers/" title="Top 12 Disneyland Rides and Attractions for Babies and Toddlers" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i1.wp.com/travelmamas.com/wp-content/uploads/2017/04/disneyland_with_babies_dumbo_square.jpg?resize=158%2C158&#038;ssl=1" alt="Top 12 Disneyland Rides and Attractions for Babies and Toddlers" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/top-10-disneyland-rides-and-attractions-for-babies-and-toddlers/" title="Top 12 Disneyland Rides and Attractions for Babies and Toddlers" class="bump-view" data-bump-view="tp">Top 12 Disneyland Rides and Attractions for Babies and Toddlers</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/things-to-do-mall-of-america/" title="30 Things to Do at Mall of America Besides Shop" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i0.wp.com/travelmamas.com/wp-content/uploads/2017/04/mall_of_america_roller_coaster_square.jpg?resize=158%2C158&#038;ssl=1" alt="30 Things to Do at Mall of America Besides Shop" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/things-to-do-mall-of-america/" title="30 Things to Do at Mall of America Besides Shop" class="bump-view" data-bump-view="tp">30 Things to Do at Mall of America Besides Shop</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/scottsdale-with-kids-arizona/" title="Scottsdale with Kids - 23 Fun Things to Do in the West&#039;s Most Western Town" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i2.wp.com/travelmamas.com/wp-content/uploads/2019/06/IMG_1835.jpg?resize=158%2C158&#038;ssl=1" alt="Scottsdale with Kids - 23 Fun Things to Do in the West&#039;s Most Western Town" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/scottsdale-with-kids-arizona/" title="Scottsdale with Kids - 23 Fun Things to Do in the West&#039;s Most Western Town" class="bump-view" data-bump-view="tp">Scottsdale with Kids - 23 Fun Things to Do in the West&#039;s Most Western Town</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/dos-and-donts-of-disneys-castaway-cay/" title="Dos &amp; Don&#039;ts of Disney&#039;s Castaway Cay" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i0.wp.com/travelmamas.com/wp-content/uploads/2019/02/castaway_cay_tips_expert_square.jpg?resize=158%2C158&#038;ssl=1" alt="Dos &amp; Don&#039;ts of Disney&#039;s Castaway Cay" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/dos-and-donts-of-disneys-castaway-cay/" title="Dos &amp; Don&#039;ts of Disney&#039;s Castaway Cay" class="bump-view" data-bump-view="tp">Dos &amp; Don&#039;ts of Disney&#039;s Castaway Cay</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/10-best-beach-hotels-for-kids/" title="10 Best Beach Hotels for Kids - Recommended by Family Travel Experts" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i1.wp.com/travelmamas.com/wp-content/uploads/2017/07/best_beach_hotels_nickpuntacana_square.jpg?resize=158%2C158&#038;ssl=1" alt="10 Best Beach Hotels for Kids - Recommended by Family Travel Experts" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/10-best-beach-hotels-for-kids/" title="10 Best Beach Hotels for Kids - Recommended by Family Travel Experts" class="bump-view" data-bump-view="tp">10 Best Beach Hotels for Kids - Recommended by Family Travel Experts</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/disney-on-ice-with-kids-tips/" title="8 Tips for Disney On Ice with Kids" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i2.wp.com/travelmamas.com/wp-content/uploads/2017/05/disney_on_ice_spin_square.jpg?resize=158%2C158&#038;ssl=1" alt="8 Tips for Disney On Ice with Kids" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/disney-on-ice-with-kids-tips/" title="8 Tips for Disney On Ice with Kids" class="bump-view" data-bump-view="tp">8 Tips for Disney On Ice with Kids</a>
+							</div>
+													</li>
+										<li>
+						<a href="https://travelmamas.com/montreal-with-kids/" title="10 Fantastique Things to Do in Montreal with Kids" class="bump-view" data-bump-view="tp">
+								<img width="158" height="158" src="https://i1.wp.com/travelmamas.com/wp-content/uploads/2017/10/montreal_with_kids_aires_libres_art_festival_square.jpg?resize=158%2C158&#038;ssl=1" alt="10 Fantastique Things to Do in Montreal with Kids" data-pin-nopin="true" class="widgets-list-layout-blavatar"/>
+							</a>
+							<div class="widgets-list-layout-links">
+								<a href="https://travelmamas.com/montreal-with-kids/" title="10 Fantastique Things to Do in Montreal with Kids" class="bump-view" data-bump-view="tp">10 Fantastique Things to Do in Montreal with Kids</a>
+							</div>
+													</li>
+					</ul>
+</div></div>
+</div></div></div></div><div id="footer" class="footer"><div class="wrap"><div class="gototop"><a href="#wrap" rel="nofollow">Top</a></div><div class="creds">Copyright &#x000A9;&nbsp;2020 Travel Mamas</div></div></div></div><!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://travelmamas.com/wp-admin/admin-ajax.php";
+</script>
+<script type="text/javascript">
+jQuery(".wp-caption").removeAttr('style');
+</script><script type='text/javascript'>jQuery(document).ready(function($) {$(".myController").jFlow({controller: ".jFlowControl",slideWrapper : "#jFlowSlider",slides: "#slides",selectedWrapper: "jFlowSelected",width: "610px",height: "321px",timer: 4000,duration: 700,loop: 1,effect: "right",prev: ".slider-previous",next: ".slider-next",auto: true});});</script>		<!-- Quantcast Tag -->
+		<script type="text/javascript">
+			var _qevents = _qevents || [];
+
+			(function() {
+				var elem = document.createElement('script');
+				elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+				elem.async = true;
+				elem.type = "text/javascript";
+				var scpt = document.getElementsByTagName('script')[0];
+				scpt.parentNode.insertBefore(elem, scpt);
+			})();
+
+			_qevents.push({
+				qacct:"p-0pg0WNqk_yKEe",
+				source:"wp"
+			});
+		</script>
+
+		<noscript>
+		<div style="display:none;">
+			<img src="//pixel.quantserve.com/pixel/p-0pg0WNqk_yKEe.gif" border="0" height="1" width="1" alt="Quantcast"/>
+		</div>
+		</noscript>
+		<!-- End Quantcast tag -->
+		<noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=2049624128614684&ev=PageView&noscript=1" alt="facebook_pixel"></noscript>
+<noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=2049624128614684&ev=GeneralEvent&noscript=1&cd[post_type]=post&cd[post_id]=11208&cd[content_name]=What+was+the+first+state+in+the+USA%3F&cd[categories]=BLOG%2C+TRAVEL+TRIVIA&cd[tags]=Travel+Trivia%2C+U.S." alt="facebook_pixel"></noscript>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/travelmamas.com\/what-was-the-first-state-in-the-usa\/":11208};
+	</script>
+					<div id="sharing_email" style="display: none;">
+		<form action="/what-was-the-first-state-in-the-usa/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="This field is for validation and should not be changed" />
+			
+			<img style="float: right; display: none" class="loading" src="https://s31395.pcdn.co/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel" role="button">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+		<script type="text/javascript" src="https://s31395.pcdn.co/wp-content/cache/js/1aa4ab48ead738fd34b3dc5d77937e43.min.js" defer="defer"></script><script type='text/javascript'>
+/* <![CDATA[ */
+var foundryLazySettings = {"aggressive":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s31395.pcdn.co/wp-content/mu-plugins/foundry-mu/inc/performance/assets/js/lazy-load.min.js?ver=1.9.1" defer="defer"></script><script type='text/javascript'>
+/* <![CDATA[ */
+var sb_instagram_js_options = {"sb_instagram_at":"203790705.3a81a9f.c5511f1fcaf249ca9742543947dca987","sb_instagram_hide_photos":"","sb_instagram_block_users":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s31395.pcdn.co/wp-content/cache/js/17068dd931e1f4c98a8785ed4172cecb.min.js" defer="defer"></script><script type="text/javascript" src="https://s31395.pcdn.co/wp-content/plugins/responsive-image-maps/jquery.rwdImageMaps.min.js?ver=1.5" defer="defer"></script><script type="text/javascript" src="https://c0.wp.com/c/5.3.2/wp-includes/js/comment-reply.min.js" defer="defer"></script><script type="text/javascript" src="https://c0.wp.com/c/5.3.2/wp-includes/js/hoverIntent.min.js" defer="defer"></script><script type="text/javascript" src="https://s31395.pcdn.co/wp-content/themes/genesis/lib/js/menu/superfish.min.js?ver=1.7.10" defer="defer"></script><script type="text/javascript" src="https://s31395.pcdn.co/wp-content/themes/genesis/lib/js/menu/superfish.args.min.js?ver=2.10.1" defer="defer"></script><script type="text/javascript" src="https://s31395.pcdn.co/wp-content/themes/genesis/lib/js/menu/superfish.compat.min.js?ver=2.10.1" defer="defer"></script><script type="text/javascript" src="https://s31395.pcdn.co/wp-content/cache/js/49152724929c00d2fad33ec25cbd1bfc.min.js" defer="defer"></script><script type="text/javascript" src="https://c0.wp.com/c/5.3.2/wp-includes/js/wp-embed.min.js" defer="defer"></script><script async="async" type="text/javascript" src="https://s31395.pcdn.co/wp-content/cache/js/c7c22dc59ee9e2360d28f3671c2e2e69.min.js" defer="defer"></script><script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.2.3/_inc/build/sharedaddy/sharing.min.js'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-tumblr', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+</script>
+<script type='text/javascript' src='https://stats.wp.com/e-202010.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.2.3',blog:'51010306',post:'11208',tz:'-8',srv:'travelmamas.com'} ]);
+	_stq.push([ 'clickTrackerInit', '51010306', '11208' ]);
+</script>
+
+<script type='text/javascript'>
+    /*Google Tag Manager for Collective Bias*/
+
+    dataLayerCBias = [{
+        'trackingID': 'UA-79675706-14',
+        'javaScriptVersion': 'analytics.js',
+        'homePageURL': 'https://travelmamas.com'
+    }];
+</script>
+<noscript>
+    <iframe src='//www.googletagmanager.com/ns.html?id=GTM-PBN79J' height='0' width='0' style='display:none;visibility:hidden'></iframe>
+</noscript>
+<script type='text/javascript'>
+    /*<![CDATA[*/
+    (function() {
+      window.setTimeout(function() {
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = '//www.googletagmanager.com/gtm.'+'js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayerCBias', 'GTM-PBN79J');
+      });
+    })();
+    /*]]>*/
+
+    /*End Google Tag Manager for Collective Bias*/
+</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"073b4df364","applicationID":"19026893","transactionName":"ZQZWMhBXVxYAUxdYDFxMdQUWX1YLTkMKXwReBg==","queueTime":0,"applicationTime":139,"atts":"SUFVRFhNRBg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>
