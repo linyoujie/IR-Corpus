@@ -16,21 +16,22 @@ import java.util.regex.Pattern;
 /**
  * @author Youjie Lin   
  */
-public class HTMLtoTEXT {
+public class ConvertToTEXT {
+    
     public static void main(String[] args) throws IOException
     {
         
            
 
-        File file = new File("./CorpusDir");
+        File file = new File("./RawHtml");
         File[] filesList = file.listFiles();
-    
-        for (int i = 0; i < filesList.length; i++) {
+
+        for (int i = 0; i < filesList.length-1; i++) {
             if (filesList[i].isFile()) {
                 String HtmlStr="";
                 BufferedReader buff;
                 ArrayList<String> files = new ArrayList<String>();
-                System.out.println("文件：" + filesList[i]);
+                System.out.println("File:" + filesList[i]);
                 files.add(filesList[i].toString());
                
                 try {
@@ -43,10 +44,8 @@ public class HTMLtoTEXT {
                         HtmlStr=HtmlStr+t;
                     }
                 } catch (FileNotFoundException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 } catch (IOException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
                 
@@ -56,7 +55,7 @@ public class HTMLtoTEXT {
 
                 BufferedWriter output = null;
                 try {
-                    File outfile = new File("./CleanedCorpus/"+i+".txt");
+                    File outfile = new File("./TextCorpus/"+i+".txt");
                     output = new BufferedWriter(new FileWriter(outfile));
                     output.write(str);
                     //clean container
@@ -113,12 +112,16 @@ public class HTMLtoTEXT {
           textStr = textStr.replaceAll("\\p{Punct}[^']|[-]", " ");
           textStr = textStr.replaceAll("[\\s][‘’]|[‘’]", "'");
           textStr = textStr.replaceAll("[\\s][“”]|[“”]", "\"");
+          //remove stopword
+        
 
+            
+     
       } catch (Exception e) {
           System.err.println("Html2Text: " + e.getMessage());
       }
 
-      return textStr;// 返回文本字符串
+      return textStr;
   }
 
 }
