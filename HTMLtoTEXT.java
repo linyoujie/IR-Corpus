@@ -1,9 +1,15 @@
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
@@ -11,53 +17,68 @@ import java.util.regex.Pattern;
  * @author Youjie Lin   
  */
 public class HTMLtoTEXT {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
-        BufferedReader buff;
+        
            
-        String HtmlStr="";
-        try {
-            buff = new BufferedReader(
-                     new FileReader("./CorpusDir/• Mass shootings in the U.S. by state 1982-2020 _ Statista.html"));
+
+        File file = new File("./CorpusDir");
+        File[] filesList = file.listFiles();
+    
+        for (int i = 0; i < filesList.length; i++) {
+            if (filesList[i].isFile()) {
+                String HtmlStr="";
+                BufferedReader buff;
+                ArrayList<String> files = new ArrayList<String>();
+                System.out.println("文件：" + filesList[i]);
+                files.add(filesList[i].toString());
                
-               
-            String t=null;
-            while((t=buff.readLine())!=null){//读一行
-                HtmlStr=HtmlStr+t;
-              }
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+                try {
+                    buff = new BufferedReader(
+                            new FileReader(filesList[i]));
+                    
+                    
+                    String t=null;
+                    while((t=buff.readLine())!=null){//读一行
+                        HtmlStr=HtmlStr+t;
+                    }
+                } catch (FileNotFoundException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+                
+                //HtmlStr="<div>&nbsp;　三、改进措施</div><div>
+                String str=clean(HtmlStr);
+                //System.out.println(str);
+
+                BufferedWriter output = null;
+                try {
+                    File outfile = new File("./CleanedCorpus/"+i+".txt");
+                    output = new BufferedWriter(new FileWriter(outfile));
+                    output.write(str);
+                    //clean container
+                    str = "";
+                } catch ( IOException e ) {
+                    e.printStackTrace();
+                } finally {
+                if ( output != null ) {
+                    
+                    output.close();
+                }
+                }
+                
+                files.clear();
+            }
+
         }
-           
-        //HtmlStr="<div>&nbsp;　三、改进措施</div><div>
-        String str=clean(HtmlStr);
-        System.out.println(str);
-        getFiles("./CorpusDir");
         
     }
        
 
 
-    public static ArrayList<String> getFiles(String path) {
-        ArrayList<String> files = new ArrayList<String>();
-        File file = new File(path);
-        File[] tempList = file.listFiles();
-    
-        for (int i = 0; i < tempList.length; i++) {
-            if (tempList[i].isFile()) {
-                  System.out.println("文件：" + tempList[i]);
-                files.add(tempList[i].toString());
-            }
-            if (tempList[i].isDirectory()) {
-                  System.out.println("文件夹：" + tempList[i]);
-            }
-        }
-        return files;
-    }
 
     public static String clean(String inputString) {
       String htmlStr = inputString; // 含html标签的字符串
@@ -89,7 +110,9 @@ public class HTMLtoTEXT {
           htmlStr = m_html.replaceAll(" "); // 过滤html标签
 
           textStr = htmlStr.replaceAll(" +", " ");
-          textStr = textStr.replaceAll("\\p{Punct}", " ");
+          textStr = textStr.replaceAll("\\p{Punct}[^']", " ");
+          textStr = textStr.replaceAll("[\\s][‘’]|[‘’]", "'");
+          textStr = textStr.replaceAll("[\\s][“”]|[“”]", "\"");
 
       } catch (Exception e) {
           System.err.println("Html2Text: " + e.getMessage());
