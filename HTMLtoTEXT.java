@@ -109,8 +109,8 @@ public class HTMLtoTEXT {
           m_html = p_html.matcher(htmlStr);
           htmlStr = m_html.replaceAll(" "); // 过滤html标签
 
-          textStr = htmlStr.replaceAll(" +", " ");
-          textStr = textStr.replaceAll("\\p{Punct}[^']", " ");
+          textStr = htmlStr.replaceAll("[\\s]+", " ");
+          textStr = textStr.replaceAll("\\p{Punct}[^']|[-]", " ");
           textStr = textStr.replaceAll("[\\s][‘’]|[‘’]", "'");
           textStr = textStr.replaceAll("[\\s][“”]|[“”]", "\"");
 
