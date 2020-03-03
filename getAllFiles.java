@@ -21,7 +21,7 @@ public class getAllFiles {
     public static void main(String[] args) throws IOException
     {
 
-        HashMap<String, ArrayList<ArrayList<Integer>> > invertedIndex = new HashMap<String, ArrayList<ArrayList<Integer>>>();
+        HashMap<String, HashMap<Integer, ArrayList<Integer>>> invertedIndex = new HashMap<String, HashMap<Integer, ArrayList<Integer>>>();
         BufferedReader stopbuff;
         File StopListFile = new File("./StopList.txt");
         ArrayList<String> stopwords = new ArrayList<String>();
@@ -69,7 +69,7 @@ public class getAllFiles {
                             String word = scanword.next();
                             //System.out.println(scanword);
                         if (!stopwords.contains(scanword)){
-                            invertedIndex.put(scanword, ArrayList<ArrayList<Integer>(filesList[i], posCount ));
+                            invertedIndex.ifNotput(scanword);
                         }
                     }
 
