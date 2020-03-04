@@ -1,0 +1,394 @@
+query<moon>: 
+ .\RawHtml\Apollo 11 (AS-506) _ National Air and Space Museum.html
+.\RawHtml\Coming to America_ Who Was First_ _ NPR.html
+.\RawHtml\Here's Your Proof That We Landed On The Moon, Steph Curry.html
+.\RawHtml\Apollo 11 Moon landing_ Everything you need to know - CBBC Newsround.html
+.\RawHtml\Apollo 11's 50th anniversary_ Quick guide to the first moon landing - CNET.html
+.\RawHtml\Apollo 11_ 50 years after moon landing, here's every mission explained - Business Insider.html
+.\RawHtml\Apollo 11_ First Men on the Moon _ Space.html
+.\RawHtml\Apollo 11_ Four things you may not know about the first moon landing - BBC News.html
+.\RawHtml\Apollo 50-year anniversary_ the moon landing’s legacy and the future of lunar exploration - Vox.html
+.\RawHtml\Who Discovered America__ The Untold History of the Peopling of the Americas_ Gavin Menzies, Ian Hudson_ 9780062236753_ Amazon.com_ Books.html
+.\RawHtml\NASA - The First Person on the Moon.html
+.\RawHtml\What Have We Left on the Moon_ _ Britannica.html
+.\RawHtml\Who Discovered Gravity_ - Universe Today.html
+.\RawHtml\Neil Armstrong_ First Man on the Moon _ Space.html
+.\RawHtml\Newton's apple_ The real story _ New Scientist.html
+.\RawHtml\What Is Gravity_ _ Live Science.html
+.\RawHtml\What Is Gravity_ _ NASA Space Place – NASA Science for Kids.html
+.\RawHtml\What is gravity_.html
+.\RawHtml\How many hours were in a dinosaur's day_ › Ask an Expert (ABC Science).html
+.\RawHtml\Saturn’s rings reveal how long a day lasts on the planet _ Science News.html
+.\RawHtml\Did the moon landing actually happen_ _ Science_ In-depth reporting on science and technology _ DW _ 18.07.2019.html
+.\RawHtml\How Long is a Day on Earth_ - Universe Today.html
+.\RawHtml\Discovering Gravity.html
+.\RawHtml\How Long Is a Day on Earth_.html
+.\RawHtml\How long is a day on Mars_ _ Explore Royal Museums Greenwich.html
+.\RawHtml\Everyone’s going back to the moon. But why_ _ Science _ The Guardian.html
+.\RawHtml\When Did Neil Armstrong Step on the Moon_ - The Atlantic.html
+.\RawHtml\Who Was the First Person to Discover Gravity_.html
+.\RawHtml\1969 Moon Landing - HISTORY.html
+.\RawHtml\8 Little-Known Facts About the Moon Landing - HISTORY.html
+.\RawHtml\July 20, 1969_ 1st footsteps on moon _ Human World _ EarthSky.html
+.\RawHtml\How Long Is a Day on Other Planets_.html
+.\RawHtml\The 12 men who walked on the moon.html
+.\RawHtml\First Moon Landing Fast Facts - CNN.html
+.\RawHtml\Moon exploration, facts and information.html
+.\RawHtml\gravity _ Definition, Physics, & Facts _ Britannica.html
+.\RawHtml\How long is a day on the Sun_ _ Astronomy.com.html
+.\RawHtml\How Long is a Day on Venus_ The Answer Keeps Changing _ Discover Magazine.html
+query<day>: 
+ .\RawHtml\How Long Is a Day_ _ Answers in Genesis.html
+.\RawHtml\How Long Is One Day on Other Planets_ _ NASA Space Place – NASA Science for Kids.html
+.\RawHtml\Why Hitler's grand plan during the second world war collapsed _ World news _ The Guardian.html
+.\RawHtml\World War II _ Facts, Summary, Combatants, & Causes _ Britannica.html
+.\RawHtml\World War II.html
+.\RawHtml\World War II_ After the War - The Atlantic.html
+.\RawHtml\World War II_ Key Dates _ The Holocaust Encyclopedia.html
+.\RawHtml\World War II_ Summary, Combatants & Facts - HISTORY.html
+.\RawHtml\World War II_ The Fall of Nazi Germany - The Atlantic.html
+.\RawHtml\WW2 Timeline_ The Second World War From Start To Finish - HistoryExtra.html
+.\RawHtml\Neil Armstrong_ First Man on the Moon _ Space.html
+.\RawHtml\Newton's apple_ The real story _ New Scientist.html
+.\RawHtml\On ‘Einstein discovered gravity’ gaffe, Piyush Goyal issues clarification - india news - Hindustan Times.html
+.\RawHtml\Overlooked No More_ Alan Turing, Condemned Code Breaker and Computer Visionary - The New York Times.html
+.\RawHtml\How Louisiana Became A State - My New Orleans.html
+.\RawHtml\How many hours were in a dinosaur's day_ › Ask an Expert (ABC Science).html
+.\RawHtml\Rebuilding the world after the second world war _ World news _ The Guardian.html
+.\RawHtml\Saturn’s rings reveal how long a day lasts on the planet _ Science News.html
+.\RawHtml\How the US has hidden its empire _ News _ The Guardian.html
+.\RawHtml\How the World's First Computer Was Rescued From the Scrap Heap _ WIRED.html
+.\RawHtml\How We Discovered That Christopher Columbus Didn't Get to America First - Pacific Standard.html
+.\RawHtml\Alan Turing (1912 - 1954).html
+.\RawHtml\If Columbus Didn’t Discover America, Which Of These Five Groups Did_ - 24_7 Wall St..html
+.\RawHtml\Alan Turing - a short biography.html
+.\RawHtml\Alan Turing - The British Library.html
+.\RawHtml\Alan Turing _ Biography, Facts, & Education _ Britannica.html
+.\RawHtml\Alan Turing_ Creator of modern computing - BBC Teach.html
+.\RawHtml\State of Delaware - Topics - Delaware Facts & Symbols - Delaware Government.html
+.\RawHtml\Statehood Dates.html
+.\RawHtml\1969 Moon Landing - HISTORY.html
+.\RawHtml\42 maps that explain World War II - Vox.html
+.\RawHtml\States by Order of Entry into Union.html
+.\RawHtml\8 Little-Known Facts About the Moon Landing - HISTORY.html
+.\RawHtml\8 things you didn’t know about Alan Turing _ PBS NewsHour.html
+.\RawHtml\Steve Jobs.html
+.\RawHtml\A Day Is Not 24 Hours - The Philipendium - Medium.html
+.\RawHtml\The 11 nations of the United States and their cultures - Business Insider.html
+.\RawHtml\An Oral History of Isaac Newton “Discovering” Gravity, as Told by His Contemporaries _ The New Yorker.html
+.\RawHtml\Apollo 11's 50th anniversary_ Quick guide to the first moon landing - CNET.html
+.\RawHtml\Apollo 11_ First Men on the Moon _ Space.html
+.\RawHtml\The 50 States of America _ US State Information.html
+.\RawHtml\The Brief History of the ENIAC Computer _ History _ Smithsonian Magazine.html
+.\RawHtml\The Enigma of Alan Turing — Central Intelligence Agency.html
+.\RawHtml\The First Town in the First State _ Lewes Chamber of Commerce.html
+.\RawHtml\The History of Apple Computers.html
+.\RawHtml\The Never-Before-Told Story of the World's First Computer Art (It's a Sexy Dame) - The Atlantic.html
+.\RawHtml\The Origin of the 8-Hour Work Day and Why We Should Rethink It.html
+.\RawHtml\Apple Computers_ This Month in Business History (Business Reference Services, Library of Congress).html
+.\RawHtml\Apple Fast Facts - CNN.html
+.\RawHtml\Apple Inc. _ American company _ Britannica.html
+.\RawHtml\Apple's origins_ An oral history from inside the loop - CNET.html
+.\RawHtml\By the Numbers_ End of World War II - CNN.html
+.\RawHtml\The Real Story_ Who Discovered America _ Voice of America - English.html
+.\RawHtml\U.S. Senate_ The Senate and the United States Constitution.html
+.\RawHtml\UNIVAC, the first commercially produced digital computer, is dedicated - HISTORY.html
+.\RawHtml\Christopher Columbus Discovers America, 1492.html
+.\RawHtml\Christopher Columbus_ 3 things you think he did that he didn’t - The Washington Post.html
+.\RawHtml\Columbus Day vs Leif Erikson Day_ Who 'Discovered' America_ _ Time.html
+.\RawHtml\Coming to America_ Who Was First_ _ NPR.html
+.\RawHtml\Computer - The first computer _ Britannica.html
+.\RawHtml\Vasudev Devnani_ Brahmagupta-II, not Isaac Newton, discovered gravity_ Rajasthan education minister _ India News - Times of India.html
+.\RawHtml\VE Day_ how World War 2 ended _ The Week UK.html
+.\RawHtml\Was America Discovered Before Columbus_ _ AMERICAN HERITAGE.html
+.\RawHtml\We Finally Know How Long a Day on Saturn Is _ Smart News _ Smithsonian Magazine.html
+.\RawHtml\What Have We Left on the Moon_ _ Britannica.html
+.\RawHtml\What is gravity_.html
+.\RawHtml\Delaware becomes the first state to ratify the Constitution - HISTORY.html
+.\RawHtml\Did the moon landing actually happen_ _ Science_ In-depth reporting on science and technology _ DW _ 18.07.2019.html
+.\RawHtml\Did you know_ Facts about Apple Inc. _ The Learning Key _ phillytrib.com.html
+.\RawHtml\Discovering Gravity.html
+.\RawHtml\ENIAC at Penn Engineering.html
+.\RawHtml\ENIAC Programmers.html
+.\RawHtml\Everyone’s going back to the moon. But why_ _ Science _ The Guardian.html
+.\RawHtml\What Steve Jobs taught us about failure - Business - US business _ NBC News.html
+.\RawHtml\When and How Did World War II End_.html
+.\RawHtml\When did the Second World War end_.html
+.\RawHtml\When did the Second World War start and end, what were WW2's biggest battles and how many people died_.html
+.\RawHtml\gravity _ Definition, Physics, & Facts _ Britannica.html
+.\RawHtml\Gravity_ it is all in your head.html
+.\RawHtml\Happy Birthday, Isaac Newton_ Birth of Physicist Who Discovered Gravity Celebrated on Christmas Day.html
+.\RawHtml\History of Apple_ The story of Steve Jobs and the company he founded - Macworld UK.html
+.\RawHtml\History of Computers - A Brief Timeline of Their Evolution _ Live Science.html
+.\RawHtml\Who Discovered America.html
+.\RawHtml\Who Discovered America__ The Untold History of the Peopling of the Americas_ Gavin Menzies, Ian Hudson_ 9780062236753_ Amazon.com_ Books.html
+.\RawHtml\Who Discovered Gravity_ - Universe Today.html
+.\RawHtml\Who First Discovered America_ _ Owlcation.html
+.\RawHtml\Who Founded Apple Company_ Know the Apple Story and History.html
+.\RawHtml\How Long is 1 Day in Red Dead Redemption 2_.html
+.\RawHtml\How Long is a Day on Earth_ - Universe Today.html
+.\RawHtml\How Long Is a Day on Earth_.html
+.\RawHtml\How long is a day on Mars_ _ Explore Royal Museums Greenwich.html
+.\RawHtml\How Long is a Day On Other Planets_ - WorldAtlas.com.html
+.\RawHtml\Who Invented the Computer_ _ HowStuffWorks.html
+.\RawHtml\Who Invented the First Computer and When_ We Investigate.html
+.\RawHtml\Who Really Discovered America_ - Theories About the Earliest Explorers.html
+.\RawHtml\Who Really Discovered America_.html
+.\RawHtml\Who really discovered the law of gravity_ - BBC Science Focus Magazine.html
+.\RawHtml\Who was Alan Turing_ - History's HEROES from E2BN.html
+.\RawHtml\Why Delaware is the 'First State,' and what 'Delaware Day' is.html
+.\RawHtml\Isaac Newton_ The man who discovered gravity - BBC Teach.html
+.\RawHtml\July 20, 1969_ 1st footsteps on moon _ Human World _ EarthSky.html
+.\RawHtml\List of U.S. states' dates of admission to the union _ Britannica.html
+.\RawHtml\How Long Is a Day on Other Planets_.html
+.\RawHtml\How Long Is a Day on Saturn_ Scientists Finally Have an Answer.html
+.\RawHtml\How Long Is a Day on Saturn_ Scientists Finally Solve a Lingering Mystery _ Space.html
+.\RawHtml\Moon exploration, facts and information.html
+.\RawHtml\How Long is a Day on Saturn_ _ Live Science.html
+.\RawHtml\How long is a day on Saturn_ _ The Planetary Society.html
+.\RawHtml\How long is a day on the Sun_ _ Astronomy.com.html
+.\RawHtml\How Long Is a Day on the Sun_.html
+.\RawHtml\How Long is a Day on Venus_ The Answer Keeps Changing _ Discover Magazine.html
+frequency<ground> : 
+ frequency<day>: 
+ frequency: 15: 
+.\RawHtml\How Long Is a Day_ _ Answers in Genesis.html
+frequency: 17: 
+.\RawHtml\How Long Is One Day on Other Planets_ _ NASA Space Place – NASA Science for Kids.html
+frequency: 2: 
+.\RawHtml\Why Hitler's grand plan during the second world war collapsed _ World news _ The Guardian.html
+frequency: 2: 
+.\RawHtml\World War II _ Facts, Summary, Combatants, & Causes _ Britannica.html
+frequency: 1: 
+.\RawHtml\World War II.html
+frequency: 3: 
+.\RawHtml\World War II_ After the War - The Atlantic.html
+frequency: 1: 
+.\RawHtml\World War II_ Key Dates _ The Holocaust Encyclopedia.html
+frequency: 7: 
+.\RawHtml\World War II_ Summary, Combatants & Facts - HISTORY.html
+frequency: 2: 
+.\RawHtml\World War II_ The Fall of Nazi Germany - The Atlantic.html
+frequency: 5: 
+.\RawHtml\WW2 Timeline_ The Second World War From Start To Finish - HistoryExtra.html
+frequency: 2: 
+.\RawHtml\Neil Armstrong_ First Man on the Moon _ Space.html
+frequency: 1: 
+.\RawHtml\Newton's apple_ The real story _ New Scientist.html
+frequency: 1: 
+.\RawHtml\On ‘Einstein discovered gravity’ gaffe, Piyush Goyal issues clarification - india news - Hindustan Times.html
+frequency: 2: 
+.\RawHtml\Overlooked No More_ Alan Turing, Condemned Code Breaker and Computer Visionary - The New York Times.html
+frequency: 1: 
+.\RawHtml\How Louisiana Became A State - My New Orleans.html
+frequency: 21: 
+.\RawHtml\How many hours were in a dinosaur's day_ › Ask an Expert (ABC Science).html
+frequency: 1: 
+.\RawHtml\Rebuilding the world after the second world war _ World news _ The Guardian.html
+frequency: 3: 
+.\RawHtml\Saturn’s rings reveal how long a day lasts on the planet _ Science News.html
+frequency: 4: 
+.\RawHtml\How the US has hidden its empire _ News _ The Guardian.html
+frequency: 1: 
+.\RawHtml\How the World's First Computer Was Rescued From the Scrap Heap _ WIRED.html
+frequency: 7: 
+.\RawHtml\How We Discovered That Christopher Columbus Didn't Get to America First - Pacific Standard.html
+frequency: 1: 
+.\RawHtml\Alan Turing (1912 - 1954).html
+frequency: 3: 
+.\RawHtml\If Columbus Didn’t Discover America, Which Of These Five Groups Did_ - 24_7 Wall St..html
+frequency: 1: 
+.\RawHtml\Alan Turing - a short biography.html
+frequency: 1: 
+.\RawHtml\Alan Turing - The British Library.html
+frequency: 5: 
+.\RawHtml\Alan Turing _ Biography, Facts, & Education _ Britannica.html
+frequency: 1: 
+.\RawHtml\Alan Turing_ Creator of modern computing - BBC Teach.html
+frequency: 1: 
+.\RawHtml\State of Delaware - Topics - Delaware Facts & Symbols - Delaware Government.html
+frequency: 2: 
+.\RawHtml\Statehood Dates.html
+frequency: 4: 
+.\RawHtml\1969 Moon Landing - HISTORY.html
+frequency: 4: 
+.\RawHtml\42 maps that explain World War II - Vox.html
+frequency: 1: 
+.\RawHtml\States by Order of Entry into Union.html
+frequency: 4: 
+.\RawHtml\8 Little-Known Facts About the Moon Landing - HISTORY.html
+frequency: 2: 
+.\RawHtml\8 things you didn’t know about Alan Turing _ PBS NewsHour.html
+frequency: 3: 
+.\RawHtml\Steve Jobs.html
+frequency: 73: 
+.\RawHtml\A Day Is Not 24 Hours - The Philipendium - Medium.html
+frequency: 1: 
+.\RawHtml\The 11 nations of the United States and their cultures - Business Insider.html
+frequency: 1: 
+.\RawHtml\An Oral History of Isaac Newton “Discovering” Gravity, as Told by His Contemporaries _ The New Yorker.html
+frequency: 1: 
+.\RawHtml\Apollo 11's 50th anniversary_ Quick guide to the first moon landing - CNET.html
+frequency: 2: 
+.\RawHtml\Apollo 11_ First Men on the Moon _ Space.html
+frequency: 3: 
+.\RawHtml\The 50 States of America _ US State Information.html
+frequency: 5: 
+.\RawHtml\The Brief History of the ENIAC Computer _ History _ Smithsonian Magazine.html
+frequency: 2: 
+.\RawHtml\The Enigma of Alan Turing — Central Intelligence Agency.html
+frequency: 2: 
+.\RawHtml\The First Town in the First State _ Lewes Chamber of Commerce.html
+frequency: 1: 
+.\RawHtml\The History of Apple Computers.html
+frequency: 2: 
+.\RawHtml\The Never-Before-Told Story of the World's First Computer Art (It's a Sexy Dame) - The Atlantic.html
+frequency: 23: 
+.\RawHtml\The Origin of the 8-Hour Work Day and Why We Should Rethink It.html
+frequency: 1: 
+.\RawHtml\Apple Computers_ This Month in Business History (Business Reference Services, Library of Congress).html
+frequency: 2: 
+.\RawHtml\Apple Fast Facts - CNN.html
+frequency: 3: 
+.\RawHtml\Apple Inc. _ American company _ Britannica.html
+frequency: 4: 
+.\RawHtml\Apple's origins_ An oral history from inside the loop - CNET.html
+frequency: 4: 
+.\RawHtml\By the Numbers_ End of World War II - CNN.html
+frequency: 8: 
+.\RawHtml\The Real Story_ Who Discovered America _ Voice of America - English.html
+frequency: 5: 
+.\RawHtml\U.S. Senate_ The Senate and the United States Constitution.html
+frequency: 14: 
+.\RawHtml\UNIVAC, the first commercially produced digital computer, is dedicated - HISTORY.html
+frequency: 2: 
+.\RawHtml\Christopher Columbus Discovers America, 1492.html
+frequency: 13: 
+.\RawHtml\Christopher Columbus_ 3 things you think he did that he didn’t - The Washington Post.html
+frequency: 14: 
+.\RawHtml\Columbus Day vs Leif Erikson Day_ Who 'Discovered' America_ _ Time.html
+frequency: 4: 
+.\RawHtml\Coming to America_ Who Was First_ _ NPR.html
+frequency: 3: 
+.\RawHtml\Computer - The first computer _ Britannica.html
+frequency: 1: 
+.\RawHtml\Vasudev Devnani_ Brahmagupta-II, not Isaac Newton, discovered gravity_ Rajasthan education minister _ India News - Times of India.html
+frequency: 15: 
+.\RawHtml\VE Day_ how World War 2 ended _ The Week UK.html
+frequency: 1: 
+.\RawHtml\Was America Discovered Before Columbus_ _ AMERICAN HERITAGE.html
+frequency: 13: 
+.\RawHtml\We Finally Know How Long a Day on Saturn Is _ Smart News _ Smithsonian Magazine.html
+frequency: 2: 
+.\RawHtml\What Have We Left on the Moon_ _ Britannica.html
+frequency: 2: 
+.\RawHtml\What is gravity_.html
+frequency: 7: 
+.\RawHtml\Delaware becomes the first state to ratify the Constitution - HISTORY.html
+frequency: 3: 
+.\RawHtml\Did the moon landing actually happen_ _ Science_ In-depth reporting on science and technology _ DW _ 18.07.2019.html
+frequency: 2: 
+.\RawHtml\Did you know_ Facts about Apple Inc. _ The Learning Key _ phillytrib.com.html
+frequency: 1: 
+.\RawHtml\Discovering Gravity.html
+frequency: 2: 
+.\RawHtml\ENIAC at Penn Engineering.html
+frequency: 1: 
+.\RawHtml\ENIAC Programmers.html
+frequency: 2: 
+.\RawHtml\Everyone’s going back to the moon. But why_ _ Science _ The Guardian.html
+frequency: 3: 
+.\RawHtml\What Steve Jobs taught us about failure - Business - US business _ NBC News.html
+frequency: 5: 
+.\RawHtml\When and How Did World War II End_.html
+frequency: 10: 
+.\RawHtml\When did the Second World War end_.html
+frequency: 3: 
+.\RawHtml\When did the Second World War start and end, what were WW2's biggest battles and how many people died_.html
+frequency: 2: 
+.\RawHtml\gravity _ Definition, Physics, & Facts _ Britannica.html
+frequency: 2: 
+.\RawHtml\Gravity_ it is all in your head.html
+frequency: 4: 
+.\RawHtml\Happy Birthday, Isaac Newton_ Birth of Physicist Who Discovered Gravity Celebrated on Christmas Day.html
+frequency: 12: 
+.\RawHtml\History of Apple_ The story of Steve Jobs and the company he founded - Macworld UK.html
+frequency: 1: 
+.\RawHtml\History of Computers - A Brief Timeline of Their Evolution _ Live Science.html
+frequency: 1: 
+.\RawHtml\Who Discovered America.html
+frequency: 1: 
+.\RawHtml\Who Discovered America__ The Untold History of the Peopling of the Americas_ Gavin Menzies, Ian Hudson_ 9780062236753_ Amazon.com_ Books.html
+frequency: 1: 
+.\RawHtml\Who Discovered Gravity_ - Universe Today.html
+frequency: 1: 
+.\RawHtml\Who First Discovered America_ _ Owlcation.html
+frequency: 1: 
+.\RawHtml\Who Founded Apple Company_ Know the Apple Story and History.html
+frequency: 10: 
+.\RawHtml\How Long is 1 Day in Red Dead Redemption 2_.html
+frequency: 32: 
+.\RawHtml\How Long is a Day on Earth_ - Universe Today.html
+frequency: 30: 
+.\RawHtml\How Long Is a Day on Earth_.html
+frequency: 41: 
+.\RawHtml\How long is a day on Mars_ _ Explore Royal Museums Greenwich.html
+frequency: 22: 
+.\RawHtml\How Long is a Day On Other Planets_ - WorldAtlas.com.html
+frequency: 1: 
+.\RawHtml\Who Invented the Computer_ _ HowStuffWorks.html
+frequency: 1: 
+.\RawHtml\Who Invented the First Computer and When_ We Investigate.html
+frequency: 3: 
+.\RawHtml\Who Really Discovered America_ - Theories About the Earliest Explorers.html
+frequency: 1: 
+.\RawHtml\Who Really Discovered America_.html
+frequency: 2: 
+.\RawHtml\Who really discovered the law of gravity_ - BBC Science Focus Magazine.html
+frequency: 4: 
+.\RawHtml\Who was Alan Turing_ - History's HEROES from E2BN.html
+frequency: 6: 
+.\RawHtml\Why Delaware is the 'First State,' and what 'Delaware Day' is.html
+frequency: 2: 
+.\RawHtml\Isaac Newton_ The man who discovered gravity - BBC Teach.html
+frequency: 1: 
+.\RawHtml\July 20, 1969_ 1st footsteps on moon _ Human World _ EarthSky.html
+frequency: 4: 
+.\RawHtml\List of U.S. states' dates of admission to the union _ Britannica.html
+frequency: 28: 
+.\RawHtml\How Long Is a Day on Other Planets_.html
+frequency: 16: 
+.\RawHtml\How Long Is a Day on Saturn_ Scientists Finally Have an Answer.html
+frequency: 10: 
+.\RawHtml\How Long Is a Day on Saturn_ Scientists Finally Solve a Lingering Mystery _ Space.html
+frequency: 1: 
+.\RawHtml\Moon exploration, facts and information.html
+frequency: 7: 
+.\RawHtml\How Long is a Day on Saturn_ _ Live Science.html
+frequency: 7: 
+.\RawHtml\How long is a day on Saturn_ _ The Planetary Society.html
+frequency: 13: 
+.\RawHtml\How long is a day on the Sun_ _ Astronomy.com.html
+frequency: 4: 
+.\RawHtml\How Long Is a Day on the Sun_.html
+frequency: 14: 
+.\RawHtml\How Long is a Day on Venus_ The Answer Keeps Changing _ Discover Magazine.html
+query<response>: 
+ .\RawHtml\Coronavirus in the U.S._ 29 Confirmed Cases, More Tests Underway - The New York Times.html
+.\RawHtml\ENIAC Programmers.html
+.\RawHtml\History of Computers - A Brief Timeline of Their Evolution _ Live Science.html
+.\RawHtml\Apple’s 40th anniversary_ Key players in company’s history – The Mercury News.html
+.\RawHtml\World War II _ Facts, Summary, Combatants, & Causes _ Britannica.html
+.\RawHtml\World War II_ After the War - The Atlantic.html
+.\RawHtml\What ‘The Imitation Game’ didn’t tell you about Turing’s greatest triumph - The Washington Post.html
+.\RawHtml\World War II_ Summary, Combatants & Facts - HISTORY.html
+.\RawHtml\The Enigma of Alan Turing — Central Intelligence Agency.html
+.\RawHtml\U.S. Department of State - United States Department of State.html
+.\RawHtml\Which States Have Coronavirus and How Do You Minimize Risk.html
+.\RawHtml\Unemployment Rates for States.html
+.\RawHtml\8 Little-Known Facts About the Moon Landing - HISTORY.html
+.\RawHtml\How Louisiana Became A State - My New Orleans.html
+.\RawHtml\A New History of the Second World War _ The New Yorker.html
+.\RawHtml\Geographic Distribution _ Statistics Overview _ Statistics Center _ HIV_AIDS _ CDC.html
+.\RawHtml\Goldman's Apple Card_ Apple Co-Founder Wants Tougher Regulation - Bloomberg.html
+.\RawHtml\How Long is a Day on Earth_ - Universe Today.html
