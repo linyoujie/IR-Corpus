@@ -19,94 +19,75 @@ public class SearchEngine {
     
     public static void main(String[] args) throws IOException
     {
-        int i = 0, j;
+        int k = 0, j;
         String arg;
 
-        String CorpusDir;
-        String InvertedIndex;
-        String StopList;
-        String Queries; 
-        String Results;
+        String CorpusDir ="";
+        String InvertedIndex="";
+        String StopList="";
+        String Queries=""; 
+        String Results="";
 
-        while (i < args.length && args[i].startsWith("-")) {
-            arg = args[i++];
+        while (k < args.length && args[k].startsWith("-")) {
+            arg = args[k++];
 
-
-    // use this type of check for arguments that require arguments
             if (arg.equals("-Results")) {
-                if (i < args.length)
-                    Results = args[i++];
+                if (k < args.length)
+                    Results = args[k++];
                 else
-                    System.err.println("-Results requires a filename");
+            
+                    System.out.println("-Results requires a filename");
             }
 
             else if (arg.equals("-CorpusDir")) {
-                if (i < args.length)
-                    CorpusDir = args[i++];
+                if (k < args.length)
+                    CorpusDir = args[k++];
                 else
-                    System.err.println("-CorpusDir requires a directory");
+                   
+                    System.out.println("-CorpusDir requires a directory");
             }
             else if (arg.equals("-InvertedIndex")) {
-                if (i < args.length)
-                    InvertedIndex = args[i++];
+                if (k < args.length)
+                    InvertedIndex = args[k++];
                 else
-                    System.err.println("-InvertedIndex requires a filename");
+                    System.out.println("-InvertedIndex requires a filename");
             }
             else if (arg.equals("-StopList")) {
-                if (i < args.length)
-                    StopList = args[i++];
+                if (k < args.length)
+                    StopList = args[k++];
                 else
-                    System.err.println("-StopList requires a filename");
+                    System.out.println("-StopList requires a filename");
             }
 
             else if (arg.equals("-Queries")) {
-                if (i < args.length)
-                    Queries = args[i++];
+                if (k < args.length)
+                    Queries = args[k++];
                 else
-                    System.err.println("-Queries requires a filename");
+                    System.out.println("-Queries requires a filename");
             }
 
-            else if (arg.equals("-Frequency")) {
-                if (i < args.length)
-                Frequency = args[i++];
-                else
-                    System.err.println("-Frequency requires a filename");
-            }
-    // use this type of check for a series of flag arguments
-            else {
-                for (j = 1; j < arg.length(); j++) {
-                    flag = arg.charAt(j);
-                    switch (flag) {
-                    case 'x':
-                        if (vflag) System.out.println("Option x");
-                        break;
-                    case 'n':
-                        if (vflag) System.out.println("Option n");
-                        break;
-                    default:
-                        System.err.println("ParseCmdLine: illegal option " + flag);
-                        break;
-                    }
-                }
-            }
         }
-        if (i == args.length)
-            System.err.println("Usage: ParseCmdLine [-verbose] [-xn] [-output afile] filename");
+
+        if (k == args.length)
+            System.out.println("Usage: SearchEngine [-CorpusDir directory] directory "+
+            "[-InvertedIndex afile] filename [-StopList afile] filename [-Queries afile] filename" +
+            "[-Results afile] filename [-output afile] filename");
         else
             System.out.println("Success!");
+            System.out.println("CorpusDir: "+ CorpusDir);
+             System.out.println("InvertedIndex: " + InvertedIndex);
+             System.out.println("StopList: " +StopList);
+             System.out.println("Queries: "+Queries);
+             System.out.println("Results: "+Results);
+             
 
 
 
-
-
-
-
-
-
-
-
+            
         HashMap<String, HashMap<String, List<Integer>>> invertedIndex = new HashMap<String, HashMap<String, List<Integer>>>();   
         HashMap<Integer,String> indexHash = new  HashMap<Integer,String>();
+        HashMap<String,Integer> nameHash = new  HashMap<String, Integer>();
+
         //loading stop words
         BufferedReader stopbuff;
         File StopListFile = new File("./StopList.txt");
@@ -138,13 +119,14 @@ public class SearchEngine {
                 System.out.println("File:" + filesList[i]);
                 files.add(filesList[i].toString());
                 indexHash.putIfAbsent(i, filesList[i].toString());
+                nameHash.putIfAbsent( filesList[i].toString(), i);
                 try {
                     buff = new BufferedReader(
                             new FileReader(filesList[i]));
                     
                     
                     String t=null;
-                    while((t=buff.readLine())!=null){//读一行
+                    while((t=buff.readLine())!=null){
                         html=html+t;
                     }
                 } catch (FileNotFoundException e) {
@@ -189,18 +171,16 @@ public class SearchEngine {
       String text = " ";
       java.util.regex.Pattern pattern;
       java.util.regex.Matcher matcher;
-
-
       try {
-          //remove matcher pattern<script>      
+          //remove matcher pattern <script>      
           pattern = Pattern.compile("<[\\s]*?script[^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?script[\\s]*?>", Pattern.CASE_INSENSITIVE);
           matcher = pattern.matcher(html);
           html = matcher.replaceAll(" "); 
-          //remove matcher pattern<style>        
+          //remove matcher pattern <style>        
           pattern = Pattern.compile("<[\\s]*?style[^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?style[\\s]*?>", Pattern.CASE_INSENSITIVE);
           matcher = pattern.matcher(html);
           html = matcher.replaceAll(" "); 
-          //remove space matcher pattern<>
+          //remove space matcher pattern <>
           pattern = Pattern.compile("<[^>]+>", Pattern.CASE_INSENSITIVE);
           matcher = pattern.matcher(html);
           html = matcher.replaceAll(" "); 
@@ -210,8 +190,8 @@ public class SearchEngine {
           //remove and conver punctuations
           text = text.replaceAll("&nbsp", " ");
           text = text.replaceAll("\\p{Punct}[^']|[-]", " ");
-          text = text.replaceAll("[\\s][‘’]|[‘’]", " '");
-          text = text.replaceAll("[\\s][“”]|[“”]", " \"").toLowerCase();
+        
+        
           text = text.toLowerCase();
           //remove stopword
         
