@@ -20,3 +20,6 @@ for any unspecify flag will set to defaut value as follow:
 
 You must have a valid Folder and StopList to start the program, any invalid file of Queries and StopList will terminated the program.
 
+A valid command can be as follow:
+        java SearchEngine -CorpusDir ./RawHtml -InvertedIndex ./InvertedIndex.txt -StopList ./StopList.txt -Queries ./query.txt -Results ./result.txt -inversedIn false
+
