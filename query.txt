@@ -1,0 +1,5 @@
+query<moon>
+query<day>
+frequency<ground> 
+frequency<day>
+query<response>
