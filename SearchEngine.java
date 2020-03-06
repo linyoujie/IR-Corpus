@@ -29,7 +29,7 @@ public class SearchEngine {
         String Queries="./query.txt"; 
         String Results="./result.txt";
         String textCorpus = "false";
-        String inversedIn = "false";
+        String inversedIn = "true";
 
         while (k < args.length && args[k].startsWith("-")) {
             arg = args[k++];
